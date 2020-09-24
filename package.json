@@ -14,7 +14,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prettier-format": "prettier --config .prettierrc 'src/**/*.js' --write",
+    "lint": "eslint . --ext .js",
+    "semantic-commitlint": "semantic-commitlint"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -33,6 +36,13 @@
   },
   "devDependencies": {
     "eslint": "^7.9.0",
-    "eslint-plugin-react": "^7.21.1"
+    "eslint-plugin-react": "^7.21.1",
+    "husky": "^4.3.0"
+  },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "npm run semantic-commitlint -- -h",
+      "pre-commit": "npm run prettier-format && npm run lint"
+    }
   }
 }
