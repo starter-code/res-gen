@@ -1,0 +1,118 @@
+{
+  "heading": {
+    "name": "John Smith",
+    "title": "Software Engineer",
+    "location": "Boston, MA"
+  },
+  "contact-info": {
+    "gmail": "example@gmail.com",
+    "github": "example@gmail.com",
+    "linkedin": "example@gmail.com",
+    "website": "google.com"
+  },
+  "software-languages": [
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "Java",
+    "PHP",
+    "Ruby",
+    "Python"
+  ],
+  "libraries-frameworks": ["React", "Rails", "Django", "Express"],
+  "interest": [],
+  "work-experience": {
+    "title": "Software Engineer Experience",
+    "details": [
+      {
+        "company": "google",
+        "location": "boston",
+        "title": "software engineer",
+        "date": "today",
+        "tags": ["JavaScript", "React"],
+        "description": ["I worked on this", "I helped the team"],
+        "hidden": true
+      },
+      {
+        "company": "facebook",
+        "location": "boston",
+        "title": "software engineer",
+        "date": "yesterday",
+        "tags": ["JavaScript", "React"],
+        "description": ["I worked on this", "I helped the team"]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Web Development Projects",
+    "details": [
+      {
+        "project-name": "project-1",
+        "title": "senior software engineer",
+        "date": "from yesteday to today",
+        "tags": ["JavaScript", "React"],
+        "description": ["I worked on this", "I helped the team"],
+        "url": "google.com"
+      },
+      {
+        "project-name": "project-2",
+        "title": "software engineer",
+        "date": null,
+        "tags": ["JavaScript", "React"],
+        "description": ["I worked on this", "I helped the team"],
+        "url": "yahoo.com"
+      },
+      {
+        "project-name": "project-3",
+        "title": null,
+        "date": null,
+        "tags": ["JavaScript", "React"],
+        "description": ["I worked on this", "I helped the team"],
+        "url": "microsoft.com"
+      }
+    ]
+  },
+  "education": {
+    "details": [
+      {
+        "school": "General Assembly",
+        "location": "boston",
+        "date": "2019-2020",
+        "description": [
+          "I worked 500 hours",
+          "I did 10 projects",
+          "I learned HTML, CSS"
+        ]
+      },
+      {
+        "school": "UMass Amherst",
+        "location": "Amherst",
+        "date": "2019-2020",
+        "description": [
+          "I worked 500 hours",
+          "I did 10 projects",
+          "I learned HTML, CSS"
+        ]
+      }
+    ]
+  },
+  "other-experience": {
+    "title": "Other Work History",
+    "details": [
+      {
+        "title": "clerk",
+        "location": "boston",
+        "company": "boston city hall",
+        "date": "2018-2020",
+        "description": []
+      },
+      {
+        "title": "grocery store greeter",
+        "location": "boston",
+        "company": "boston city hall",
+        "date": "2018-2019",
+        "description": ["I greeted people"]
+      }
+    ]
+  }
+}
