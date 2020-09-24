@@ -1,0 +1,7 @@
+BACKLOG
+
+- [ ] Research a package generates PDF
+- [ ] Add CSS Customizer
+- [ ] Make a resume template
+- [ ] Ability to save templates
+- [ ] Add webpack
