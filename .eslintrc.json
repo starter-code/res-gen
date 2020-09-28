@@ -26,5 +26,10 @@
     "semi": ["error", "always"],
     "comma-dangle": ["error", "always-multiline"],
     "no-invalid-this": 0
+  },
+  "settings": {
+    "react": {
+      "version": "16.13.1"
+    }
   }
 }
