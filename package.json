@@ -6,20 +6,26 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "copy-webpack-plugin": "^6.1.1",
+    "html-webpack-plugin": "^4.5.0",
     "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
     "pdfkit": "^0.11.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
-    "semantic-commitlint": "^1.4.0"
+    "sass": "^1.26.11",
+    "sass-loader": "^10.0.2",
+    "semantic-commitlint": "^1.4.0",
+    "source-map-loader": "^1.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "npx webpack-dev-server",
+    "build": "webpack -p",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prettier-format": "prettier --config .prettierrc 'src/**/*.js' --write",
+    "prettier-format": "prettier --config .prettierrc 'src/**/*.{js,scss}' --write",
     "lint": "eslint . --ext .js",
     "semantic-commitlint": "semantic-commitlint"
   },
@@ -39,12 +45,28 @@
     ]
   },
   "devDependencies": {
-    "eslint-plugin-react": "^7.21.1"
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^4.3.0",
+    "eslint-plugin-react": "^7.21.1",
+    "postcss": "^8.1.0",
+    "postcss-loader": "^4.0.2",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
   },
   "husky": {
     "hooks": {
       "prepare-commit-msg": "npm run semantic-commitlint -- -h",
-      "pre-commit": "npm run prettier-format && npm run lint"
+      "pre-commit": "lint-staged && npm run lint"
     }
+  },
+  "lint-staged": {
+    "src/**/*.{js,scss}": [
+      "npm run prettier-format",
+      "git add"
+    ]
   }
 }
