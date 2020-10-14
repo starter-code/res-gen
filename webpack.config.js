@@ -27,12 +27,32 @@ module.exports = {
         enforce: 'pre',
         use: ['source-map-loader'],
       },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'fonts/',
+            },
+          },
+        ],
+      },
     ],
   },
   devServer: {
     port: 3000,
     open: true,
     hot: true,
+  },
+  resolve: {
+    alias: {
+      fonts: path.resolve(__dirname, 'src/fonts'),
+      pages: path.resolve(__dirname, 'src/components/pages'),
+      'react-pdf': path.resolve(__dirname, 'node_modules/@react-pdf/renderer'),
+      templates: path.resolve(__dirname, 'src/components/templates'),
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({

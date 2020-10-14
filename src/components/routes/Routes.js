@@ -6,7 +6,7 @@ import {
   NotFoundPage,
   CrispPage,
   CascadePage,
-} from '../pages';
+} from 'pages';
 
 export const Routes = () => {
   return (
