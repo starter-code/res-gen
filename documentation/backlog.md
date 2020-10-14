@@ -1,5 +1,6 @@
 BACKLOG
 
+- [ ] Add special inspector to help identify customizer
 - [ ] Add CSS Customizer (user feature)
 - [ ] Ability to save templates
 - [ ] User tutorial (user feature)
