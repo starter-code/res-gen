@@ -6,7 +6,9 @@ import {
   NotFoundPage,
   CrispPage,
   CascadePage,
+  GoogleDocPage,
 } from 'pages';
+// import GoogleDocPage from '../pages/GoogleDocPage';
 
 export const Routes = () => {
   return (
@@ -16,6 +18,7 @@ export const Routes = () => {
         <Route exact path="/contributors" component={ContributorsPage} />
         <Route exact path="/crisp" component={CrispPage} />
         <Route exact path="/cascade" component={CascadePage} />
+        <Route exact path="/googledoc" component={GoogleDocPage} />
         <Route path="/" component={NotFoundPage} />
       </Switch>
     </div>
