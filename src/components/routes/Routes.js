@@ -6,7 +6,7 @@ import {
   NotFoundPage,
   CrispPage,
   CascadePage,
-  GoogleDocPage,
+  MahomesPage,
 } from 'pages';
 // import GoogleDocPage from '../pages/GoogleDocPage';
 
@@ -18,7 +18,7 @@ export const Routes = () => {
         <Route exact path="/contributors" component={ContributorsPage} />
         <Route exact path="/crisp" component={CrispPage} />
         <Route exact path="/cascade" component={CascadePage} />
-        <Route exact path="/googledoc" component={GoogleDocPage} />
+        <Route exact path="/Mahomes" component={MahomesPage} />
         <Route path="/" component={NotFoundPage} />
       </Switch>
     </div>

@@ -10,11 +10,10 @@ const styles = StyleSheet.create({
     padding: '0 0 5px 5px',
   },
   'column--info': {
-    backgroundColor: 'lightgrey',
+    backgroundColor: '#EEE',
     color: 'black',
-    padding: '24px 0 0 0',
+    padding: '24px 0 0 12px',
     width: '35%',
-    height: '100%',
   },
   'heading-info--name': {
     fontSize: 24,
@@ -24,22 +23,22 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
     margin: '0 0 8px 0',
-    padding: '0 0 0 5px',
+    padding: '0 0 0 0px',
   },
   'section-info--heading-second': {
     fontSize: 16,
     fontWeight: 'bold',
     margin: '0 0 8px 0',
-    padding: '15px 0 0 5px',
+    padding: '15px 0 0 0px',
   },
   'section--contact-info': {
-    padding: '0 0 0 5px',
+    padding: '0 0 0 0px',
   },
   'section--heading-info': {
-    padding: '0 0 0 24px',
+    padding: '0 0 0 0px',
   },
   'section--skills-info': {
-    padding: '0 0 0 10px',
+    padding: '0 0 0 0px',
   },
   'section--skills-info--text': {
     marginBottom: '10px',
@@ -55,7 +54,6 @@ export const InfoColumn = () => {
     <View style={styles['column--info']}>
       <View style={styles['heading--location-item']}>
         <Text>{data['heading'].location}</Text>
-        <Text>Zip code</Text>
         <Text>{data['contact-info'].email}</Text>
       </View>
       <Text style={styles['section-info--heading']}>Links</Text>

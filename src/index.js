@@ -8,6 +8,9 @@ import * as serviceWorker from './serviceWorker';
 import { Font } from 'react-pdf';
 import Roboto from 'fonts/Roboto-Regular.ttf';
 import RobotoBold from 'fonts/Roboto-Bold.ttf';
+import Merriweather from 'fonts/Merriweather-Regular.ttf';
+import MerriweatherLight from 'fonts/Merriweather-Light.ttf';
+import MerriweatherBold from 'fonts/Merriweather-Bold.ttf';
 
 // const Roboto = 'https://fonts.googleapis.com/css?family=Roboto:700';
 
@@ -16,6 +19,15 @@ Font.register({
   fonts: [
     { src: Roboto }, // font-style: normal, font-weight: normal
     { src: RobotoBold, fontWeight: 700 },
+  ],
+});
+
+Font.register({
+  family: 'Merriweather',
+  fonts: [
+    { src: Merriweather },
+    { src: MerriweatherLight },
+    { src: MerriweatherBold, fontWeight: 700 },
   ],
 });
 
