@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export const Cascade = () => {
+export const CascadeTemplate = () => {
   return (
     <PDFViewer className="pdf-viewer">
       <Document>
