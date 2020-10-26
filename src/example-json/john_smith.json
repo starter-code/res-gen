@@ -10,6 +10,12 @@
     "linkedin": "johnsmith0101",
     "website": "google.com"
   },
+  "summary": {
+    "heading": "Summary",
+    "description": [
+      "Developer focused on finding innovative ways to efficiently develop, design, and optimize web applications. I'm a hard-working, quick learning individual who strives in pushing myself and learning new things."
+    ]
+  },
   "skills": [
     "JavaScript",
     "HTML",
