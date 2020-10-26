@@ -1,6 +1,6 @@
 import React from 'react';
 import { PDFViewer, Page, Document, StyleSheet } from 'react-pdf';
-import { InfoColumn } from './InfoColumn';
+import { InfoColumn } from './Info/InfoColumn';
 import { ContentColumn } from './Content/ContentColumn';
 import data from '../../../example-json/john_smith.json';
 
