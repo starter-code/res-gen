@@ -5,5 +5,8 @@
     "activityBar.background": "#1b860d",
     "titleBar.activeBackground": "#1b860d",
     "titleBar.activeForeground": "#FBFBF6"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }

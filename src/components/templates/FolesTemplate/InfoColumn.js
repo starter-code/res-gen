@@ -20,6 +20,12 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
   },
+  'heading-info--title': {
+    fontSize: 14,
+  },
+  'heading-info--location': {
+    fontSize: 14,
+  },
   'section-info--heading': {
     backgroundColor: '#446F6F',
     fontSize: 16,
@@ -43,8 +49,10 @@ export const InfoColumn = () => {
     <View style={styles['column--info']}>
       <View style={styles['section--heading-info']}>
         <Text style={styles['heading-info--name']}>{data.heading.name}</Text>
-        <Text>{data.heading.title}</Text>
-        <Text>{data.heading.location}</Text>
+        <Text style={styles['heading-info--title']}>{data.heading.title}</Text>
+        <Text style={styles['heading-info--location']}>
+          {data.heading.location}
+        </Text>
       </View>
       <Text style={styles['section-info--heading']}>Contact</Text>
       <View style={styles['section--contact-info']}>

@@ -15,7 +15,7 @@ npm start
 
 ```
 http://localhost:3000/#/crisp
-http://localhost:3000/#/cascade
+http://localhost:3000/#/foles
 ```
 
 ### Technology
