@@ -10,6 +10,12 @@
     "linkedin": "johnsmith0101",
     "website": "google.com"
   },
+  "summary": {
+    "heading": "Summary",
+    "description": [
+      "Developer focused on finding innovative ways to efficiently develop, design, and optimize web applications. I'm a hard-working, quick learning individual who strives in pushing myself and learning new things."
+    ]
+  },
   "skills": [
     "JavaScript",
     "HTML",
@@ -20,7 +26,27 @@
     "Agile",
     "Kanban"
   ],
-  "interests": [],
+  "languages": ["JavaScript", "HTML", "CSS"],
+  "libraries/frameworks": [
+    "React.js",
+    "Webpack",
+    "Express.js",
+    "Nest.js",
+    "jQuery"
+  ],
+  "software-development": [
+    "Git + Github",
+    "Jira",
+    "Confluence",
+    "Agile",
+    "Kanban"
+  ],
+  "interests": [
+    "Philadelphia Eagles",
+    "Game of Thrones",
+    "Marathon Running",
+    "American Culture"
+  ],
   "work-experience": {
     "heading": "Software Engineering Experience",
     "details": [
@@ -61,7 +87,8 @@
     "heading": "Web Development Projects",
     "details": [
       {
-        "name": "GoFundThem",
+        "project": "GoFundThem",
+        "location": "",
         "descriptor": "Your one stop shop to get funded",
         "title": "Senior Software Engineer",
         "dates": "June 2020 - Aug 2020",
@@ -73,7 +100,8 @@
         "url": "google.com"
       },
       {
-        "name": "DraftQueens",
+        "project": "DraftQueens",
+        "location": "New York City",
         "title": "Software Engineer Consultant",
         "dates": "Jan 2020 - May 2020",
         "tags": ["JavaScript", "React", "PHP", "Laravel", "MySQL"],
@@ -87,45 +115,44 @@
     ]
   },
   "education": {
+    "heading": "Education",
     "details": [
       {
         "school": "General Assembly",
-        "location": "boston",
-        "dates": "2019-2020",
+        "location": "Boston, MA",
+        "dates": "2019 - 2020",
         "descriptions": [
-          "I worked 500 hours",
-          "I did 10 projects",
-          "I learned HTML, CSS"
+          "Full time 500+ hour web development immersive program",
+          "Developed four full stack web applications using JavaScript, HTML, CSS, and Ruby"
         ]
       },
       {
         "school": "UMass Amherst",
         "location": "Amherst",
-        "dates": "2019-2020",
+        "dates": "2019 - 2020",
         "descriptions": [
-          "I worked 500 hours",
-          "I did 10 projects",
-          "I learned HTML, CSS"
+          "Computer Science: Intro to Java, Data Structures, Game Design, Data Science",
+          "Information Technology: Computer Literacy, Problem Solving with Internet"
         ]
       }
     ]
   },
-  "other-experience": {
-    "title": "Other Work History",
+  "other-work-experience": {
+    "heading": "Other Work History",
     "details": [
       {
-        "title": "clerk",
-        "location": "boston",
-        "company": "boston city hall",
-        "dates": "2018-2020",
+        "title": "Cashier",
+        "location": "Boston",
+        "company": "McDonalds",
+        "dates": "2018 - 2020",
         "descriptions": []
       },
       {
-        "title": "grocery store greeter",
-        "location": "boston",
-        "company": "boston city hall",
-        "dates": "2018-2019",
-        "descriptions": ["I greeted people"]
+        "title": "Customer Service Representative",
+        "location": "Boston",
+        "company": "Target",
+        "dates": "2018 - 2019",
+        "descriptions": ["Increased customer happiness by 200%"]
       }
     ]
   }
