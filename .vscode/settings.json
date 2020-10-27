@@ -2,8 +2,8 @@
   "editor.formatOnSave": true,
   "editor.wordWrapColumn": 80,
   "workbench.colorCustomizations": {
-    "activityBar.background": "#1b860d",
-    "titleBar.activeBackground": "#1b860d",
+    "activityBar.background": "#044204",
+    "titleBar.activeBackground": "#044204",
     "titleBar.activeForeground": "#FBFBF6"
   },
   "[json]": {
