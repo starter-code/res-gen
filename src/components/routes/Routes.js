@@ -5,7 +5,7 @@ import {
   ContributorsPage,
   NotFoundPage,
   CrispPage,
-  CascadePage,
+  FolesPage,
 } from 'pages';
 
 export const Routes = () => {
@@ -15,7 +15,7 @@ export const Routes = () => {
         <Route exact path="/" component={HomePage} />
         <Route exact path="/contributors" component={ContributorsPage} />
         <Route exact path="/crisp" component={CrispPage} />
-        <Route exact path="/cascade" component={CascadePage} />
+        <Route exact path="/foles" component={FolesPage} />
         <Route path="/" component={NotFoundPage} />
       </Switch>
     </div>

@@ -5,8 +5,8 @@ export const HomePage = () => {
   return (
     <div>
       <Link to="/">Home Page</Link>
-      <Link to="cascade">Cascade Template</Link>
-      <Link to="crip">Crisp Template</Link>
+      <Link to="foles">Foles Template</Link>
+      <Link to="crisp">Crisp Template</Link>
     </div>
   );
 };
