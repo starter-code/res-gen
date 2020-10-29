@@ -6,7 +6,7 @@ export const HomePage = () => {
     <div>
       <Link to="/">Home Page</Link>
       <Link to="foles">Foles Template</Link>
-      <Link to="crisp">Crisp Template</Link>
+      <Link to="mahomes">Mahomes Template</Link>
     </div>
   );
 };

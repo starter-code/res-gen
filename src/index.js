@@ -6,22 +6,52 @@ import App from './components/app/App';
 import * as serviceWorker from './serviceWorker';
 
 import { Font } from 'react-pdf';
+import RobotoLight from 'fonts/Roboto-Light.ttf';
+import RobotoItalicLight from 'fonts/Roboto-LightItalic.ttf';
 import Roboto from 'fonts/Roboto-Regular.ttf';
+import RobotoItalic from 'fonts/Roboto-Italic.ttf';
 import RobotoBold from 'fonts/Roboto-Bold.ttf';
-
-// const Roboto = 'https://fonts.googleapis.com/css?family=Roboto:700';
+import RobotoItalicBold from 'fonts/Roboto-BoldItalic.ttf';
+import Merriweather from 'fonts/Merriweather-Regular.ttf';
+import MerriweatherLight from 'fonts/Merriweather-Light.ttf';
+import MerriweatherBold from 'fonts/Merriweather-Bold.ttf';
+import MerriweatherBoldItalic from 'fonts/Merriweather-BoldItalic.ttf';
+import MerriweatherItalic from 'fonts/Merriweather-Italic.ttf';
+import MerriweatherLightItalic from 'fonts/Merriweather-LightItalic.ttf';
 
 Font.register({
   family: 'Roboto',
   fonts: [
-    { src: Roboto }, // font-style: normal, font-weight: normal
+    { src: Roboto },
+    { src: RobotoLight },
     { src: RobotoBold, fontWeight: 700 },
   ],
 });
 
 Font.register({
-  family: 'Oswald',
-  src: 'https://fonts.gstatic.com/s/oswald/v13/Y_TKV6o8WovbUd3m_X9aAA.ttf',
+  family: 'RobotoItalic',
+  fonts: [
+    { src: RobotoItalic },
+    { src: RobotoItalicLight },
+    { src: RobotoItalicBold, fontWeight: 700 },
+  ],
+});
+
+Font.register({
+  family: 'Merriweather',
+  fonts: [
+    { src: Merriweather },
+    { src: MerriweatherLight },
+    { src: MerriweatherBold, fontWeight: 700 },
+  ],
+});
+Font.register({
+  family: 'MerriweatherItalic',
+  fonts: [
+    { src: MerriweatherItalic },
+    { src: MerriweatherLightItalic },
+    { src: MerriweatherBoldItalic, fontWeight: 700 },
+  ],
 });
 
 ReactDOM.render(
