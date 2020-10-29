@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-pdf';
-import data from '../../../example-json/john_smith.json';
 import _ from 'lodash';
+import PropTypes from 'prop-types';
 
 const styles = StyleSheet.create({
   'contact-info--contact-item': {
@@ -42,18 +42,18 @@ const styles = StyleSheet.create({
   },
   'section--skills-info--text': {
     marginBottom: '10px',
+    marginLeft: '10px',
   },
   'heading--location-item': {
-    top: '-15',
-    padding: '0 0 0 5px',
+    padding: '0 0 20px 5px',
   },
 });
 
-export const InfoColumn = () => {
+export const InfoColumn = ({ data }) => {
   return (
     <View style={styles['column--info']}>
+      <Text style={styles['section-info--heading']}>Contact</Text>
       <View style={styles['heading--location-item']}>
-        <Text>{data['heading'].location}</Text>
         <Text>{data['contact-info'].email}</Text>
       </View>
       <Text style={styles['section-info--heading']}>Links</Text>
@@ -76,11 +76,23 @@ export const InfoColumn = () => {
         {_.map(data.skills, (skill, index) => {
           return (
             <Text style={styles['section--skills-info--text']} key={index}>
-              - {skill}
+              {skill}
             </Text>
           );
         })}
       </View>
     </View>
   );
+};
+
+InfoColumn.propTypes = {
+  data: PropTypes.shape({
+    'contact-info': PropTypes.shape({
+      email: PropTypes.string,
+      github: PropTypes.string,
+      linkedin: PropTypes.string,
+      website: PropTypes.string,
+    }),
+    skills: PropTypes.arrayOf(PropTypes.string),
+  }),
 };

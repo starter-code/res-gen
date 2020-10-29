@@ -1,6 +1,5 @@
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-pdf';
-import data from '../../../example-json/john_smith.json';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 
@@ -27,17 +26,18 @@ const styles = StyleSheet.create({
   'work-experience-content--tags': {
     display: 'flex',
     flexDirection: 'row',
+    margin: '3px 0 8px 0',
   },
   'work-experience-content--tags-item': {
-    backgroundColor: 'lightblue',
+    backgroundColor: '#276a97',
     borderRadius: 8,
-    color: 'black',
+    color: 'white',
     fontSize: 8,
     margin: '0 4px 0 0',
     padding: '0 6px',
   },
   'work-experience-content--descriptions-item': {
-    margin: '0 0 4px 30px',
+    margin: '0 0 4px 15px',
     fontSize: 10,
   },
   'project-content--heading': {
@@ -55,6 +55,7 @@ const styles = StyleSheet.create({
   },
   'project-content--descriptor': {
     fontSize: '8',
+    fontFamily: 'MerriweatherItalic',
     padding: '2px 0 0 0',
   },
   'summary--heading': {
@@ -184,7 +185,9 @@ const ProjectHeading = ({ project, dates, descriptor, title }) => {
   return (
     <View>
       <View style={styles['project-content--heading']}>
-        <Text style={styles['project-content--project']}>{project} -- </Text>
+        <Text style={styles['project-content--project']}>
+          {project} {!!descriptor && '--'}{' '}
+        </Text>
         <Text style={styles['project-content--descriptor']}> {descriptor}</Text>
       </View>
       <View style={styles['project-content--subheading']}>
@@ -268,7 +271,7 @@ Summary.propTypes = {
   description: PropTypes.string,
 };
 
-export const Content = () => {
+export const Content = ({ data }) => {
   return (
     <View style={styles['column--content']}>
       <Text style={styles['section-content--heading']}>
@@ -285,4 +288,21 @@ export const Content = () => {
       <WorkExperiences details={data['work-experience'].details} />
     </View>
   );
+};
+
+Content.propTypes = {
+  data: PropTypes.shape({
+    summary: PropTypes.shape({
+      heading: PropTypes.string,
+      description: PropTypes.string,
+    }),
+    projects: PropTypes.shape({
+      details: PropTypes.arrayOf(PropTypes.object),
+      heading: PropTypes.string,
+    }),
+    'work-experience': PropTypes.shape({
+      details: PropTypes.arrayOf(PropTypes.object),
+      heading: PropTypes.string,
+    }),
+  }),
 };

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-pdf';
 import data from '../../../example-json/john_smith.json';
-// import _ from 'lodash';
 
 const styles = StyleSheet.create({
   'contact-info--contact-item': {

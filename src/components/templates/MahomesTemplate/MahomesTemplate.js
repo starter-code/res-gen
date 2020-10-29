@@ -3,6 +3,7 @@ import { PDFViewer, Page, Document, StyleSheet, View } from 'react-pdf';
 import { Content } from './Content';
 import { Heading } from './Heading';
 import { InfoColumn } from './InfoColumn';
+import data from '../../../example-json/john_smith.json';
 
 const styles = StyleSheet.create({
   page: {
@@ -23,8 +24,8 @@ export const Mahomes = () => {
         <Page style={styles.page}>
           <Heading />
           <View style={styles.columns}>
-            <Content />
-            <InfoColumn />
+            <Content data={data} />
+            <InfoColumn data={data} />
           </View>
         </Page>
       </Document>
