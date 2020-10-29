@@ -9,3 +9,5 @@ BACKLOG
 - [ ] Add end2end tests
 - [ ] Add CI/CD for unit tests
 - [ ] Add user-friendly Homepage
+- [ ] Add Crisp template equivalent
+- [ ] Add Techlead template equivalent
