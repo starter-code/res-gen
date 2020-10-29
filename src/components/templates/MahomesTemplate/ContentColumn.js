@@ -271,7 +271,7 @@ Summary.propTypes = {
   description: PropTypes.string,
 };
 
-export const Content = ({ data }) => {
+export const ContentColumn = ({ data }) => {
   return (
     <View style={styles['column--content']}>
       <Text style={styles['section-content--heading']}>
@@ -290,7 +290,7 @@ export const Content = ({ data }) => {
   );
 };
 
-Content.propTypes = {
+ContentColumn.propTypes = {
   data: PropTypes.shape({
     summary: PropTypes.shape({
       heading: PropTypes.string,
