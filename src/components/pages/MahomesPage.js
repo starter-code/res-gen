@@ -1,11 +1,11 @@
 import React from 'react';
-import { Mahomes } from 'templates/MahomesTemplate/MahomesTemplate';
+import { MahomesTemplate } from 'templates/MahomesTemplate';
 
 export const MahomesPage = () => {
   return (
-    <div className="googleDoc-page">
+    <div className="mahomes-page">
       <h1>Template</h1>
-      <Mahomes />
+      <MahomesTemplate />
     </div>
   );
 };

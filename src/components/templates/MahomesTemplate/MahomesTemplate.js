@@ -1,6 +1,7 @@
 import React from 'react';
-import { PDFViewer, Page, Document, StyleSheet, View } from 'react-pdf';
-import { Content } from './Content';
+import { StyleSheet, View } from 'react-pdf';
+import { generatePDFTemplate } from '../BaseTemplate/BaseTemplate';
+import { ContentColumn } from './ContentColumn';
 import { Heading } from './Heading';
 import { InfoColumn } from './InfoColumn';
 import data from '../../../example-json/john_smith.json';
@@ -17,18 +18,20 @@ const styles = StyleSheet.create({
   },
 });
 
-export const Mahomes = () => {
+const UnwrappedMahomesTemplate = () => {
   return (
-    <PDFViewer className="pdf-viewer">
-      <Document>
-        <Page style={styles.page}>
-          <Heading />
-          <View style={styles.columns}>
-            <Content data={data} />
-            <InfoColumn data={data} />
-          </View>
-        </Page>
-      </Document>
-    </PDFViewer>
+    <React.Fragment>
+      <Heading />
+      <View style={styles.columns}>
+        <ContentColumn data={data} />
+        <InfoColumn data={data} />
+      </View>
+    </React.Fragment>
   );
 };
+
+export const MahomesTemplate = generatePDFTemplate({
+  Template: UnwrappedMahomesTemplate,
+  styles,
+  displayName: 'MahomesTemplate',
+});

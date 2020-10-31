@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
   'column--info': {
     backgroundColor: '#EEE',
     color: 'black',
-    padding: '24px 0 0 12px',
+    padding: '6px 0 0 12px',
     width: '35%',
   },
   'heading-info--name': {
