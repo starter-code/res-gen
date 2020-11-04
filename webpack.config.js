@@ -48,6 +48,7 @@ module.exports = {
   },
   resolve: {
     alias: {
+      customizers: path.resolve(__dirname, 'src/components/customizers'),
       fonts: path.resolve(__dirname, 'src/fonts'),
       pages: path.resolve(__dirname, 'src/components/pages'),
       'react-pdf': path.resolve(__dirname, 'node_modules/@react-pdf/renderer'),
