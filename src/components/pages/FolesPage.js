@@ -1,5 +1,5 @@
 import React from 'react';
-import { FolesTemplate } from 'templates/FolesTemplate';
+import { FolesTemplate } from 'src/templates/FolesTemplate';
 
 export const FolesPage = () => {
   return (

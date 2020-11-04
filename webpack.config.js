@@ -48,11 +48,12 @@ module.exports = {
   },
   resolve: {
     alias: {
-      customizers: path.resolve(__dirname, 'src/components/customizers'),
-      fonts: path.resolve(__dirname, 'src/fonts'),
-      pages: path.resolve(__dirname, 'src/components/pages'),
       'react-pdf': path.resolve(__dirname, 'node_modules/@react-pdf/renderer'),
-      templates: path.resolve(__dirname, 'src/components/templates'),
+      'src/components': path.resolve(__dirname, 'src/components'),
+      'src/customizers': path.resolve(__dirname, 'src/components/customizers'),
+      'src/fonts': path.resolve(__dirname, 'src/fonts/fonts.js'),
+      'src/pages': path.resolve(__dirname, 'src/components/pages'),
+      'src/templates': path.resolve(__dirname, 'src/components/templates'),
     },
   },
   plugins: [

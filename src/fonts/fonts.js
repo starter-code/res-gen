@@ -1,16 +1,16 @@
 import { Font } from 'react-pdf';
-import RobotoLight from 'fonts/Roboto-Light.ttf';
-import RobotoItalicLight from 'fonts/Roboto-LightItalic.ttf';
-import Roboto from 'fonts/Roboto-Regular.ttf';
-import RobotoItalic from 'fonts/Roboto-Italic.ttf';
-import RobotoBold from 'fonts/Roboto-Bold.ttf';
-import RobotoItalicBold from 'fonts/Roboto-BoldItalic.ttf';
-import Merriweather from 'fonts/Merriweather-Regular.ttf';
-import MerriweatherLight from 'fonts/Merriweather-Light.ttf';
-import MerriweatherBold from 'fonts/Merriweather-Bold.ttf';
-import MerriweatherBoldItalic from 'fonts/Merriweather-BoldItalic.ttf';
-import MerriweatherItalic from 'fonts/Merriweather-Italic.ttf';
-import MerriweatherLightItalic from 'fonts/Merriweather-LightItalic.ttf';
+import RobotoLight from './Roboto-Light.ttf';
+import RobotoItalicLight from './Roboto-LightItalic.ttf';
+import Roboto from './Roboto-Regular.ttf';
+import RobotoItalic from './Roboto-Italic.ttf';
+import RobotoBold from './Roboto-Bold.ttf';
+import RobotoItalicBold from './Roboto-BoldItalic.ttf';
+import Merriweather from './Merriweather-Regular.ttf';
+import MerriweatherLight from './Merriweather-Light.ttf';
+import MerriweatherBold from './Merriweather-Bold.ttf';
+import MerriweatherBoldItalic from './Merriweather-BoldItalic.ttf';
+import MerriweatherItalic from './Merriweather-Italic.ttf';
+import MerriweatherLightItalic from './Merriweather-LightItalic.ttf';
 
 Font.register({
   family: 'Roboto',

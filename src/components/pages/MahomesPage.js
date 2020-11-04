@@ -1,5 +1,5 @@
 import React from 'react';
-import { MahomesTemplate } from 'templates/MahomesTemplate';
+import { MahomesTemplate } from 'src/templates/MahomesTemplate';
 
 export const MahomesPage = () => {
   return (
