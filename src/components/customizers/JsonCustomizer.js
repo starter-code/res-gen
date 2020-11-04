@@ -2,9 +2,6 @@ import React, { useRef, useEffect } from 'react';
 import Codemirror from 'codemirror';
 import data from '../../example-json/john_smith.json';
 
-// console.log(Codemirror);
-// console.log(Object.keys(Codemirror));
-
 const editorOptions = {
   mode: { name: 'javascript', json: true },
   lineNumbers: true,
