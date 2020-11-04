@@ -7,7 +7,7 @@ import {
   FolesPage,
   MahomesPage,
   EditorPlayground,
-} from 'pages';
+} from 'src/pages';
 
 export const Routes = () => {
   return (

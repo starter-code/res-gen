@@ -4,7 +4,7 @@ import { HashRouter } from 'react-router-dom';
 import './scss/index.scss';
 import App from './components/app/App';
 import * as serviceWorker from './serviceWorker';
-import 'fonts/fonts.js';
+import 'src/fonts';
 
 ReactDOM.render(
   <HashRouter>
