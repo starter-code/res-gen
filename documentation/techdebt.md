@@ -4,3 +4,4 @@ TECH DEBT
 - [ ] Mahomes template styleNames are inconsistent
 - [ ] Template styles idaelly should be passed down from props
 - [ ] Customizer should show errors on invalid JSON
+- [ ] Make button submit on key press Enter

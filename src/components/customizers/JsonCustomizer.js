@@ -1,64 +1,38 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import Codemirror from 'codemirror';
 import data from '../../example-json/john_smith.json';
+import { editorOptions } from './EditorOptions';
+import PropTypes from 'prop-types';
 
-const editorOptions = {
-  mode: { name: 'javascript', json: true },
-  lineNumbers: true,
-  lineWrapping: true,
-  theme: 'dracula',
-  extraKeys: {
-    'Ctrl-Q': (cm) => {
-      cm.foldCode(cm.getCursor());
-    },
-  },
-  foldGutter: true,
-  gutters: ['CodeMirror-linenumbers', 'CodeMirror-foldgutter'],
-  foldOptions: {
-    widget: (from, to) => {
-      var count = undefined;
-
-      // Get open / close token
-      var startToken = '{',
-        endToken = '}';
-      var prevLine = window.editor_json.getLine(from.line);
-      if (prevLine.lastIndexOf('[') > prevLine.lastIndexOf('{')) {
-        (startToken = '['), (endToken = ']');
-      }
-
-      // Get json content
-      var internal = window.editor_json.getRange(from, to);
-      var toParse = startToken + internal + endToken;
-
-      // Get key count
-      try {
-        var parsed = JSON.parse(toParse);
-        count = Object.keys(parsed).length;
-      } catch (e) {
-        console.error(e);
-      }
-
-      return count ? `\u21A4${count}\u21A6` : '\u2194';
-    },
-  },
-};
-
-export const JsonCustomizer = () => {
+export const JsonCustomizer = ({ setData }) => {
+  const [editor, setEditor] = useState(null);
   const editorRef = useRef(null);
 
   const onHandleChange = () => {};
+  const handleClick = () => {
+    const data = JSON.parse(editor.doc.getValue());
+    setData(data);
+  };
 
   useEffect(() => {
-    Codemirror.fromTextArea(editorRef.current, editorOptions);
+    setEditor(Codemirror.fromTextArea(editorRef.current, editorOptions));
+    setData(data);
   }, [editorRef]);
 
   return (
     <div>
-      <textarea
-        onChange={onHandleChange}
-        value={JSON.stringify(data, null, 2)}
-        ref={editorRef}
-      ></textarea>
+      <button onClick={handleClick}>Click me</button>
+      <form>
+        <textarea
+          onChange={onHandleChange}
+          value={JSON.stringify(data, null, 2)}
+          ref={editorRef}
+        ></textarea>
+      </form>
     </div>
   );
+};
+
+JsonCustomizer.propTypes = {
+  setData: PropTypes.func,
 };

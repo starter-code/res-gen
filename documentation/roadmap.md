@@ -1,8 +1,7 @@
 VERSION 0.2.0 (Customizers)
 
-- [ ] Add JSON customizer for resume data
+- [x] Add JSON customizer for resume data
 - [ ] Add CSS customizer
-- [ ] Add special options customizer to hide, reorder
 
 VERSION 0.1.1 (Mini Code Refactors)
 
@@ -11,8 +10,8 @@ VERSION 0.1.1 (Mini Code Refactors)
 
 VERSION 0.1.0 (Resume-Templates)
 
-- [ ] Add Foles template
-- [ ] Add Mahomes template
+- [x] Add Foles template
+- [x] Add Mahomes template
 
 VERSION 0.0.3 (React-PDF)
 
