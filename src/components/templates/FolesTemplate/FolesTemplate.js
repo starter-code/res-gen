@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-pdf';
 import { InfoColumn } from './Info/InfoColumn';
 import { ContentColumn } from './Content/ContentColumn';
 import { generatePDFTemplate } from '../BaseTemplate/BaseTemplate';
-import data from '../../../example-json/john_smith.json';
+import PropTypes from 'prop-types';
 
 const styles = StyleSheet.create({
   page: {
@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const UnwrappedFolesTemplate = () => {
+const UnwrappedFolesTemplate = ({ data }) => {
   return (
     <React.Fragment>
       <InfoColumn data={data} />
@@ -27,3 +27,8 @@ export const FolesTemplate = generatePDFTemplate({
   styles,
   displayName: 'FolesTemplate',
 });
+
+UnwrappedFolesTemplate.propTypes = {
+  count: PropTypes.number,
+  data: PropTypes.object,
+};
