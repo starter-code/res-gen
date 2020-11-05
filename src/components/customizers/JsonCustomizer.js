@@ -10,8 +10,7 @@ export const JsonCustomizer = ({ setData }) => {
 
   const onHandleChange = () => {};
   const handleClick = () => {
-    const data = JSON.parse(editor.doc.getValue());
-    setData(data);
+    setData(JSON.parse(editor.doc.getValue()));
   };
 
   useEffect(() => {
