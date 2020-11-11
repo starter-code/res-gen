@@ -2,19 +2,20 @@ import React from 'react';
 import { Text, View } from 'react-pdf';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
-import WorkExperienceDescriptions from './WorkExperience';
-import DetailsTags from './DetailTags';
+import { WorkExperienceDescriptions } from './WorkExperience';
+import { DetailsTags } from './DetailTags';
+import { styles } from './content-styles';
 
 const ProjectHeading = ({ project, dates, descriptor, title }) => {
   return (
     <View>
-      <View style={['project-content--heading']}>
-        <Text style={['project-content--project']}>
+      <View style={styles['project-content--heading']}>
+        <Text style={styles['project-content--project']}>
           {project} {!!descriptor && '--'}{' '}
         </Text>
-        <Text style={['project-content--descriptor']}> {descriptor}</Text>
+        <Text style={styles['project-content--descriptor']}> {descriptor}</Text>
       </View>
-      <View style={['project-content--subheading']}>
+      <View style={styles['project-content--subheading']}>
         <Text>{title}</Text>
         <Text>{dates}</Text>
       </View>
@@ -55,9 +56,11 @@ Project.propTypes = {
   title: PropTypes.string,
 };
 
-export const Projects = ({ details }) => {
+export const Projects = ({ details, heading }) => {
+  console.log(details);
   return (
     <View>
+      <Text style={styles['section-content--heading']}>{heading}</Text>
       {_.map(details, (details, index) => {
         return <Project {...details} key={index} />;
       })}
@@ -67,4 +70,5 @@ export const Projects = ({ details }) => {
 
 Projects.propTypes = {
   details: PropTypes.array,
+  heading: PropTypes.string,
 };

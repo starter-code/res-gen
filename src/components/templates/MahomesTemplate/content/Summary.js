@@ -2,23 +2,15 @@ import React from 'react';
 import { Text, View } from 'react-pdf';
 
 import PropTypes from 'prop-types';
+import { styles } from './content-styles';
 
-const SummaryHeading = () => {
+export const Summary = ({ description, heading }) => {
   return (
     <View>
-      <View style={['summary--heading']}></View>
-    </View>
-  );
-};
-SummaryHeading.propTypes = {
-  description: PropTypes.string,
-};
-
-export const Summary = ({ description }) => {
-  return (
-    <View>
-      <SummaryHeading />
-      <View style={['summary--description']}>
+      <View style={styles['summary--heading']}>
+        <Text style={styles['section-content--heading']}>{heading}</Text>
+      </View>
+      <View style={styles['summary--description']}>
         <Text>{description}</Text>
       </View>
     </View>
@@ -27,4 +19,5 @@ export const Summary = ({ description }) => {
 
 Summary.propTypes = {
   description: PropTypes.string,
+  heading: PropTypes.string,
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View } from 'react-pdf';
+import { View } from 'react-pdf';
 import PropTypes from 'prop-types';
 import { styles } from './content-styles';
 import { WorkExperiences } from './WorkExperience';
@@ -7,20 +7,23 @@ import { Projects } from './Projects';
 import { Summary } from './Summary';
 
 export const ContentColumn = ({ data }) => {
+  const {
+    summary: { description: summaryDescription, heading: summaryHeading },
+    projects: { details: projectDetails, heading: projectHeading },
+    'work-experience': {
+      details: workExperienceDetails,
+      heading: WorkExperienceHeading,
+    },
+  } = data;
+
   return (
     <View style={styles['column--content']}>
-      <Text style={styles['section-content--heading']}>
-        {data.summary.heading}
-      </Text>
-      <Summary description={data.summary.description} />
-      <Text style={styles['section-content--heading']}>
-        {data.projects.heading}
-      </Text>
-      <Projects details={data.projects.details} />
-      <Text style={styles['section-content--heading']}>
-        {data['work-experience'].heading}
-      </Text>
-      <WorkExperiences details={data['work-experience'].details} />
+      <Summary description={summaryDescription} heading={summaryHeading} />
+      <Projects details={projectDetails} heading={projectHeading} />
+      <WorkExperiences
+        details={workExperienceDetails}
+        heading={WorkExperienceHeading}
+      />
     </View>
   );
 };

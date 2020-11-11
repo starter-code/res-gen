@@ -2,17 +2,18 @@ import React from 'react';
 import { Text, View } from 'react-pdf';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
-import WorkExperienceHeading from './WorkExperienceHeading';
-import DetailsTags from './DetailTags';
+import { WorkExperienceHeading } from './WorkExperienceHeading';
+import { DetailsTags } from './DetailTags';
+import { styles } from './content-styles';
 
-const WorkExperienceDescriptions = ({ descriptions }) => {
+export const WorkExperienceDescriptions = ({ descriptions }) => {
   return (
     <View>
       {_.map(descriptions, (description, index) => {
         return (
           <Text
             key={index}
-            style={['work-experience-content--descriptions-item']}
+            style={styles['work-experience-content--descriptions-item']}
           >
             &#8226; {description}
           </Text>
@@ -57,9 +58,10 @@ WorkExperience.propTypes = {
   title: PropTypes.string,
 };
 
-export const WorkExperiences = ({ details }) => {
+export const WorkExperiences = ({ details, heading }) => {
   return (
     <View>
+      <Text style={styles['section-content--heading']}>{heading}</Text>
       {_.map(details, (details, index) => {
         return <WorkExperience {...details} key={index} />;
       })}
@@ -69,4 +71,5 @@ export const WorkExperiences = ({ details }) => {
 
 WorkExperiences.propTypes = {
   details: PropTypes.array,
+  heading: PropTypes.string,
 };
