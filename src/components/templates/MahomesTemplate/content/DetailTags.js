@@ -6,13 +6,10 @@ import { styles } from './content-styles';
 
 export const DetailsTags = ({ tags }) => {
   return (
-    <View style={styles['work-experience-content--tags']}>
+    <View style={styles['work-experience-tags']}>
       {_.map(tags, (tag, tagIndex) => {
         return (
-          <Text
-            key={tagIndex}
-            style={styles['work-experience-content--tags-item']}
-          >
+          <Text key={tagIndex} style={styles['tag-item']}>
             {tag}
           </Text>
         );

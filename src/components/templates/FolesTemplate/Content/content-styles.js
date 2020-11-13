@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-pdf';
 
 export const styles = StyleSheet.create({
-  'column--content': {
+  'column-content': {
     backgroundColor: 'white',
     padding: '24px 24px 0 24px',
     width: '65%',

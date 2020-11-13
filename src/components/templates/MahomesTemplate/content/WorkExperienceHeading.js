@@ -7,13 +7,13 @@ import { styles } from './content-styles';
 export const WorkExperienceHeading = ({ company, dates, location, title }) => {
   return (
     <View>
-      <View style={styles['work-experience-content--heading']}>
+      <View style={styles['work-experience-heading']}>
         <Text>
           {company} | {location}
         </Text>
         <Text>{dates}</Text>
       </View>
-      <Text style={styles['work-experience-content--title']}>{title}</Text>
+      <Text style={styles['work-experience-title']}>{title}</Text>
     </View>
   );
 };

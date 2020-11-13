@@ -8,11 +8,11 @@ import { styles } from './info-styles';
 export const Skills = ({ data }) => {
   return (
     <View>
-      <Text style={styles['section-info--heading-second']}>Skills</Text>
-      <View style={styles['section--skills-info']}>
+      <Text style={styles['section-info-second']}>Skills</Text>
+      <View style={styles['section-skills-info']}>
         {_.map(data.skills, (skill, index) => {
           return (
-            <Text style={styles['section--skills-info--text']} key={index}>
+            <Text style={styles['skill-item']} key={index}>
               {skill}
             </Text>
           );
@@ -23,6 +23,7 @@ export const Skills = ({ data }) => {
 };
 
 Skills.propTypes = {
-  data: PropTypes.arrayOf(PropTypes.string),
-  skills: PropTypes.arrayOf(PropTypes.string),
+  data: PropTypes.shape({
+    skills: PropTypes.arrayOf(PropTypes.string),
+  }),
 };

@@ -9,13 +9,13 @@ import { styles } from './content-styles';
 const ProjectHeading = ({ project, dates, descriptor, title }) => {
   return (
     <View>
-      <View style={styles['project-content--heading']}>
-        <Text style={styles['project-content--project']}>
+      <View style={styles['project-heading']}>
+        <Text style={styles['project-project']}>
           {project} {!!descriptor && '--'}{' '}
         </Text>
-        <Text style={styles['project-content--descriptor']}> {descriptor}</Text>
+        <Text style={styles['project-descriptor']}> {descriptor}</Text>
       </View>
-      <View style={styles['project-content--subheading']}>
+      <View style={styles['project-subheading']}>
         <Text>{title}</Text>
         <Text>{dates}</Text>
       </View>
@@ -57,10 +57,9 @@ Project.propTypes = {
 };
 
 export const Projects = ({ details, heading }) => {
-  console.log(details);
   return (
     <View>
-      <Text style={styles['section-content--heading']}>{heading}</Text>
+      <Text style={styles['section-heading']}>{heading}</Text>
       {_.map(details, (details, index) => {
         return <Project {...details} key={index} />;
       })}

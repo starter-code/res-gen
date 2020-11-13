@@ -8,21 +8,10 @@ export const Links = ({ contactInfo }) => {
   const { github, linkedin, website } = contactInfo;
   return (
     <View>
-      <Text style={styles['section-info--heading']}>Links</Text>
-      <View style={styles['section--contact-info']}>
-        <View style={styles['contact-info--contact-item']}>
-          <Text>Github: </Text>
-          <Text>{github}</Text>
-        </View>
-        <View style={styles['contact-info--contact-item']}>
-          <Text>LinkedIn: </Text>
-          <Text>{linkedin}</Text>
-        </View>
-        <View style={styles['contact-info--contact-item']}>
-          <Text>Website: </Text>
-          <Text>{website}</Text>
-        </View>
-      </View>
+      <Text style={styles['info-heading']}>Links</Text>
+      <Text style={styles['list-item']}>Github: {github}</Text>
+      <Text style={styles['list-item']}>LinkedIn: {linkedin}</Text>
+      <Text style={styles['list-item']}>Website: {website}</Text>
     </View>
   );
 };

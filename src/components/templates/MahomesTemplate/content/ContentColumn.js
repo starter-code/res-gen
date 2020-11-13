@@ -17,7 +17,7 @@ export const ContentColumn = ({ data }) => {
   } = data;
 
   return (
-    <View style={styles['column--content']}>
+    <View style={styles['column-content']}>
       <Summary description={summaryDescription} heading={summaryHeading} />
       <Projects details={projectDetails} heading={projectHeading} />
       <WorkExperiences

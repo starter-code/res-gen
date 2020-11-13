@@ -4,20 +4,18 @@ import { Text, View } from 'react-pdf';
 
 import { styles } from './info-styles';
 
-export const Contacts = ({ contactInfo, location }) => {
-  const { email } = contactInfo;
+export const Contacts = ({ email, location }) => {
   return (
     <View>
-      <Text style={styles['section-info--heading']}>Contact</Text>
-      <View style={styles['heading--location-item']}>
-        <Text>{email}</Text>
-        <Text>{location}</Text>
-      </View>
+      <Text style={styles['info-heading']}>Contact</Text>
+      <Text style={styles['list-item']}>{email}</Text>
+
+      <Text style={styles['list-item']}>{location}</Text>
     </View>
   );
 };
 
 Contacts.propTypes = {
-  contactInfo: PropTypes.object,
+  email: PropTypes.string,
   location: PropTypes.string,
 };

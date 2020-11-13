@@ -11,10 +11,7 @@ export const WorkExperienceDescriptions = ({ descriptions }) => {
     <View>
       {_.map(descriptions, (description, index) => {
         return (
-          <Text
-            key={index}
-            style={styles['work-experience-content--descriptions-item']}
-          >
+          <Text key={index} style={styles['work-experience-description']}>
             &#8226; {description}
           </Text>
         );
@@ -61,7 +58,7 @@ WorkExperience.propTypes = {
 export const WorkExperiences = ({ details, heading }) => {
   return (
     <View>
-      <Text style={styles['section-content--heading']}>{heading}</Text>
+      <Text style={styles['section-heading']}>{heading}</Text>
       {_.map(details, (details, index) => {
         return <WorkExperience {...details} key={index} />;
       })}

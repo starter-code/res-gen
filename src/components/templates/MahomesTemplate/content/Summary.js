@@ -7,10 +7,10 @@ import { styles } from './content-styles';
 export const Summary = ({ description, heading }) => {
   return (
     <View>
-      <View style={styles['summary--heading']}>
-        <Text style={styles['section-content--heading']}>{heading}</Text>
+      <View style={styles['summary-heading']}>
+        <Text style={styles['section-heading']}>{heading}</Text>
       </View>
-      <View style={styles['summary--description']}>
+      <View style={styles['summary-description']}>
         <Text>{description}</Text>
       </View>
     </View>

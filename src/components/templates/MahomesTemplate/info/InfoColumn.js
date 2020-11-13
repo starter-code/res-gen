@@ -15,9 +15,11 @@ export const InfoColumn = ({ data }) => {
     skills: skillsData,
   } = data;
 
+  const { email } = contactInfo;
+
   return (
-    <View style={styles['column--info']}>
-      <Contacts contactInfo={contactInfo} location={location} />
+    <View style={styles['column-info']}>
+      <Contacts email={email} location={location} />
       <Links contactInfo={contactInfo} />
       <Skills skillsData={skillsData} data={data} />
     </View>
