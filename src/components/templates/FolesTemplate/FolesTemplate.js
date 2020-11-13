@@ -1,9 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { StyleSheet } from 'react-pdf';
 import { InfoColumn } from './Info/InfoColumn';
 import { ContentColumn } from './Content/ContentColumn';
 import { generatePDFTemplate } from '../BaseTemplate/BaseTemplate';
-import PropTypes from 'prop-types';
 
 const styles = StyleSheet.create({
   page: {
@@ -29,6 +29,5 @@ export const FolesTemplate = generatePDFTemplate({
 });
 
 UnwrappedFolesTemplate.propTypes = {
-  count: PropTypes.number,
   data: PropTypes.object,
 };

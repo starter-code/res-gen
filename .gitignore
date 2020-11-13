@@ -22,3 +22,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+# example-pdfs
+# only includes john_smith.json excludes everything else.
+/src/example-json/*
+!/src/example-json/john_smith.json

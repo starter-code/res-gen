@@ -1,26 +1,24 @@
-import React from 'react';
-import { Text, View, StyleSheet } from 'react-pdf';
-import data from '../../../example-json/john_smith.json';
+import { StyleSheet } from 'react-pdf';
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
   'contact-info--contact-item': {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
     margin: '0 12px 0 0',
   },
-  'column--info': {
+  'column-info': {
     backgroundColor: '#276a97',
     color: 'white',
     padding: '24px 0 24px 0',
     width: '100%',
   },
-  'heading-info--name': {
+  'heading-name': {
     fontSize: 30,
     fontWeight: 'bold',
     padding: '0 0 10px 0',
   },
-  'heading-info--title': {
+  'heading-title': {
     fontSize: 15,
   },
   'section-info--heading': {
@@ -34,20 +32,9 @@ const styles = StyleSheet.create({
     padding: '0 0 0 24px',
   },
   'section--heading-info': {
-    padding: '0 0 0 24px',
+    padding: '0 0 0 12px',
   },
   'section--skills-info': {
     padding: '0 0 0 24px',
   },
 });
-
-export const Heading = () => {
-  return (
-    <View style={styles['column--info']}>
-      <View style={styles['section--heading-info']}>
-        <Text style={styles['heading-info--name']}>{data.heading.name}</Text>
-        <Text style={styles['heading-info--title']}>{data.heading.title}</Text>
-      </View>
-    </View>
-  );
-};

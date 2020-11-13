@@ -18,7 +18,7 @@ export const InfoColumn = ({ data }) => {
   } = data;
 
   return (
-    <View style={styles['column--info']}>
+    <View style={styles['column-info']}>
       <InfoHeader name={name} title={title} location={location} />
       <Contacts contactInfo={contactInfo} />
       <InfoSubSection data={languagesData} heading="Languages" />
