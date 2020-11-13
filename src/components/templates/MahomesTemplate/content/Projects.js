@@ -11,12 +11,12 @@ const ProjectHeading = ({ project, dates, descriptor, title }) => {
     <View>
       <View style={styles['project-heading']}>
         <Text style={styles['project-project']}>
-          {project} {!!descriptor && '--'}{' '}
+          {project} {!!descriptor && '|'}{' '}
         </Text>
         <Text style={styles['project-descriptor']}> {descriptor}</Text>
       </View>
       <View style={styles['project-subheading']}>
-        <Text>{title}</Text>
+        <Text style={styles['project-title']}>{title}</Text>
         <Text>{dates}</Text>
       </View>
     </View>

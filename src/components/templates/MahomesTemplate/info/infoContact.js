@@ -9,7 +9,6 @@ export const Contacts = ({ email, location }) => {
     <View>
       <Text style={styles['info-heading']}>Contact</Text>
       <Text style={styles['list-item']}>{email}</Text>
-
       <Text style={styles['list-item']}>{location}</Text>
     </View>
   );

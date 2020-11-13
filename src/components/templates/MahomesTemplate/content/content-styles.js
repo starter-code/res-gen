@@ -20,6 +20,9 @@ export const styles = StyleSheet.create({
   'work-experience-title': {
     fontWeight: 'bold',
   },
+  'project-title': {
+    fontWeight: 'bold',
+  },
   'work-experience-tags': {
     display: 'flex',
     flexDirection: 'row',
@@ -47,11 +50,8 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
-  'project-project': {
-    fontWeight: 'bold',
-  },
   'project-descriptor': {
-    fontSize: '8',
+    fontSize: '10',
     fontFamily: 'MerriweatherItalic',
     padding: '2px 0 0 0',
   },
