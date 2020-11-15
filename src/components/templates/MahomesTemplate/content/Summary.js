@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, View } from 'react-pdf';
 
 import PropTypes from 'prop-types';
-import { styles } from './content-styles';
+import { styles } from '../Styles';
 
 export const Summary = ({ description, heading }) => {
   return (

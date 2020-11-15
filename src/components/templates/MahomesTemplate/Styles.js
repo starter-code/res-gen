@@ -1,16 +1,24 @@
 import { StyleSheet } from 'react-pdf';
 
 export const styles = StyleSheet.create({
+  'heading-info': {
+    backgroundColor: '#276a97',
+    color: 'white',
+    padding: '24px 0 24px 24px',
+    width: '100%',
+  },
+  'heading-name': {
+    fontSize: 30,
+    fontWeight: 'bold',
+    padding: '0 0 10px 0',
+  },
+  'heading-title': {
+    fontSize: 15,
+  },
   'column-content': {
     backgroundColor: 'white',
     padding: '0 12px 0 12px',
     width: '65%',
-  },
-  'section-heading': {
-    fontSize: 16,
-    margin: '8px 0 0 0',
-    padding: '0 0 8px 0',
-    fontWeight: 'bold',
   },
   'work-experience-heading': {
     display: 'flex',
@@ -18,9 +26,6 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   'work-experience-title': {
-    fontWeight: 'bold',
-  },
-  'project-title': {
     fontWeight: 'bold',
   },
   'work-experience-tags': {
@@ -39,6 +44,10 @@ export const styles = StyleSheet.create({
   'work-experience-description': {
     margin: '0 0 4px 15px',
     fontSize: 10,
+    flexShrink: 1,
+  },
+  'project-title': {
+    fontWeight: 'bold',
   },
   'project-heading': {
     display: 'flex',
@@ -55,6 +64,12 @@ export const styles = StyleSheet.create({
     fontFamily: 'MerriweatherItalic',
     padding: '2px 0 0 0',
   },
+  'section-heading': {
+    fontSize: 16,
+    margin: '8px 0 0 0',
+    padding: '0 0 8px 0',
+    fontWeight: 'bold',
+  },
   'summary-heading': {
     display: 'flex',
     fontSize: 16,
@@ -67,5 +82,37 @@ export const styles = StyleSheet.create({
     fontSize: 10,
     flexDirection: 'row',
     justifyContent: 'space-between',
+  },
+  'column-info': {
+    backgroundColor: '#EEE',
+    color: 'black',
+    padding: '0 0 0 12px',
+    width: '35%',
+  },
+  'info-heading': {
+    fontSize: 16,
+    fontWeight: 'bold',
+    margin: '8px 0 8px 0',
+    padding: '0 0 0 0px',
+  },
+  'list-item': {
+    display: 'flex',
+    flexDirection: 'row',
+    padding: '0 0 5px 5px',
+  },
+  'skills-info': {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    width: '100%',
+    margin: '3px 0 8px 0',
+  },
+  'skill-item': {
+    backgroundColor: '#276a97',
+    display: 'inline',
+    borderRadius: 8,
+    color: 'white',
+    margin: '0 100px 5px 0',
+    padding: '0 6px',
   },
 });

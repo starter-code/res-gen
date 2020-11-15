@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Text, View } from 'react-pdf';
 
-import { styles } from './info-styles';
+import { styles } from '../Styles';
 
 export const Links = ({ contactInfo }) => {
   const { github, linkedin, website } = contactInfo;

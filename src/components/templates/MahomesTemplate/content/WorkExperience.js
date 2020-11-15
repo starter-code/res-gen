@@ -4,7 +4,7 @@ import _ from 'lodash';
 import PropTypes from 'prop-types';
 import { WorkExperienceHeading } from './WorkExperienceHeading';
 import { DetailsTags } from './DetailTags';
-import { styles } from './content-styles';
+import { styles } from '../Styles';
 
 export const WorkExperienceDescriptions = ({ descriptions }) => {
   return (

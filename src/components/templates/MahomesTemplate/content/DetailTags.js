@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, View } from 'react-pdf';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
-import { styles } from './content-styles';
+import { styles } from '../Styles';
 
 export const DetailsTags = ({ tags }) => {
   return (
