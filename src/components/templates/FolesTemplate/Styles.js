@@ -37,11 +37,6 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
     borderBottom: 1,
   },
-  'project-content--heading': {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
   'column-info': {
     backgroundColor: 'darkslategrey',
     color: 'white',
@@ -67,7 +62,7 @@ export const styles = StyleSheet.create({
   'info-header-location': {
     fontSize: 14,
   },
-  'info-content-header': {
+  'info-header-content': {
     backgroundColor: '#446F6F',
     fontSize: 16,
     fontWeight: 'bold',

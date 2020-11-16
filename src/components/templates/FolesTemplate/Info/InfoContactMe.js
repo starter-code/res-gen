@@ -8,7 +8,7 @@ export const Contacts = ({ contactInfo }) => {
   const { email, github, linkedin, website } = contactInfo;
   return (
     <View>
-      <Text style={styles['info-content-header']}>Contact</Text>
+      <Text style={styles['info-header-content']}>Contact</Text>
       <View style={styles['info-section']}>
         <View style={styles['contact-item']}>
           <Text>Gmail:</Text>

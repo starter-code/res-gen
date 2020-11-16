@@ -95,7 +95,7 @@ export const styles = StyleSheet.create({
     margin: '8px 0 8px 0',
     padding: '0 0 0 0px',
   },
-  'list-item': {
+  'info-list-item': {
     display: 'flex',
     flexDirection: 'row',
     padding: '0 0 5px 5px',

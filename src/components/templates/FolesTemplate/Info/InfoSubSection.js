@@ -8,7 +8,7 @@ import { styles } from '../Styles';
 export const InfoSubSection = ({ data, heading }) => {
   return (
     <View>
-      <Text style={styles['info-content-header']}>{heading}</Text>
+      <Text style={styles['info-header-content']}>{heading}</Text>
       <View style={styles['info-section']}>
         {_.map(data, (text, index) => {
           return (

@@ -9,9 +9,9 @@ export const Links = ({ contactInfo }) => {
   return (
     <View>
       <Text style={styles['info-heading']}>Socials</Text>
-      <Text style={styles['list-item']}>Github: {github}</Text>
-      <Text style={styles['list-item']}>LinkedIn: {linkedin}</Text>
-      <Text style={styles['list-item']}>Website: {website}</Text>
+      <Text style={styles['info-list-item']}>Github: {github}</Text>
+      <Text style={styles['info-list-item']}>LinkedIn: {linkedin}</Text>
+      <Text style={styles['info-list-item']}>Website: {website}</Text>
     </View>
   );
 };
