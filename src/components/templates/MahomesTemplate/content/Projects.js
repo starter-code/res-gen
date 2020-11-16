@@ -4,13 +4,13 @@ import _ from 'lodash';
 import PropTypes from 'prop-types';
 import { WorkExperienceDescriptions } from './WorkExperience';
 import { DetailsTags } from './DetailTags';
-import { styles } from './content-styles';
+import { styles } from '../Styles';
 
 const ProjectHeading = ({ project, dates, descriptor, title }) => {
   return (
     <View>
       <View style={styles['project-heading']}>
-        <Text style={styles['project-project']}>
+        <Text>
           {project} {!!descriptor && '|'}{' '}
         </Text>
         <Text style={styles['project-descriptor']}> {descriptor}</Text>

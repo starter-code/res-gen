@@ -3,13 +3,13 @@ import React from 'react';
 import { Text, View } from 'react-pdf';
 import _ from 'lodash';
 
-import { styles } from './info-styles';
+import { styles } from '../Styles';
 
 export const Skills = ({ data }) => {
   return (
     <View>
-      <Text style={styles['section-info-second']}>Skills</Text>
-      <View style={styles['section-skills-info']}>
+      <Text style={styles['info-heading']}>Skills</Text>
+      <View style={styles['skills-info']}>
         {_.map(data.skills, (skill, index) => {
           return (
             <Text style={styles['skill-item']} key={index}>

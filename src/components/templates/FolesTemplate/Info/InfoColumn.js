@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { View } from 'react-pdf';
 
-import { styles } from './info-styles';
+import { styles } from '../Styles';
 import { InfoHeader } from './InfoHeader';
 import { Contacts } from './InfoContactMe';
 import { InfoSubSection } from './InfoSubSection';

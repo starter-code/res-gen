@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Text, View } from 'react-pdf';
 
-import { styles } from './content-styles';
+import { styles } from '../Styles';
 
 export const DescriptionsList = ({ descriptions }) => {
   return (

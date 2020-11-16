@@ -2,7 +2,7 @@ import React from 'react';
 import { View } from 'react-pdf';
 
 import PropTypes from 'prop-types';
-import { styles } from './info-styles';
+import { styles } from '../Styles';
 
 import { Contacts } from './infoContact';
 import { Links } from './infoLinks';

@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from 'react-pdf';
 import PropTypes from 'prop-types';
-import { styles } from './content-styles';
+import { styles } from '../Styles';
 import { WorkExperiences } from './WorkExperience';
 import { Projects } from './Projects';
 import { Summary } from './Summary';
