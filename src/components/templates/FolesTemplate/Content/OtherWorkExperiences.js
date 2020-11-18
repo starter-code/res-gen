@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Text, View } from 'react-pdf';
 
-import { styles } from '../Styles';
 import { DetailHeading } from './DetailHeading';
 import { DescriptionsList } from './DescriptionsList';
 
@@ -13,6 +12,7 @@ const OtherWorkExperience = ({
   descriptions,
   location,
   title,
+  style,
 }) => {
   return (
     <View>
@@ -21,8 +21,9 @@ const OtherWorkExperience = ({
         dates={dates}
         title={title}
         location={location}
+        style={style}
       />
-      <DescriptionsList descriptions={descriptions} />
+      <DescriptionsList descriptions={descriptions} style={style} />
     </View>
   );
 };
@@ -33,14 +34,15 @@ OtherWorkExperience.propTypes = {
   descriptions: PropTypes.arrayOf(PropTypes.string),
   location: PropTypes.string,
   title: PropTypes.string,
+  style: PropTypes.object,
 };
 
-export const OtherWorkExperiences = ({ details, heading }) => {
+export const OtherWorkExperiences = ({ details, heading, style }) => {
   return (
     <View>
-      <Text style={styles['section-heading']}>{heading}</Text>
+      <Text style={style['section-heading']}>{heading}</Text>
       {_.map(details, (details, index) => {
-        return <OtherWorkExperience {...details} key={index} />;
+        return <OtherWorkExperience {...details} key={index} style={style} />;
       })}
     </View>
   );
@@ -49,4 +51,5 @@ export const OtherWorkExperiences = ({ details, heading }) => {
 OtherWorkExperiences.propTypes = {
   details: PropTypes.array,
   heading: PropTypes.string,
+  style: PropTypes.object,
 };

@@ -3,16 +3,14 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Text, View } from 'react-pdf';
 
-import { styles } from '../Styles';
-
-export const InfoSubSection = ({ data, heading }) => {
+export const InfoSubSection = ({ data, heading, style }) => {
   return (
     <View>
-      <Text style={styles['info-header-content']}>{heading}</Text>
-      <View style={styles['info-section']}>
+      <Text style={style['info-header-content']}>{heading}</Text>
+      <View style={style['info-section']}>
         {_.map(data, (text, index) => {
           return (
-            <Text style={styles['info-item']} key={index}>
+            <Text style={style['info-item']} key={index}>
               {text}
             </Text>
           );
@@ -25,4 +23,5 @@ export const InfoSubSection = ({ data, heading }) => {
 InfoSubSection.propTypes = {
   data: PropTypes.arrayOf(PropTypes.string),
   heading: PropTypes.string,
+  style: PropTypes.object,
 };

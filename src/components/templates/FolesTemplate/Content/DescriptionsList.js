@@ -3,14 +3,12 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Text, View } from 'react-pdf';
 
-import { styles } from '../Styles';
-
-export const DescriptionsList = ({ descriptions }) => {
+export const DescriptionsList = ({ descriptions, style }) => {
   return (
     <View>
       {_.map(descriptions, (description, index) => {
         return (
-          <Text key={index} style={styles['description-item']}>
+          <Text key={index} style={style['description-item']}>
             &#8226; {description}
           </Text>
         );
@@ -21,4 +19,5 @@ export const DescriptionsList = ({ descriptions }) => {
 
 DescriptionsList.propTypes = {
   descriptions: PropTypes.arrayOf(PropTypes.string),
+  style: PropTypes.object,
 };

@@ -1,6 +1,11 @@
 import { StyleSheet } from 'react-pdf';
 
-export const styles = StyleSheet.create({
+export const style = StyleSheet.create({
+  page: {
+    flexDirection: 'row',
+    fontFamily: 'Roboto',
+    fontSize: 8,
+  },
   'column-content': {
     backgroundColor: 'white',
     padding: '24px 24px 0 24px',
