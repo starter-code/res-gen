@@ -3,16 +3,14 @@ import React from 'react';
 import { Text, View } from 'react-pdf';
 import _ from 'lodash';
 
-import { styles } from '../Styles';
-
-export const Skills = ({ data }) => {
+export const Skills = ({ data, style }) => {
   return (
     <View>
-      <Text style={styles['info-heading']}>Skills</Text>
-      <View style={styles['skills-info']}>
+      <Text style={style['info-heading']}>Skills</Text>
+      <View style={style['skills-info']}>
         {_.map(data.skills, (skill, index) => {
           return (
-            <Text style={styles['skill-item']} key={index}>
+            <Text style={style['skill-item']} key={index}>
               {skill}
             </Text>
           );
@@ -26,4 +24,5 @@ Skills.propTypes = {
   data: PropTypes.shape({
     skills: PropTypes.arrayOf(PropTypes.string),
   }),
+  style: PropTypes.object,
 };

@@ -1,12 +1,11 @@
 import React from 'react';
 import { View } from 'react-pdf';
 import PropTypes from 'prop-types';
-import { styles } from '../Styles';
 import { WorkExperiences } from './WorkExperience';
 import { Projects } from './Projects';
 import { Summary } from './Summary';
 
-export const ContentColumn = ({ data }) => {
+export const ContentColumn = ({ data, style }) => {
   const {
     summary: { description: summaryDescription, heading: summaryHeading },
     projects: { details: projectDetails, heading: projectHeading },
@@ -17,12 +16,21 @@ export const ContentColumn = ({ data }) => {
   } = data;
 
   return (
-    <View style={styles['column-content']}>
-      <Summary description={summaryDescription} heading={summaryHeading} />
-      <Projects details={projectDetails} heading={projectHeading} />
+    <View style={style['column-content']}>
+      <Summary
+        description={summaryDescription}
+        heading={summaryHeading}
+        style={style}
+      />
+      <Projects
+        details={projectDetails}
+        heading={projectHeading}
+        style={style}
+      />
       <WorkExperiences
         details={workExperienceDetails}
         heading={WorkExperienceHeading}
+        style={style}
       />
     </View>
   );
@@ -43,4 +51,5 @@ ContentColumn.propTypes = {
       heading: PropTypes.string,
     }),
   }),
+  style: PropTypes.object,
 };

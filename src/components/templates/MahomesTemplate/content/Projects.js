@@ -4,19 +4,18 @@ import _ from 'lodash';
 import PropTypes from 'prop-types';
 import { WorkExperienceDescriptions } from './WorkExperience';
 import { DetailsTags } from './DetailTags';
-import { styles } from '../Styles';
 
-const ProjectHeading = ({ project, dates, descriptor, title }) => {
+const ProjectHeading = ({ project, dates, descriptor, title, style }) => {
   return (
     <View>
-      <View style={styles['project-heading']}>
+      <View style={style['project-heading']}>
         <Text>
           {project} {!!descriptor && '|'}{' '}
         </Text>
-        <Text style={styles['project-descriptor']}> {descriptor}</Text>
+        <Text style={style['project-descriptor']}> {descriptor}</Text>
       </View>
-      <View style={styles['project-subheading']}>
-        <Text style={styles['project-title']}>{title}</Text>
+      <View style={style['project-subheading']}>
+        <Text style={style['project-title']}>{title}</Text>
         <Text>{dates}</Text>
       </View>
     </View>
@@ -29,9 +28,18 @@ ProjectHeading.propTypes = {
   dates: PropTypes.string,
   location: PropTypes.string,
   title: PropTypes.string,
+  style: PropTypes.object,
 };
 
-const Project = ({ project, dates, descriptor, descriptions, tags, title }) => {
+const Project = ({
+  project,
+  dates,
+  descriptor,
+  descriptions,
+  tags,
+  title,
+  style,
+}) => {
   return (
     <View>
       <ProjectHeading
@@ -39,9 +47,10 @@ const Project = ({ project, dates, descriptor, descriptions, tags, title }) => {
         descriptor={descriptor}
         dates={dates}
         title={title}
+        style={style}
       />
-      <DetailsTags tags={tags} />
-      <WorkExperienceDescriptions descriptions={descriptions} />
+      <DetailsTags tags={tags} style={style} />
+      <WorkExperienceDescriptions descriptions={descriptions} style={style} />
     </View>
   );
 };
@@ -54,14 +63,15 @@ Project.propTypes = {
   location: PropTypes.string,
   tags: PropTypes.arrayOf(PropTypes.string),
   title: PropTypes.string,
+  style: PropTypes.object,
 };
 
-export const Projects = ({ details, heading }) => {
+export const Projects = ({ details, heading, style }) => {
   return (
     <View>
-      <Text style={styles['section-heading']}>{heading}</Text>
+      <Text style={style['section-heading']}>{heading}</Text>
       {_.map(details, (details, index) => {
-        return <Project {...details} key={index} />;
+        return <Project {...details} key={index} style={style} />;
       })}
     </View>
   );
@@ -70,4 +80,5 @@ export const Projects = ({ details, heading }) => {
 Projects.propTypes = {
   details: PropTypes.array,
   heading: PropTypes.string,
+  style: PropTypes.object,
 };

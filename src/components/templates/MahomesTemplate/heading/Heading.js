@@ -1,13 +1,12 @@
 import React from 'react';
 import { Text, View } from 'react-pdf';
 import PropTypes from 'prop-types';
-import { styles } from '../Styles';
 
-export const Heading = ({ name, title }) => {
+export const Heading = ({ name, title, style }) => {
   return (
-    <View style={styles['heading-info']}>
-      <Text style={styles['heading-name']}>{name}</Text>
-      <Text style={styles['heading-title']}>{title}</Text>
+    <View style={style['heading-info']}>
+      <Text style={style['heading-name']}>{name}</Text>
+      <Text style={style['heading-title']}>{title}</Text>
     </View>
   );
 };
@@ -15,4 +14,5 @@ export const Heading = ({ name, title }) => {
 Heading.propTypes = {
   name: PropTypes.string,
   title: PropTypes.string,
+  style: PropTypes.object,
 };

@@ -1,16 +1,14 @@
 import React from 'react';
 import { Text, View } from 'react-pdf';
-
 import PropTypes from 'prop-types';
-import { styles } from '../Styles';
 
-export const Summary = ({ description, heading }) => {
+export const Summary = ({ description, heading, style }) => {
   return (
     <View>
-      <View style={styles['summary-heading']}>
-        <Text style={styles['section-heading']}>{heading}</Text>
+      <View style={style['summary-heading']}>
+        <Text style={style['section-heading']}>{heading}</Text>
       </View>
-      <View style={styles['summary-description']}>
+      <View style={style['summary-description']}>
         <Text>{description}</Text>
       </View>
     </View>
@@ -20,4 +18,5 @@ export const Summary = ({ description, heading }) => {
 Summary.propTypes = {
   description: PropTypes.string,
   heading: PropTypes.string,
+  style: PropTypes.object,
 };
