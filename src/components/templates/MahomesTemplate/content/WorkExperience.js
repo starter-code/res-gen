@@ -4,14 +4,13 @@ import _ from 'lodash';
 import PropTypes from 'prop-types';
 import { WorkExperienceHeading } from './WorkExperienceHeading';
 import { DetailsTags } from './DetailTags';
-import { styles } from '../Styles';
 
-export const WorkExperienceDescriptions = ({ descriptions }) => {
+export const WorkExperienceDescriptions = ({ descriptions, style }) => {
   return (
     <View>
       {_.map(descriptions, (description, index) => {
         return (
-          <Text key={index} style={styles['work-experience-description']}>
+          <Text key={index} style={style['work-experience-description']}>
             &#8226; {description}
           </Text>
         );
@@ -22,6 +21,7 @@ export const WorkExperienceDescriptions = ({ descriptions }) => {
 
 WorkExperienceDescriptions.propTypes = {
   descriptions: PropTypes.arrayOf(PropTypes.string),
+  style: PropTypes.object,
 };
 
 const WorkExperience = ({
@@ -31,6 +31,7 @@ const WorkExperience = ({
   location,
   tags,
   title,
+  style,
 }) => {
   return (
     <View>
@@ -39,9 +40,10 @@ const WorkExperience = ({
         dates={dates}
         title={title}
         location={location}
+        style={style}
       />
-      <DetailsTags tags={tags} />
-      <WorkExperienceDescriptions descriptions={descriptions} />
+      <DetailsTags tags={tags} style={style} />
+      <WorkExperienceDescriptions descriptions={descriptions} style={style} />
     </View>
   );
 };
@@ -53,14 +55,15 @@ WorkExperience.propTypes = {
   location: PropTypes.string,
   tags: PropTypes.arrayOf(PropTypes.string),
   title: PropTypes.string,
+  style: PropTypes.object,
 };
 
-export const WorkExperiences = ({ details, heading }) => {
+export const WorkExperiences = ({ details, heading, style }) => {
   return (
     <View>
-      <Text style={styles['section-heading']}>{heading}</Text>
+      <Text style={style['section-heading']}>{heading}</Text>
       {_.map(details, (details, index) => {
-        return <WorkExperience {...details} key={index} />;
+        return <WorkExperience {...details} key={index} style={style} />;
       })}
     </View>
   );
@@ -69,4 +72,5 @@ export const WorkExperiences = ({ details, heading }) => {
 WorkExperiences.propTypes = {
   details: PropTypes.array,
   heading: PropTypes.string,
+  style: PropTypes.object,
 };

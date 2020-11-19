@@ -1,6 +1,15 @@
 import { StyleSheet } from 'react-pdf';
 
-export const styles = StyleSheet.create({
+export const style = StyleSheet.create({
+  page: {
+    display: 'flex',
+    fontFamily: 'Merriweather',
+    fontSize: 12,
+  },
+  columns: {
+    flexDirection: 'row',
+    height: '100%',
+  },
   'heading-info': {
     backgroundColor: '#276a97',
     color: 'white',

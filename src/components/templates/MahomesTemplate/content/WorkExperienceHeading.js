@@ -1,19 +1,23 @@
 import React from 'react';
 import { Text, View } from 'react-pdf';
-
 import PropTypes from 'prop-types';
-import { styles } from '../Styles';
 
-export const WorkExperienceHeading = ({ company, dates, location, title }) => {
+export const WorkExperienceHeading = ({
+  company,
+  dates,
+  location,
+  title,
+  style,
+}) => {
   return (
     <View>
-      <View style={styles['work-experience-heading']}>
+      <View style={style['work-experience-heading']}>
         <Text>
           {company} | {location}
         </Text>
         <Text>{dates}</Text>
       </View>
-      <Text style={styles['work-experience-title']}>{title}</Text>
+      <Text style={style['work-experience-title']}>{title}</Text>
     </View>
   );
 };
@@ -23,4 +27,5 @@ WorkExperienceHeading.propTypes = {
   dates: PropTypes.string,
   location: PropTypes.string,
   title: PropTypes.string,
+  style: PropTypes.object,
 };

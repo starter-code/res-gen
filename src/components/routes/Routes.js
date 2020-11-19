@@ -8,6 +8,7 @@ import {
   MahomesPage,
   EditorPlayground,
   ExamplePage,
+  CssExamplePage,
 } from 'src/pages';
 
 export const Routes = () => {
@@ -19,6 +20,11 @@ export const Routes = () => {
         <Route exact path="/foles" component={FolesPage} />
         <Route exact path="/mahomes" component={MahomesPage} />
         <Route exact path="/json-customizer-example" component={ExamplePage} />
+        <Route
+          exact
+          path="/css-customizer-example"
+          component={CssExamplePage}
+        />
         <Route exact path="/custom-playground" component={EditorPlayground} />
         <Route path="/" component={NotFoundPage} />
       </Switch>

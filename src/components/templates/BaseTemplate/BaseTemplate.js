@@ -2,8 +2,8 @@ import React from 'react';
 import { PDFViewer, Page, Document } from 'react-pdf';
 import PropTypes from 'prop-types';
 
-export const generatePDFTemplate = ({ Template, styles, displayName }) => {
-  const WrappedTemplate = ({ data }) => {
+export const generatePDFTemplate = ({ Template, displayName }) => {
+  const WrappedTemplate = ({ data, style }) => {
     if (data === undefined) {
       return <div></div>;
     }
@@ -11,8 +11,8 @@ export const generatePDFTemplate = ({ Template, styles, displayName }) => {
       <React.Fragment>
         <PDFViewer className="pdf-viewer">
           <Document>
-            <Page size="LETTER" style={styles.page}>
-              <Template data={data} />
+            <Page size="LETTER" style={style.page}>
+              <Template data={data} style={style} />
             </Page>
           </Document>
         </PDFViewer>
@@ -24,6 +24,7 @@ export const generatePDFTemplate = ({ Template, styles, displayName }) => {
 
   WrappedTemplate.propTypes = {
     data: PropTypes.object,
+    style: PropTypes.object,
   };
 
   return WrappedTemplate;

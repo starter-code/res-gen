@@ -2,14 +2,13 @@ import React from 'react';
 import { Text, View } from 'react-pdf';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
-import { styles } from '../Styles';
 
-export const DetailsTags = ({ tags }) => {
+export const DetailsTags = ({ tags, style }) => {
   return (
-    <View style={styles['work-experience-tags']}>
+    <View style={style['work-experience-tags']}>
       {_.map(tags, (tag, tagIndex) => {
         return (
-          <Text key={tagIndex} style={styles['tag-item']}>
+          <Text key={tagIndex} style={style['tag-item']}>
             {tag}
           </Text>
         );
@@ -20,4 +19,5 @@ export const DetailsTags = ({ tags }) => {
 
 DetailsTags.propTypes = {
   tags: PropTypes.arrayOf(PropTypes.string),
+  style: PropTypes.object,
 };

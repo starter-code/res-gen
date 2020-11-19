@@ -1,14 +1,12 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { View } from 'react-pdf';
-
-import { styles } from '../Styles';
 import { WorkExperiences } from './WorkExperiences';
 import { Projects } from './Projects';
 import { Educations } from './Educations';
 import { OtherWorkExperiences } from './OtherWorkExperiences';
 
-export const ContentColumn = ({ data }) => {
+export const ContentColumn = ({ data, style }) => {
   const {
     projects: { details: projectDetails, heading: projectsHeading },
     education: { details: educationDetails, heading: educationHeading },
@@ -21,18 +19,27 @@ export const ContentColumn = ({ data }) => {
       heading: OtherWorkExperienceHeading,
     },
   } = data;
-
   return (
-    <View style={styles['column-content']}>
+    <View style={style['column-content']}>
       <WorkExperiences
         details={workExperienceDetails}
         heading={workExperienceHeading}
+        style={style}
       />
-      <Projects details={projectDetails} heading={projectsHeading} />
-      <Educations details={educationDetails} heading={educationHeading} />
+      <Projects
+        details={projectDetails}
+        heading={projectsHeading}
+        style={style}
+      />
+      <Educations
+        details={educationDetails}
+        heading={educationHeading}
+        style={style}
+      />
       <OtherWorkExperiences
         details={OtherWorkExperienceDetails}
         heading={OtherWorkExperienceHeading}
+        style={style}
       />
     </View>
   );
@@ -45,4 +52,5 @@ ContentColumn.propTypes = {
     'work-experience': PropTypes.object,
     'other-work-experience': PropTypes.object,
   }),
+  style: PropTypes.object,
 };

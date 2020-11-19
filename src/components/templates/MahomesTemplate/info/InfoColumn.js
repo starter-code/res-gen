@@ -1,14 +1,11 @@
 import React from 'react';
 import { View } from 'react-pdf';
-
 import PropTypes from 'prop-types';
-import { styles } from '../Styles';
-
 import { Contacts } from './infoContact';
 import { Links } from './infoLinks';
 import { Skills } from './infoSkills';
 
-export const InfoColumn = ({ data }) => {
+export const InfoColumn = ({ data, style }) => {
   const {
     heading: { location },
     'contact-info': contactInfo,
@@ -18,14 +15,15 @@ export const InfoColumn = ({ data }) => {
   const { email } = contactInfo;
 
   return (
-    <View style={styles['column-info']}>
-      <Contacts email={email} location={location} />
-      <Links contactInfo={contactInfo} />
-      <Skills skillsData={skillsData} data={data} />
+    <View style={style['column-info']}>
+      <Contacts email={email} location={location} style={style} />
+      <Links contactInfo={contactInfo} style={style} />
+      <Skills skillsData={skillsData} data={data} style={style} />
     </View>
   );
 };
 
 InfoColumn.propTypes = {
   data: PropTypes.object,
+  style: PropTypes.object,
 };

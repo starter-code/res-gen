@@ -2,27 +2,25 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Text, View } from 'react-pdf';
 
-import { styles } from '../Styles';
-
-export const Contacts = ({ contactInfo }) => {
+export const Contacts = ({ contactInfo, style }) => {
   const { email, github, linkedin, website } = contactInfo;
   return (
     <View>
-      <Text style={styles['info-header-content']}>Contact</Text>
-      <View style={styles['info-section']}>
-        <View style={styles['contact-item']}>
+      <Text style={style['info-header-content']}>Contact</Text>
+      <View style={style['info-section']}>
+        <View style={style['contact-item']}>
           <Text>Gmail:</Text>
           <Text>{email}</Text>
         </View>
-        <View style={styles['contact-item']}>
+        <View style={style['contact-item']}>
           <Text>Github:</Text>
           <Text>{github}</Text>
         </View>
-        <View style={styles['contact-item']}>
+        <View style={style['contact-item']}>
           <Text>LinkedIn:</Text>
           <Text>{linkedin}</Text>
         </View>
-        <View style={styles['contact-item']}>
+        <View style={style['contact-item']}>
           <Text>Website:</Text>
           <Text>{website}</Text>
         </View>
@@ -33,4 +31,5 @@ export const Contacts = ({ contactInfo }) => {
 
 Contacts.propTypes = {
   contactInfo: PropTypes.object,
+  style: PropTypes.object,
 };
