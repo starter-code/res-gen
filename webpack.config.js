@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
   mode: 'development',
@@ -48,12 +49,22 @@ module.exports = {
   },
   resolve: {
     alias: {
+      'code-mirror-lint': path.resolve(
+        __dirname,
+        'src/custom-packages/code-mirror-lint.js',
+      ),
+      'json-lint': path.resolve(__dirname, 'src/custom-packages/json-lint.js'),
       'react-pdf': path.resolve(__dirname, 'node_modules/@react-pdf/renderer'),
       'src/components': path.resolve(__dirname, 'src/components'),
       'src/customizers': path.resolve(__dirname, 'src/components/customizers'),
       'src/fonts': path.resolve(__dirname, 'src/fonts/fonts.js'),
       'src/pages': path.resolve(__dirname, 'src/components/pages'),
       'src/templates': path.resolve(__dirname, 'src/components/templates'),
+    },
+    fallback: {
+      fs: require.resolve('fs'),
+      stream: require.resolve('stream-browserify'),
+      zlib: require.resolve('browserify-zlib'),
     },
   },
   plugins: [
@@ -84,6 +95,12 @@ module.exports = {
           toType: 'file',
         },
       ],
+    }),
+    new webpack.ProvidePlugin({
+      Buffer: ['buffer', 'Buffer'],
+    }),
+    new webpack.ProvidePlugin({
+      process: 'process/browser',
     }),
   ],
 };

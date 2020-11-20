@@ -7,11 +7,13 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "browserify-zlib": "^0.2.0",
     "codemirror": "^5.58.2",
     "copy-webpack-plugin": "^6.1.1",
     "html-webpack-plugin": "^4.5.0",
     "husky": "^4.3.0",
     "lint-staged": "^10.4.0",
+    "process": "^0.11.10",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -20,7 +22,8 @@
     "sass": "^1.26.11",
     "sass-loader": "^10.0.2",
     "semantic-commitlint": "^1.4.0",
-    "source-map-loader": "^1.1.0"
+    "source-map-loader": "^1.1.0",
+    "stream-browserify": "^3.0.0"
   },
   "scripts": {
     "start": "npx webpack-dev-server",
@@ -57,7 +60,7 @@
     "postcss": "^8.1.0",
     "postcss-loader": "^4.0.2",
     "style-loader": "^1.2.1",
-    "webpack": "^4.44.2",
+    "webpack": "^5.0.0",
     "webpack-cli": "^3.3.12"
   },
   "husky": {
