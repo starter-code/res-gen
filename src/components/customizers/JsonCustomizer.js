@@ -3,6 +3,7 @@ import Codemirror from 'codemirror';
 import data from '../../example-json/john_smith.json';
 import { editorOptions } from './EditorOptions';
 import PropTypes from 'prop-types';
+import 'jsonlint';
 
 export const JsonCustomizer = ({ setData }) => {
   const [editor, setEditor] = useState(null);

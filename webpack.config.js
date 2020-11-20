@@ -48,12 +48,18 @@ module.exports = {
   },
   resolve: {
     alias: {
+      jsonlint: path.resolve(__dirname, 'src/custom-packages/jsonlint.js'),
       'react-pdf': path.resolve(__dirname, 'node_modules/@react-pdf/renderer'),
       'src/components': path.resolve(__dirname, 'src/components'),
       'src/customizers': path.resolve(__dirname, 'src/components/customizers'),
       'src/fonts': path.resolve(__dirname, 'src/fonts/fonts.js'),
       'src/pages': path.resolve(__dirname, 'src/components/pages'),
       'src/templates': path.resolve(__dirname, 'src/components/templates'),
+    },
+    fallback: {
+      fs: false,
+      stream: false,
+      zlib: require.resolve('browserify-zlib'),
     },
   },
   plugins: [
