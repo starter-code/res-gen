@@ -1,4 +1,4 @@
-import Codemirror from 'codemirror';
+import CodeMirror from 'codemirror';
 import 'code-mirror-lint';
 import PropTypes from 'prop-types';
 import React, { useRef, useEffect, useState } from 'react';
@@ -16,7 +16,7 @@ export const CssCustomizer = ({ setStyle }) => {
   };
 
   useEffect(() => {
-    setEditor(Codemirror.fromTextArea(editorRef.current, editorOptions));
+    setEditor(CodeMirror.fromTextArea(editorRef.current, editorOptions));
     setStyle(style);
   }, [editorRef]);
 
