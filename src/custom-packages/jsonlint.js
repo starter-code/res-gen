@@ -710,4 +710,4 @@ var jsonlint = (function () {
   return parser;
 })();
 
-window.jsonlint = jsonlint;
+module.exports = jsonlint;

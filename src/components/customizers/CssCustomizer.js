@@ -1,8 +1,11 @@
-import React, { useRef, useEffect, useState } from 'react';
 import Codemirror from 'codemirror';
-import { style } from '../templates/FolesTemplate/Styles';
-import { editorOptions } from './EditorOptions';
+import 'jsonlint';
 import PropTypes from 'prop-types';
+import React, { useRef, useEffect, useState } from 'react';
+
+import { style } from '../templates/FolesTemplate/Styles';
+import './lint';
+import { editorOptions } from './options';
 
 export const CssCustomizer = ({ setStyle }) => {
   const [editor, setEditor] = useState(null);
@@ -20,7 +23,7 @@ export const CssCustomizer = ({ setStyle }) => {
 
   return (
     <div>
-      <button onClick={handleClick}>Click me</button>
+      <button onClick={handleClick}>Update PDF</button>
       <form>
         <textarea
           onChange={onHandleChange}

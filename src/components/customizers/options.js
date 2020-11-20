@@ -1,5 +1,3 @@
-import './CodeMirrorLint';
-
 export const editorOptions = {
   mode: { name: 'javascript', json: true },
   lineNumbers: true,
@@ -17,7 +15,6 @@ export const editorOptions = {
     'CodeMirror-foldgutter',
     'CodeMirror-lint-markers',
   ],
-
   foldOptions: {
     widget: (from, to) => {
       var count = undefined;

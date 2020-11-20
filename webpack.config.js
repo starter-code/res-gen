@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
   mode: 'development',
@@ -57,8 +58,8 @@ module.exports = {
       'src/templates': path.resolve(__dirname, 'src/components/templates'),
     },
     fallback: {
-      fs: false,
-      stream: false,
+      fs: require.resolve('fs'),
+      stream: require.resolve('stream-browserify'),
       zlib: require.resolve('browserify-zlib'),
     },
   },
@@ -90,6 +91,12 @@ module.exports = {
           toType: 'file',
         },
       ],
+    }),
+    new webpack.ProvidePlugin({
+      Buffer: ['buffer', 'Buffer'],
+    }),
+    new webpack.ProvidePlugin({
+      process: 'process/browser',
     }),
   ],
 };
