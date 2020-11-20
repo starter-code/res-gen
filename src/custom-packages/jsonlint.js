@@ -3,6 +3,8 @@
 
 /* Jison generated parser */
 
+// ripped from https://github.com/zaach/jsonlint/blob/master/lib/jsonlint.js
+
 var jsonlint = (function () {
   var parser = {
     trace: function trace() {},
