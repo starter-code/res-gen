@@ -49,7 +49,11 @@ module.exports = {
   },
   resolve: {
     alias: {
-      jsonlint: path.resolve(__dirname, 'src/custom-packages/jsonlint.js'),
+      'code-mirror-lint': path.resolve(
+        __dirname,
+        'src/custom-packages/code-mirror-lint.js',
+      ),
+      'json-lint': path.resolve(__dirname, 'src/custom-packages/json-lint.js'),
       'react-pdf': path.resolve(__dirname, 'node_modules/@react-pdf/renderer'),
       'src/components': path.resolve(__dirname, 'src/components'),
       'src/customizers': path.resolve(__dirname, 'src/components/customizers'),

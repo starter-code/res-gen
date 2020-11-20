@@ -1,7 +1,7 @@
 /* eslint-disable space-before-function-paren */
 
 import CodeMirror from 'codemirror';
-import jsonlint from 'jsonlint';
+import jsonlint from 'json-lint';
 
 CodeMirror.registerHelper('lint', 'json', function lint(text) {
   var found = [];
