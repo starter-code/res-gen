@@ -2,7 +2,6 @@ BACKLOG
 
 VERSION 1.0
 
-- [ ] Add CSS Customizer (user feature)
 - [ ] Add user-friendly Homepage
 
 VERSION 1.1
