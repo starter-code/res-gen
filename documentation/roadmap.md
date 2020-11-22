@@ -1,7 +1,14 @@
+VERSION 0.3.0 (Styled Pages)
+
+- [ ] Side by side view of Template and Editor
+- [ ] Persist JSON when switching between templates
+- [ ] Button that switches JSON editor to CSS editor
+
 VERSION 0.2.0 (Customizers)
 
 - [x] Add JSON customizer for resume data
-- [ ] Add CSS customizer
+- [x] Add CSS Customizer (user feature)
+- [x] JSON validator
 
 VERSION 0.1.1 (Mini Code Refactors)
 
