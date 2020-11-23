@@ -1,0 +1,23 @@
+.customizer {
+  height: 50vh;
+  max-width: 50%;
+}
+
+.template {
+  max-width: 50%;
+}
+
+.json-customizer {
+  height: 100vh;
+}
+
+.gutter {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.gutter.gutter-horizontal {
+  cursor: col-resize;
+  background-color: red;
+}
