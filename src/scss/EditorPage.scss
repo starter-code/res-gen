@@ -1,0 +1,38 @@
+.customizer {
+  max-width: 50%;
+}
+
+.splitScreen {
+  display: flex;
+  height: 100%;
+}
+
+.json-container {
+  position: relative;
+}
+
+.pdf-updater {
+  z-index: 100;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+
+.template {
+  max-width: 50%;
+}
+
+.json-customizer {
+  height: 100vh;
+}
+
+.gutter {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.gutter.gutter-horizontal {
+  cursor: col-resize;
+  background-color: black;
+}
