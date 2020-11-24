@@ -10,6 +10,7 @@ export const EditorCustomizer = ({ setData, defaultData, type }) => {
 
   const onHandleChange = () => {};
   const handleClick = () => {
+    console.log('!!!');
     setData(JSON.parse(editor.doc.getValue()));
   };
 
