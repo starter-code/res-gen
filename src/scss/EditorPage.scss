@@ -1,6 +1,21 @@
 .customizer {
-  height: 50vh;
   max-width: 50%;
+}
+
+.splitScreen {
+  display: flex;
+  height: 100%;
+}
+
+.json-container {
+  position: relative;
+}
+
+.pdf-updater {
+  z-index: 2;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
 }
 
 .template {
@@ -19,5 +34,5 @@
 
 .gutter.gutter-horizontal {
   cursor: col-resize;
-  background-color: red;
+  background-color: black;
 }
