@@ -3,15 +3,45 @@ import Split from 'react-split';
 import { EditorCustomizer } from 'src/customizers/EditorCustomizer';
 import { FolesTemplate } from 'src/templates/FolesTemplate';
 import { MahomesTemplate } from 'src/templates/MahomesTemplate';
-import { style as defaultCssData } from '../templates/FolesTemplate/Styles';
+import { style as defaultFolesCss } from '../templates/FolesTemplate/Styles';
+import { style as defaultMahomesCss } from '../templates/MahomesTemplate/Styles';
 import defaultResumeData from '../../example-json/john_smith.json';
 import FolesCoverImg from '../../images/FolesCoverImg.png';
 import MahomesCoverImg from '../../images/MahomesCoverImg.png';
 import Modal from 'react-modal';
 
 export const EditorPage = () => {
-  const [cssData, setCssData] = useState(defaultCssData);
+  const templateStyles = [defaultFolesCss, defaultMahomesCss];
   const [resumeData, setResumeData] = useState(defaultResumeData);
+  const [componentIndex, setComponentIndex] = useState(0);
+  const [resumeIndex, setResumeIndex] = useState(0);
+  const [cssData, setCssData] = useState(templateStyles[resumeIndex]);
+  templateStyles[resumeIndex] = cssData;
+
+  const switchResume = [
+    {
+      resume: (
+        <FolesTemplate
+          key="foles"
+          data={resumeData}
+          style={templateStyles[0]}
+        />
+      ),
+      title: 'Foles',
+      image: FolesCoverImg,
+    },
+    {
+      resume: (
+        <MahomesTemplate
+          key="mahomes"
+          data={resumeData}
+          style={templateStyles[1]}
+        />
+      ),
+      title: 'Mahomes',
+      image: MahomesCoverImg,
+    },
+  ];
 
   const switchEditor = [
     {
@@ -48,7 +78,7 @@ export const EditorPage = () => {
       transform: 'translate(-50%, -50%)',
     },
   };
-  var subtitle;
+  let subtitle;
 
   const [modalIsOpen, setIsOpen] = React.useState(false);
   function openModal() {
@@ -63,24 +93,6 @@ export const EditorPage = () => {
   function closeModal() {
     setIsOpen(false);
   }
-
-  const switchResume = [
-    {
-      resume: (
-        <MahomesTemplate key="mahomes" data={resumeData} style={cssData} />
-      ),
-      title: 'Mahomes',
-      image: MahomesCoverImg,
-    },
-    {
-      resume: <FolesTemplate key="foles" data={resumeData} style={cssData} />,
-      title: 'Foles',
-      image: FolesCoverImg,
-    },
-  ];
-
-  const [componentIndex, setComponentIndex] = useState(0);
-  const [resumeIndex, setResumeIndex] = useState(0);
 
   const renderTemplate = (index) => {
     return switchResume[index].resume;
