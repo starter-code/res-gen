@@ -2,8 +2,12 @@ import React, { useState } from 'react';
 import Split from 'react-split';
 import { EditorCustomizer } from 'src/customizers/EditorCustomizer';
 import { FolesTemplate } from 'src/templates/FolesTemplate';
+import { MahomesTemplate } from 'src/templates/MahomesTemplate';
 import { style as defaultCssData } from '../templates/FolesTemplate/Styles';
 import defaultResumeData from '../../example-json/john_smith.json';
+import FolesCoverImg from '../../images/FolesCoverImg.png';
+import MahomesCoverImg from '../../images/MahomesCoverImg.png';
+import Modal from 'react-modal';
 
 export const EditorPage = () => {
   const [cssData, setCssData] = useState(defaultCssData);
@@ -34,7 +38,53 @@ export const EditorPage = () => {
     },
   ];
 
+  const customStyles = {
+    content: {
+      top: '50%',
+      left: '75%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)',
+    },
+  };
+  var subtitle;
+
+  const [modalIsOpen, setIsOpen] = React.useState(false);
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function afterOpenModal() {
+    // references are now sync'd and can be accessed.
+    subtitle.style.color = 'black';
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
+  const switchResume = [
+    {
+      resume: (
+        <MahomesTemplate key="mahomes" data={resumeData} style={cssData} />
+      ),
+      title: 'Mahomes',
+      image: MahomesCoverImg,
+    },
+    {
+      resume: <FolesTemplate key="foles" data={resumeData} style={cssData} />,
+      title: 'Foles',
+      image: FolesCoverImg,
+    },
+  ];
+
   const [componentIndex, setComponentIndex] = useState(0);
+  const [resumeIndex, setResumeIndex] = useState(0);
+
+  const renderTemplate = (index) => {
+    return switchResume[index].resume;
+  };
 
   const renderEditorComponent = (index) => {
     return switchEditor[index].component;
@@ -66,7 +116,32 @@ export const EditorPage = () => {
         {renderEditorComponent(componentIndex)}
       </div>
       <div className="template">
-        <FolesTemplate data={resumeData} style={cssData} />
+        <button onClick={openModal}>Open Modal</button>
+        {renderTemplate(resumeIndex)}
+      </div>
+
+      <div>
+        <Modal
+          isOpen={modalIsOpen}
+          onAfterOpen={afterOpenModal}
+          onRequestClose={closeModal}
+          style={customStyles}
+          contentLabel="Example Modal"
+        >
+          <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Select a template</h2>
+          <button onClick={closeModal}>Exit</button>
+          <div>
+            {switchResume.map((resume, resumeIndex) => (
+              <button
+                className="imgButton"
+                key={resumeIndex}
+                onClick={() => setResumeIndex(resumeIndex)}
+              >
+                <img className="coverImg" src={resume.image} />
+              </button>
+            ))}
+          </div>
+        </Modal>
       </div>
     </Split>
   );

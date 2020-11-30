@@ -29,6 +29,10 @@ module.exports = {
         use: ['source-map-loader'],
       },
       {
+        test: /\.(webm|webp|mp4|png)$/,
+        loader: 'file-loader',
+      },
+      {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
         use: [
           {
