@@ -2,18 +2,27 @@
   max-width: 50%;
 }
 
-.splitScreen {
+.split-screen {
   display: flex;
   height: 100%;
 }
 
-.coverImg {
+.cover-img {
   height: 250px;
   width: 200px;
 }
 
-.buttonImg {
+.img-button {
   padding-right: 3px;
+}
+
+.modal-styles {
+  top: '50%';
+  left: '75%';
+  right: 'auto';
+  bottom: 'auto';
+  margin-right: '-50%';
+  transform: 'translate(-50%, -50%)';
 }
 
 .json-container {

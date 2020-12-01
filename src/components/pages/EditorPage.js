@@ -80,19 +80,19 @@ export const EditorPage = () => {
   };
   let subtitle;
 
-  const [modalIsOpen, setIsOpen] = React.useState(false);
-  function openModal() {
+  const [modalIsOpen, setIsOpen] = useState(false);
+  const openModal = () => {
     setIsOpen(true);
-  }
+  };
 
-  function afterOpenModal() {
+  const afterOpenModal = () => {
     // references are now sync'd and can be accessed.
     subtitle.style.color = 'black';
-  }
+  };
 
-  function closeModal() {
+  const closeModal = () => {
     setIsOpen(false);
-  }
+  };
 
   const renderTemplate = (index) => {
     return switchResume[index].resume;
@@ -104,7 +104,7 @@ export const EditorPage = () => {
 
   return (
     <Split
-      className="splitScreen"
+      className="split-screen"
       sizes={[50, 50]}
       minSize={100}
       gutterSize={2}
@@ -138,18 +138,18 @@ export const EditorPage = () => {
           onAfterOpen={afterOpenModal}
           onRequestClose={closeModal}
           style={customStyles}
-          contentLabel="Example Modal"
+          contentLabel="Template Switcher"
         >
           <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Select a template</h2>
           <button onClick={closeModal}>Exit</button>
           <div>
             {switchResume.map((resume, resumeIndex) => (
               <button
-                className="imgButton"
+                className="img-button"
                 key={resumeIndex}
                 onClick={() => setResumeIndex(resumeIndex)}
               >
-                <img className="coverImg" src={resume.image} />
+                <img className="cover-img" src={resume.image} />
               </button>
             ))}
           </div>
