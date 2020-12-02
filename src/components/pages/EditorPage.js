@@ -10,12 +10,24 @@ import FolesCoverImg from '../../images/FolesCoverImg.png';
 import MahomesCoverImg from '../../images/MahomesCoverImg.png';
 import Modal from 'react-modal';
 
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '75%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+  },
+};
+
 export const EditorPage = () => {
   const templateStyles = [defaultFolesCss, defaultMahomesCss];
   const [resumeData, setResumeData] = useState(defaultResumeData);
   const [componentIndex, setComponentIndex] = useState(0);
   const [resumeIndex, setResumeIndex] = useState(0);
   const [cssData, setCssData] = useState(templateStyles[resumeIndex]);
+  const [modalIsOpen, setIsOpen] = useState(false);
   templateStyles[resumeIndex] = cssData;
 
   const switchResume = [
@@ -68,26 +80,8 @@ export const EditorPage = () => {
     },
   ];
 
-  const customStyles = {
-    content: {
-      top: '50%',
-      left: '75%',
-      right: 'auto',
-      bottom: 'auto',
-      marginRight: '-50%',
-      transform: 'translate(-50%, -50%)',
-    },
-  };
-  let subtitle;
-
-  const [modalIsOpen, setIsOpen] = useState(false);
   const openModal = () => {
     setIsOpen(true);
-  };
-
-  const afterOpenModal = () => {
-    // references are now sync'd and can be accessed.
-    subtitle.style.color = 'black';
   };
 
   const closeModal = () => {
@@ -135,12 +129,11 @@ export const EditorPage = () => {
       <div>
         <Modal
           isOpen={modalIsOpen}
-          onAfterOpen={afterOpenModal}
           onRequestClose={closeModal}
           style={customStyles}
           contentLabel="Template Switcher"
         >
-          <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Select a template</h2>
+          <h2>Select a template</h2>
           <button onClick={closeModal}>Exit</button>
           <div>
             {switchResume.map((resume, resumeIndex) => (
