@@ -6,10 +6,10 @@ import { editorOptions } from './options';
 
 export const EditorCustomizer = ({ setData, defaultData, type }) => {
   const [editor, setEditor] = useState(null);
-  let editorRef = useRef(null);
+  const editorRef = useRef(null);
 
   const onHandleChange = () => {};
-  const handleClick = () => {
+  const onHandleClick = () => {
     setData(JSON.parse(editor.doc.getValue()));
   };
 
@@ -20,11 +20,11 @@ export const EditorCustomizer = ({ setData, defaultData, type }) => {
     );
     setEditor(codeMirrorEditor);
     setData(defaultData);
-  }, [type, editorRef]);
+  }, [type, editorRef, defaultData]);
 
   return (
-    <div className={`json-container ${type}`}>
-      <button className="pdf-updater" onClick={handleClick}>
+    <div className="json-container">
+      <button className="pdf-updater" onClick={onHandleClick}>
         Update PDF
       </button>
       <form>

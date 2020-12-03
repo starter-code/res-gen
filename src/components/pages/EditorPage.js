@@ -9,60 +9,43 @@ import defaultResumeData from '../../example-json/john_smith.json';
 import FolesCoverImg from '../../images/FolesCoverImg.png';
 import MahomesCoverImg from '../../images/MahomesCoverImg.png';
 import Modal from 'react-modal';
+import _ from 'lodash';
 
-const customStyles = {
-  content: {
-    top: '50%',
-    left: '75%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
-  },
-};
+Modal.setAppElement('#root');
 
 export const EditorPage = () => {
   const templateStyles = [defaultFolesCss, defaultMahomesCss];
   const [resumeData, setResumeData] = useState(defaultResumeData);
-  const [componentIndex, setComponentIndex] = useState(0);
+  const [editorIndex, setEditorIndex] = useState(0);
   const [resumeIndex, setResumeIndex] = useState(0);
   const [cssData, setCssData] = useState(templateStyles[resumeIndex]);
   const [modalIsOpen, setIsOpen] = useState(false);
-  templateStyles[resumeIndex] = cssData;
 
-  const switchResume = [
+  const templates = [
     {
-      resume: (
-        <FolesTemplate
-          key="foles"
-          data={resumeData}
-          style={templateStyles[0]}
-        />
+      component: (
+        <FolesTemplate key="foles" data={resumeData} style={cssData} />
       ),
       title: 'Foles',
       image: FolesCoverImg,
     },
     {
-      resume: (
-        <MahomesTemplate
-          key="mahomes"
-          data={resumeData}
-          style={templateStyles[1]}
-        />
+      component: (
+        <MahomesTemplate key="mahomes" data={resumeData} style={cssData} />
       ),
       title: 'Mahomes',
       image: MahomesCoverImg,
     },
   ];
 
-  const switchEditor = [
+  const editors = [
     {
       component: (
         <EditorCustomizer
           setData={setResumeData}
           defaultData={resumeData}
           type="JSON"
-          key="JSON"
+          key={Math.random()}
         />
       ),
       title: 'Resume JSON',
@@ -73,7 +56,7 @@ export const EditorPage = () => {
           setData={setCssData}
           defaultData={cssData}
           type="CSS"
-          key="CSS"
+          key={Math.random()}
         />
       ),
       title: 'CSS',
@@ -88,66 +71,72 @@ export const EditorPage = () => {
     setIsOpen(false);
   };
 
-  const renderTemplate = (index) => {
-    return switchResume[index].resume;
+  const renderComponent = (type, index) => {
+    return type[index].component;
   };
 
-  const renderEditorComponent = (index) => {
-    return switchEditor[index].component;
+  const onHandleSwitchEditor = (index) => {
+    setEditorIndex(index);
+  };
+
+  const onHandleSwitchTemplate = (index) => {
+    setResumeIndex(index);
+    setCssData(templateStyles[index]);
   };
 
   return (
-    <Split
-      className="split-screen"
-      sizes={[50, 50]}
-      minSize={100}
-      gutterSize={2}
-      gutterAlign="center"
-      snapOffset={30}
-      dragInterval={1}
-      direction="horizontal"
-      cursor="col-resize"
-    >
-      <div className="container">
-        <div className="customizer">
-          {switchEditor.map((editor, editorIndex) => (
-            <button
-              key={editorIndex}
-              onClick={() => setComponentIndex(editorIndex)}
-            >
-              {editor.title}
-            </button>
-          ))}
-        </div>
-        {renderEditorComponent(componentIndex)}
-      </div>
-      <div className="template">
-        <button onClick={openModal}>Open Modal</button>
-        {renderTemplate(resumeIndex)}
-      </div>
-
-      <div>
-        <Modal
-          isOpen={modalIsOpen}
-          onRequestClose={closeModal}
-          style={customStyles}
-          contentLabel="Template Switcher"
-        >
-          <h2>Select a template</h2>
-          <button onClick={closeModal}>Exit</button>
-          <div>
-            {switchResume.map((resume, resumeIndex) => (
+    <div className="editor-page">
+      <Split
+        className="split-screen"
+        sizes={[50, 50]}
+        minSize={100}
+        gutterSize={2}
+        gutterAlign="center"
+        snapOffset={30}
+        dragInterval={1}
+        direction="horizontal"
+        cursor="col-resize"
+      >
+        <div className="container">
+          <div className="customizer">
+            {_.map(editors, (editor, editorIndex) => (
               <button
-                className="img-button"
-                key={resumeIndex}
-                onClick={() => setResumeIndex(resumeIndex)}
+                key={editorIndex}
+                onClick={() => onHandleSwitchEditor(editorIndex)}
               >
-                <img className="cover-img" src={resume.image} />
+                {editor.title}
               </button>
             ))}
           </div>
-        </Modal>
-      </div>
-    </Split>
+          {renderComponent(editors, editorIndex)}
+        </div>
+        <div className="template">
+          <button onClick={openModal}>Open Modal</button>
+          {renderComponent(templates, resumeIndex)}
+        </div>
+      </Split>
+
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        className="template-switcher-modal"
+        overlayClassName="template-switcher-overlay"
+        contentLabel="Template Switcher"
+      >
+        <h2>Select a template</h2>
+        <button onClick={closeModal}>Exit</button>
+        <div>
+          {_.map(templates, (template, templateIndex) => (
+            <button
+              className="img-button"
+              key={templateIndex}
+              onClick={() => onHandleSwitchTemplate(templateIndex)}
+            >
+              <img className="cover-img" src={template.image} />
+            </button>
+          ))}
+        </div>
+      </Modal>
+    </div>
   );
 };
