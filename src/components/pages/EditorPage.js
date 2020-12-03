@@ -44,22 +44,22 @@ export const EditorPage = () => {
         <EditorCustomizer
           setData={setResumeData}
           defaultData={resumeData}
-          type="JSON"
+          type="Content"
           key={Math.random()}
         />
       ),
-      title: 'Resume JSON',
+      title: 'Resume Content',
     },
     {
       component: (
         <EditorCustomizer
           setData={setCssData}
           defaultData={cssData}
-          type="CSS"
+          type="Resume Styles"
           key={Math.random()}
         />
       ),
-      title: 'CSS',
+      title: 'Resume Styles',
     },
   ];
 
