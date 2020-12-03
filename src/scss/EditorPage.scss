@@ -2,9 +2,18 @@
   max-width: 50%;
 }
 
-.splitScreen {
+.split-screen {
   display: flex;
   height: 100%;
+}
+
+.cover-img {
+  height: 250px;
+  width: 200px;
+}
+
+.img-button {
+  padding-right: 3px;
 }
 
 .json-container {
