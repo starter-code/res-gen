@@ -11,7 +11,7 @@ import MahomesCoverImg from '../../images/MahomesCoverImg.png';
 import Modal from 'react-modal';
 import _ from 'lodash';
 
-Modal.setAppElement('#root');
+Modal.setAppElement('#modal');
 
 export const EditorPage = () => {
   const templateStyles = [defaultFolesCss, defaultMahomesCss];
