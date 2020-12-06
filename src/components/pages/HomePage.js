@@ -53,7 +53,53 @@ export const HomePage = () => {
       <div className="youtube-how-to-section">
         <div className="video-demo">This is video demo</div>
       </div>
-      <div className="footer-section">This is footer</div>
+      <div className="footer-section">
+        <div className="footer-header">
+          <h3>Get going!</h3>
+          <button className="btn-one">Create your Resume!</button>
+        </div>
+        <div className="footer-content">
+          <div className="footer-content-section">
+            <h2>ResGenie</h2>
+          </div>
+          <div className="footer-content-section">
+            <h3>Check out this project on GitHub</h3>
+            <Link
+              className="footer-link"
+              src="https://github.com/starter-code/res-gen"
+            >
+              GitHub
+            </Link>
+            <Link
+              className="footer-link"
+              src="https://github.com/starter-code/res-gen"
+            >
+              GitHub
+            </Link>
+          </div>
+          <div className="footer-content-section">
+            <h3>Information</h3>
+            <Link
+              className="footer-link"
+              src="https://github.com/starter-code/res-gen"
+            >
+              FAQ
+            </Link>
+            <Link
+              className="footer-link"
+              src="https://github.com/starter-code/res-gen"
+            >
+              FAQ
+            </Link>
+          </div>
+          <div className="footer-content-section">
+            <h3>Column three</h3>
+          </div>
+        </div>
+        <div className="footer-foot">
+          <h6>Copyright stuff can go here if we need it??</h6>
+        </div>
+      </div>
     </div>
   );
 };

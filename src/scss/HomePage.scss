@@ -23,14 +23,16 @@ $green: #859900;
 
 .navbar {
   background-color: $base02;
+  color: $base2;
   height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: 1.2rem;
+  font-weight: 900;
   position: sticky !important;
   top: 0;
-  z-index: 100000;
+  z-index: 1000000;
   transition: all 0.2s ease-out;
 }
 
@@ -39,7 +41,7 @@ $green: #859900;
 }
 
 .nav-link {
-  color: #fff;
+  color: $base2;
   justify-self: flex-end;
   margin-right: 30px;
   cursor: pointer;
@@ -48,17 +50,18 @@ $green: #859900;
   font-weight: 400;
 }
 .nav-link:hover {
-  border-bottom: 4px solid #fff;
+  border-bottom: 4px solid $base2;
   transition: all 0.2s ease-out;
 }
 
 .title {
   font-size: 1.5rem;
   font-weight: 400;
-  color: #fff;
+  color: $base2;
   justify-self: start;
   flex: 1;
   margin-left: 30px;
+  text-decoration: underline $blue;
 }
 
 .hero-section {
@@ -88,9 +91,10 @@ $green: #859900;
 
 .btn-one {
   padding: 14px 40px;
+  border-radius: 30px;
   font-size: 20px;
   font-weight: 900;
-  background-color: $cyan;
+  background-color: $blue;
   color: $base2;
   transition-duration: 0.4s;
   text-decoration: none;
@@ -103,7 +107,8 @@ $green: #859900;
 }
 
 .hero-two {
-  background-color: $cyan;
+  background-color: $blue;
+  border-radius: 20px;
   color: black;
   display: flex;
   align-items: center;
@@ -177,7 +182,7 @@ $green: #859900;
 
 .choose-template-section {
   background-color: $base03;
-  color: #2aa198;
+  color: $base2;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -202,7 +207,7 @@ $green: #859900;
 
 .template-pick-image:hover {
   transform: scale(1.1);
-  box-shadow: 0px 5px 15px 5px $base1;
+  box-shadow: 0px 5px 15px 5px $blue;
 }
 
 .youtube-how-to-section {
@@ -231,6 +236,52 @@ $green: #859900;
   width: 100vw;
   height: 100vh;
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-header {
+  margin-top: 50px;
+  width: 30vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer-content {
+  display: flex;
+  width: 100vw;
+  height: 60vh;
+}
+
+.footer-foot {
+  display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0.5;
+  width: 100vw;
+  height: 10vh;
+}
+
+.footer-content-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25vw;
+  height: 100%;
+}
+
+.footer-link {
+  color: $base00;
+  align-self: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.footer-link:hover {
+  color: $base1;
+  transition: all 0.2s ease-out;
 }
