@@ -5,7 +5,7 @@ import MahomesCoverImg from '../../images/MahomesCoverImg.png';
 
 export const HomePage = () => {
   return (
-    <div className="home-page">
+    <main className="home-page">
       <nav className="navbar">
         <h1 className="title">ResGenie</h1>
         <Link className="nav-link" to="editor-page">
@@ -15,7 +15,7 @@ export const HomePage = () => {
           FAQ
         </Link>
       </nav>
-      <div className="hero-section">
+      <section className="hero-section">
         <div className="hero-one">
           <h3>Resumes made simple!</h3>
           <ul className="hero-list">
@@ -28,15 +28,17 @@ export const HomePage = () => {
         <div className="hero-two">
           <img className="hero-image" src={FolesCoverImg} />
         </div>
-      </div>
+      </section>
       <div className="triple-column-section">
         <div className="triple-header">
-          <h1>Create reusmes that get results! In 3 easy steps!</h1>
+          <h1>Create resumes that get results! In 3 easy steps!</h1>
         </div>
         <div className="triple-content">
-          <div className="triple-one">Pick a template</div>
-          <div className="triple-two">Update some JSON</div>
-          <div className="triple-three">Download and land your dream job</div>
+          <article className="triple-one">Pick a template</article>
+          <article className="triple-two">Update some JSON</article>
+          <article className="triple-three">
+            Download and land your dream job
+          </article>
         </div>
       </div>
       <div className="choose-template-section">
@@ -53,23 +55,17 @@ export const HomePage = () => {
       <div className="youtube-how-to-section">
         <div className="video-demo">This is video demo</div>
       </div>
-      <div className="footer-section">
+      <footer className="footer-section">
         <div className="footer-header">
           <h3>Get going!</h3>
           <button className="btn-one">Create your Resume!</button>
         </div>
         <div className="footer-content">
           <div className="footer-content-section">
-            <h2>ResGenie</h2>
+            <h2 className="footer-title">ResGenie</h2>
           </div>
           <div className="footer-content-section">
             <h3>Check out this project on GitHub</h3>
-            <Link
-              className="footer-link"
-              src="https://github.com/starter-code/res-gen"
-            >
-              GitHub
-            </Link>
             <Link
               className="footer-link"
               src="https://github.com/starter-code/res-gen"
@@ -85,21 +81,27 @@ export const HomePage = () => {
             >
               FAQ
             </Link>
+          </div>
+          <div className="footer-content-section">
+            <h3>Made by:</h3>
             <Link
               className="footer-link"
               src="https://github.com/starter-code/res-gen"
             >
-              FAQ
+              David Ko
             </Link>
-          </div>
-          <div className="footer-content-section">
-            <h3>Column three</h3>
+            <Link
+              className="footer-link"
+              src="https://github.com/starter-code/res-gen"
+            >
+              Patrick Dohn
+            </Link>
           </div>
         </div>
         <div className="footer-foot">
           <h6>Copyright stuff can go here if we need it??</h6>
         </div>
-      </div>
-    </div>
+      </footer>
+    </main>
   );
 };

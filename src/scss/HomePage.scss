@@ -17,8 +17,9 @@ $green: #859900;
 
 .home-page {
   display: flex;
+  width: 100%;
   flex-direction: column;
-  overflow: scroll;
+  overflow-y: overlay;
 }
 
 .navbar {
@@ -65,13 +66,25 @@ $green: #859900;
 }
 
 .hero-section {
-  background-color: $base02;
+  background-color: $base2;
   color: $cyan;
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    height: 180%;
+    width: 70%;
+    transform: rotate(-10deg);
+    background-color: $base02;
+    bottom: -30%;
+    left: -5%;
+    z-index: 1;
+  }
 }
 
 .hero-one {
@@ -83,6 +96,7 @@ $green: #859900;
   flex-direction: column;
   width: 30vw;
   height: 80vh;
+  z-index: 2;
 }
 
 .hero-items {
@@ -96,9 +110,10 @@ $green: #859900;
   font-weight: 900;
   background-color: $blue;
   color: $base2;
-  transition-duration: 0.4s;
   text-decoration: none;
+  outline: none;
   border: none;
+  transition: 0.4s;
 }
 
 .btn-one:hover {
@@ -107,14 +122,13 @@ $green: #859900;
 }
 
 .hero-two {
-  background-color: $blue;
-  border-radius: 20px;
   color: black;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 30vw;
   height: 80vh;
+  z-index: 2;
 }
 
 .hero-image {
@@ -131,6 +145,7 @@ $green: #859900;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  z-index: 2;
 }
 
 .triple-header {
@@ -142,7 +157,7 @@ $green: #859900;
 }
 
 .triple-content {
-  width: 100vw;
+  width: 100%;
   height: 70vh;
   display: flex;
   flex-direction: row;
@@ -234,7 +249,7 @@ $green: #859900;
   background-color: $base02;
   color: $base2;
   width: 100vw;
-  height: 100vh;
+  height: 40vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -251,8 +266,12 @@ $green: #859900;
 
 .footer-content {
   display: flex;
-  width: 100vw;
-  height: 60vh;
+  width: 100%;
+  height: 60%;
+}
+
+.footer-title {
+  text-decoration: underline $blue;
 }
 
 .footer-foot {
