@@ -14,6 +14,8 @@ $violet: #6c71c4;
 $blue: #268bd2;
 $cyan: #2aa198;
 $green: #859900;
+$black: #000000;
+$white: #fff;
 
 .home-page {
   display: flex;
@@ -35,10 +37,6 @@ $green: #859900;
   top: 0;
   z-index: 1000000;
   transition: all 0.2s ease-out;
-}
-
-.navbar:hover {
-  background-color: $base00;
 }
 
 .nav-link {
@@ -118,11 +116,11 @@ $green: #859900;
 
 .btn-one:hover {
   background-color: $base2;
-  color: black;
+  color: $black;
 }
 
 .hero-two {
-  color: black;
+  color: $black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -133,12 +131,11 @@ $green: #859900;
 
 .hero-image {
   height: 70vh;
-  box-shadow: 0px 5px 15px 5px #000000;
 }
 
 .triple-column-section {
-  background-color: $base3;
-  color: $blue;
+  background-color: $base2;
+  color: $base02;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -166,33 +163,61 @@ $green: #859900;
 }
 
 .triple-one {
-  background-color: $blue;
-  color: black;
+  background-color: $base02;
+  color: $base2;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 20vw;
   height: 40vh;
+  position: relative;
+}
+
+.design {
+  display: block;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  height: 50px;
+  width: 50px;
+  background-color: $base2;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.triple-one:hover > .design {
+  background-color: $blue;
 }
 
 .triple-two {
-  background-color: $blue;
-  color: black;
+  background-color: $base02;
+  color: $base2;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 20vw;
   height: 40vh;
+  position: relative;
+}
+.triple-two:hover > .design {
+  background-color: $blue;
 }
 
 .triple-three {
-  background-color: $blue;
-  color: black;
+  background-color: $base02;
+  color: $base2;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 20vw;
   height: 40vh;
+  position: relative;
+}
+.triple-three:hover > .design {
+  background-color: $blue;
 }
 
 .choose-template-section {
@@ -215,14 +240,12 @@ $green: #859900;
 }
 
 .template-pick-image {
-  height: 50vh;
-  box-shadow: 0px 5px 15px 5px #000000;
+  height: 70vh;
   transition: all 0.2s ease-in-out;
 }
 
 .template-pick-image:hover {
   transform: scale(1.1);
-  box-shadow: 0px 5px 15px 5px $blue;
 }
 
 .youtube-how-to-section {
@@ -240,7 +263,7 @@ $green: #859900;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: black;
+  color: $black;
   width: 50vw;
   height: 50vh;
 }
@@ -249,7 +272,7 @@ $green: #859900;
   background-color: $base02;
   color: $base2;
   width: 100vw;
-  height: 40vh;
+  height: 40%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -303,4 +326,75 @@ $green: #859900;
 .footer-link:hover {
   color: $base1;
   transition: all 0.2s ease-out;
+}
+
+.faq-section {
+  display: flex;
+  background-color: $base2;
+  height: 100vh;
+  width: 100vw;
+}
+
+.faq-one {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 50vw;
+  height: 100vh;
+}
+
+.faq-content {
+  height: 10%;
+  width: 50%;
+  background-color: $base02;
+  color: $base2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid lightgray;
+  border-radius: 20px;
+  transition: 0.4s;
+}
+
+.hidden {
+  display: none;
+}
+
+.faq-title {
+  font-size: 32px;
+  color: $base02;
+}
+
+.faq-content:hover {
+  height: 30%;
+  width: 70%;
+}
+.faq-content:hover > .hidden {
+  display: block;
+  height: 40%;
+  width: 70%;
+}
+
+.faq-two {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  height: 100vh;
+}
+
+.contact-form {
+  background-color: $base02;
+  color: $base2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid lightgray;
+  border-radius: 20px;
+  height: 40%;
+  width: 40%;
 }

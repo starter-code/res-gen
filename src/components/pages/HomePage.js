@@ -7,11 +7,13 @@ export const HomePage = () => {
   return (
     <main className="home-page">
       <nav className="navbar">
-        <h1 className="title">ResGenie</h1>
+        <Link className="title" to="/">
+          ResGenie
+        </Link>
         <Link className="nav-link" to="editor-page">
           Get Started!
         </Link>
-        <Link className="nav-link" to="editor-page">
+        <Link className="nav-link" to="faq-page">
           FAQ
         </Link>
       </nav>
@@ -23,7 +25,9 @@ export const HomePage = () => {
             <li className="hero-items">point two</li>
             <li className="hero-items">point three</li>
           </ul>
-          <button className="btn-one">Create your Resume!</button>
+          <Link to="editor-page" className="btn-one">
+            Create your Resume!
+          </Link>
         </div>
         <div className="hero-two">
           <img className="hero-image" src={FolesCoverImg} />
@@ -34,10 +38,20 @@ export const HomePage = () => {
           <h1>Create resumes that get results! In 3 easy steps!</h1>
         </div>
         <div className="triple-content">
-          <article className="triple-one">Pick a template</article>
-          <article className="triple-two">Update some JSON</article>
+          <article className="triple-one">
+            <div className="design"> </div>
+            <h3>title</h3>
+            <p>content can go here put whatever you want</p>
+          </article>
+          <article className="triple-two">
+            <div className="design"> </div>
+            <h3>title</h3>
+            <p>content can go here put whatever you want</p>
+          </article>
           <article className="triple-three">
-            Download and land your dream job
+            <div className="design"> </div>
+            <h3>title</h3>
+            <p>content can go here put whatever you want</p>
           </article>
         </div>
       </div>
@@ -46,10 +60,14 @@ export const HomePage = () => {
           <h2 className="">Pick your template here!!</h2>
         </div>
         <div className="template-pick">
-          <img className="template-pick-image" src={MahomesCoverImg} />
+          <Link to="editor-page">
+            <img className="template-pick-image" src={MahomesCoverImg} />
+          </Link>
         </div>
         <div className="template-pick">
-          <img className="template-pick-image" src={FolesCoverImg} />
+          <Link to="editor-page">
+            <img className="template-pick-image" src={FolesCoverImg} />
+          </Link>
         </div>
       </div>
       <div className="youtube-how-to-section">
@@ -58,7 +76,9 @@ export const HomePage = () => {
       <footer className="footer-section">
         <div className="footer-header">
           <h3>Get going!</h3>
-          <button className="btn-one">Create your Resume!</button>
+          <Link to="editor-page" className="btn-one">
+            Create your Resume!
+          </Link>
         </div>
         <div className="footer-content">
           <div className="footer-content-section">
@@ -66,36 +86,30 @@ export const HomePage = () => {
           </div>
           <div className="footer-content-section">
             <h3>Check out this project on GitHub</h3>
-            <Link
+            <a
               className="footer-link"
-              src="https://github.com/starter-code/res-gen"
+              href="https://github.com/starter-code/res-gen"
             >
               GitHub
-            </Link>
+            </a>
           </div>
           <div className="footer-content-section">
             <h3>Information</h3>
-            <Link
-              className="footer-link"
-              src="https://github.com/starter-code/res-gen"
-            >
+            <Link className="footer-link" to="faq-page">
               FAQ
             </Link>
           </div>
           <div className="footer-content-section">
             <h3>Made by:</h3>
-            <Link
-              className="footer-link"
-              src="https://github.com/starter-code/res-gen"
-            >
+            <a className="footer-link" href="https://github.com/davidholyko">
               David Ko
-            </Link>
-            <Link
+            </a>
+            <a
               className="footer-link"
-              src="https://github.com/starter-code/res-gen"
+              href="https://www.linkedin.com/in/patrick-dohn/"
             >
               Patrick Dohn
-            </Link>
+            </a>
           </div>
         </div>
         <div className="footer-foot">
