@@ -1,8 +1,15 @@
-VERSION 0.3.0 (Styled Pages)
+VERSION 0.4.0 (Styled Home Page)
 
-- [ ] Side by side view of Template and Editor
-- [ ] Persist JSON when switching between templates
-- [ ] Button that switches JSON editor to CSS editor
+- [x] Add hero to home page
+- [x] Add navbar to home page
+- [x] Add footer to home page
+- [x] Add info sections
+- [ ] Fill out page with meaning-full content
+
+VERSION 0.3.0 (Styled Editor Page)
+
+- [x] Side by side view of Template and Editor
+- [x] Button that switches JSON editor to CSS editor
 
 VERSION 0.2.0 (Customizers)
 
