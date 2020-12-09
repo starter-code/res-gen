@@ -1,68 +1,8 @@
-$base03: #002b36;
-$base02: #073642;
-$base01: #586e75;
-$base00: #657b83;
-$base0: #839496;
-$base1: #93a1a1;
-$base2: #eee8d5;
-$base3: #fdf6e3;
-$yellow: #b58900;
-$orange: #cb4b16;
-$red: #dc322f;
-$magenta: #d33682;
-$violet: #6c71c4;
-$blue: #268bd2;
-$cyan: #2aa198;
-$green: #859900;
-
 .home-page {
   display: flex;
   width: 100%;
   flex-direction: column;
   overflow-y: overlay;
-}
-
-.navbar {
-  background-color: $base02;
-  color: $base2;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 1.2rem;
-  font-weight: 900;
-  position: sticky !important;
-  top: 0;
-  z-index: 1000000;
-  transition: all 0.2s ease-out;
-}
-
-.navbar:hover {
-  background-color: $base00;
-}
-
-.nav-link {
-  color: $base2;
-  justify-self: flex-end;
-  margin-right: 30px;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: 400;
-}
-.nav-link:hover {
-  border-bottom: 4px solid $base2;
-  transition: all 0.2s ease-out;
-}
-
-.title {
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: $base2;
-  justify-self: start;
-  flex: 1;
-  margin-left: 30px;
-  text-decoration: underline $blue;
 }
 
 .hero-section {
@@ -118,11 +58,11 @@ $green: #859900;
 
 .btn-one:hover {
   background-color: $base2;
-  color: black;
+  color: $black;
 }
 
 .hero-two {
-  color: black;
+  color: $black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -133,12 +73,11 @@ $green: #859900;
 
 .hero-image {
   height: 70vh;
-  box-shadow: 0px 5px 15px 5px #000000;
 }
 
 .triple-column-section {
-  background-color: $base3;
-  color: $blue;
+  background-color: $base2;
+  color: $base02;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -165,44 +104,45 @@ $green: #859900;
   align-items: center;
 }
 
-.triple-one {
-  background-color: $blue;
-  color: black;
+.triplet {
+  background-color: $base02;
+  color: $base2;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 20vw;
   height: 40vh;
+  position: relative;
+
+  &:hover > .design {
+    background-color: $blue;
+  }
 }
 
-.triple-two {
-  background-color: $blue;
-  color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 20vw;
-  height: 40vh;
-}
-
-.triple-three {
-  background-color: $blue;
-  color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 20vw;
-  height: 40vh;
+.design {
+  display: block;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  height: 50px;
+  width: 50px;
+  background-color: $base2;
+  border-radius: 50px;
+  transition: 0.3s;
 }
 
 .choose-template-section {
   background-color: $base03;
+  text-align: center;
   color: $base2;
   width: 100vw;
   height: 100vh;
+}
+
+.template-picker {
   display: flex;
   justify-content: space-around;
-  align-items: center;
 }
 
 .template-pick {
@@ -215,14 +155,12 @@ $green: #859900;
 }
 
 .template-pick-image {
-  height: 50vh;
-  box-shadow: 0px 5px 15px 5px #000000;
+  height: 70vh;
   transition: all 0.2s ease-in-out;
 }
 
 .template-pick-image:hover {
   transform: scale(1.1);
-  box-shadow: 0px 5px 15px 5px $blue;
 }
 
 .youtube-how-to-section {
@@ -240,67 +178,7 @@ $green: #859900;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: black;
+  color: $black;
   width: 50vw;
   height: 50vh;
-}
-
-.footer-section {
-  background-color: $base02;
-  color: $base2;
-  width: 100vw;
-  height: 40vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer-header {
-  margin-top: 50px;
-  width: 30vw;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.footer-content {
-  display: flex;
-  width: 100%;
-  height: 60%;
-}
-
-.footer-title {
-  text-decoration: underline $blue;
-}
-
-.footer-foot {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0.5;
-  width: 100vw;
-  height: 10vh;
-}
-
-.footer-content-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 25vw;
-  height: 100%;
-}
-
-.footer-link {
-  color: $base00;
-  align-self: center;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 400;
-  margin-bottom: 10px;
-}
-.footer-link:hover {
-  color: $base1;
-  transition: all 0.2s ease-out;
 }
