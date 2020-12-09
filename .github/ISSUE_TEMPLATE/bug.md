@@ -1,8 +1,8 @@
 ---
 name: Bug Report
 about: Report a bug that needs to be fixed
-title: '[Bug] Default Bug Title'
-labels: ''
+title: 'Default Bug Title'
+labels: 'bug'
 assignees: ''
 ---
 
@@ -13,8 +13,6 @@ _A clear and concise description of what the bug is._
 
 1.
 2.
-3.
-4.
 
 **Acceptance Criteria**
 
