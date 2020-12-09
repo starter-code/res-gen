@@ -21,7 +21,6 @@
     "react-modal": "^3.12.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
-    "react-split": "^2.0.9",
     "sass": "^1.26.11",
     "sass-loader": "^10.0.2",
     "semantic-commitlint": "^1.4.0",

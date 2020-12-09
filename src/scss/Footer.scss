@@ -1,13 +1,25 @@
 .footer {
-  align-items: center;
+  margin-top: 50px;
   background-color: $base02;
   color: $base2;
   display: flex;
   flex-direction: column;
   height: 40%;
   justify-content: space-between;
+  align-items: center;
   padding: 70px 0 0 0;
   width: 100vw;
+}
+
+.footer-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+
+  & > * {
+    margin: 0 10px;
+  }
 }
 
 .footer-content {
@@ -57,4 +69,11 @@
     color: $base1;
     transition: all 0.2s ease-out;
   }
+}
+
+.footer-title {
+  font-weight: 800;
+  color: $base2;
+  margin-left: 30px;
+  text-decoration: underline $blue;
 }

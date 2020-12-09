@@ -1,21 +1,36 @@
+// TODO: rename this class to something with meaning
 .btn-one {
-  background-color: $blue;
+  padding: 14px 40px;
   border-radius: 30px;
-  border: none;
-  color: $base2;
   font-size: 20px;
   font-weight: 900;
-  outline: none;
-  padding: 14px 40px;
+  background-color: $blue;
+  color: $base2;
   text-decoration: none;
+  outline: none;
+  border: none;
   transition: 0.4s;
+  cursor: pointer;
 
   &:hover {
-    color: $black;
     background-color: $base2;
+    color: $black;
+  }
+
+  &:hover path {
+    stroke: $black;
+  }
+
+  & svg {
+    vertical-align: text-bottom;
+    margin-left: 5px;
+  }
+
+  & path {
+    stroke: $white;
+    transition: 0.4s;
   }
 }
-
 .choose-template-section {
   color: $base02;
   background-color: $base2;

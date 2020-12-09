@@ -15,4 +15,28 @@
   background-color: white;
   padding: 20px;
   outline: none;
+  text-align: center;
+  position: relative;
+}
+
+.template-img-button {
+  margin: 10px;
+  cursor: pointer;
+}
+
+.template-img {
+  height: 500px;
+  width: 400px;
+  margin: 10px;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+button.modal-close-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 5px;
 }

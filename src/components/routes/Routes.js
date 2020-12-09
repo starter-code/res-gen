@@ -15,7 +15,13 @@ export const Routes = () => {
         <Route exact path="/" component={HomePage} />
         <Route exact path="/contributors" component={ContributorsPage} />
         <Route exact path="/faq-page" component={FAQPage} />
-        <Route exact path="/editor-page" component={EditorPage} />
+        <Route
+          exact
+          path="/editor-page"
+          render={(props) => {
+            return <EditorPage {...props} />;
+          }}
+        />
         <Route path="/" component={NotFoundPage} />
       </Switch>
     </div>
