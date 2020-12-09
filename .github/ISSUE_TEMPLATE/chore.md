@@ -1,8 +1,8 @@
 ---
 name: Tech Chore
 about: Describe a chore that needs to be done
-title: '[CHORE] Default Chore Title'
-labels: ''
+title: 'Default Chore Title'
+labels: 'chore'
 assignees: ''
 ---
 

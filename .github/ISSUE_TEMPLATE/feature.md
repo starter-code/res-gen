@@ -1,8 +1,8 @@
 ---
 name: Feature Request
 about: Propose a new feature or enhancement
-title: '[FEATURE] Default Feature Title'
-labels: ''
+title: 'Default Feature Title'
+labels: 'feature'
 assignees: ''
 ---
 

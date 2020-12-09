@@ -1,8 +1,8 @@
 ---
 name: Research Spike
 about: Research a topic that will lead to a feature or fix
-title: '[SPIKE] Default Spike Title'
-labels: ''
+title: 'Default Spike Title'
+labels: 'spike'
 assignees: ''
 ---
 

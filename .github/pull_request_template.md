@@ -1,19 +1,12 @@
 #### Summary
 
-- Work Type: <!-- Feature | Bugfix | Chore | Refactor -->
+- Work Type: <!-- Feature | Fix | Chore | Refactor -->
 
 #### What I did
 
 -
 -
 -
-
-#### Before/After Preview
-
-- Before:
-<!-- Insert relevant screenshot here -->
-- After:
-<!-- Insert relevant screenshot here -->
 
 #### Checklist
 
