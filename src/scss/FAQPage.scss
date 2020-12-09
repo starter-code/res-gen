@@ -1,0 +1,92 @@
+.faq-section {
+  display: flex;
+  background-color: $base2;
+  height: 100vh;
+  width: 100vw;
+}
+
+.faq-one {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 50vw;
+  height: 100vh;
+}
+
+.faq-content {
+  height: 10%;
+  width: 50%;
+  background-color: $base02;
+  color: $base2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid lightgray;
+  border-radius: 20px;
+  transition: 0.4s;
+}
+
+.hidden {
+  display: none;
+}
+
+.faq-title {
+  font-size: 32px;
+  color: $base02;
+}
+
+.faq-content:hover {
+  height: 30%;
+  width: 70%;
+}
+.faq-content:hover > .hidden {
+  display: block;
+  height: 40%;
+  width: 70%;
+}
+
+.faq-two {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  height: 100vh;
+}
+
+.contact-form {
+  background-color: $base02;
+  color: $base2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid lightgray;
+  border-radius: 20px;
+  height: 40%;
+  width: 40%;
+}
+
+/*
+
+Question 1 Who is the project for
+Answer: Software engineers coming out of a bootcamp who know some CSS and JSON
+
+Question 2: What is this project made out of
+Answer: Its made with React with a custom webpack config. The editor page is made from codemirror to make the editor and React PDF to render the PDF.
+
+Question 3: Who made this project and how to contact them?
+Answer:
+
+
+Question 4: How do i find the code for this project?
+Answer: Link to github
+
+Question 5: Can I contribute to this project
+Answer: NO go away!!!
+
+
+
+*/
