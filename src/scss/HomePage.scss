@@ -1,66 +1,8 @@
-$base03: #002b36;
-$base02: #073642;
-$base01: #586e75;
-$base00: #657b83;
-$base0: #839496;
-$base1: #93a1a1;
-$base2: #eee8d5;
-$base3: #fdf6e3;
-$yellow: #b58900;
-$orange: #cb4b16;
-$red: #dc322f;
-$magenta: #d33682;
-$violet: #6c71c4;
-$blue: #268bd2;
-$cyan: #2aa198;
-$green: #859900;
-$black: #000000;
-$white: #fff;
-
 .home-page {
   display: flex;
   width: 100%;
   flex-direction: column;
   overflow-y: overlay;
-}
-
-.navbar {
-  background-color: $base02;
-  color: $base2;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 1.2rem;
-  font-weight: 900;
-  position: sticky !important;
-  top: 0;
-  z-index: 1000000;
-  transition: all 0.2s ease-out;
-}
-
-.nav-link {
-  color: $base2;
-  justify-self: flex-end;
-  margin-right: 30px;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: 400;
-}
-.nav-link:hover {
-  border-bottom: 4px solid $base2;
-  transition: all 0.2s ease-out;
-}
-
-.title {
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: $base2;
-  justify-self: start;
-  flex: 1;
-  margin-left: 30px;
-  text-decoration: underline $blue;
 }
 
 .hero-section {
@@ -192,12 +134,15 @@ $white: #fff;
 
 .choose-template-section {
   background-color: $base03;
+  text-align: center;
   color: $base2;
   width: 100vw;
   height: 100vh;
+}
+
+.template-picker {
   display: flex;
   justify-content: space-around;
-  align-items: center;
 }
 
 .template-pick {
@@ -236,65 +181,4 @@ $white: #fff;
   color: $black;
   width: 50vw;
   height: 50vh;
-}
-
-.footer-section {
-  background-color: $base02;
-  color: $base2;
-  width: 100vw;
-  height: 40%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer-header {
-  margin-top: 50px;
-  width: 30vw;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.footer-content {
-  display: flex;
-  width: 100%;
-  height: 60%;
-}
-
-.footer-title {
-  text-decoration: underline $blue;
-}
-
-.footer-foot {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0.5;
-  width: 100vw;
-  height: 10vh;
-}
-
-.footer-content-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 25vw;
-  height: 100%;
-}
-
-.footer-link {
-  color: $base00;
-  align-self: center;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 400;
-  margin-bottom: 10px;
-
-  &:hover {
-    color: $base1;
-    transition: all 0.2s ease-out;
-  }
 }

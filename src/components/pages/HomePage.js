@@ -2,21 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import FolesCoverImg from '../../images/FolesCoverImg.png';
 import MahomesCoverImg from '../../images/MahomesCoverImg.png';
+import { NavBar, Footer } from 'src/components/main';
 
 export const HomePage = () => {
   return (
     <main className="home-page">
-      <nav className="navbar">
-        <Link className="title" to="/">
-          ResGenie
-        </Link>
-        <Link className="nav-link" to="editor-page">
-          Get Started!
-        </Link>
-        <Link className="nav-link" to="faq-page">
-          FAQ
-        </Link>
-      </nav>
+      <NavBar />
       <section className="hero-section">
         <div className="hero-one">
           <h3>Resumes made simple!</h3>
@@ -56,66 +47,24 @@ export const HomePage = () => {
         </div>
       </section>
       <section className="choose-template-section">
-        <div>
-          <h2 className="">Pick your template here!!</h2>
-        </div>
-        <div className="template-pick">
-          <Link to="editor-page">
-            <img className="template-pick-image" src={MahomesCoverImg} />
-          </Link>
-        </div>
-        <div className="template-pick">
-          <Link to="editor-page">
-            <img className="template-pick-image" src={FolesCoverImg} />
-          </Link>
+        <h2>Choose your resume template</h2>
+        <div className="template-picker">
+          <div className="template-pick">
+            <Link to="editor-page">
+              <img className="template-pick-image" src={MahomesCoverImg} />
+            </Link>
+          </div>
+          <div className="template-pick">
+            <Link to="editor-page">
+              <img className="template-pick-image" src={FolesCoverImg} />
+            </Link>
+          </div>
         </div>
       </section>
       <section className="youtube-how-to-section">
         <div className="video-demo">This is video demo</div>
       </section>
-      <footer className="footer-section">
-        <div className="footer-header">
-          <h3>Get going!</h3>
-          <Link to="editor-page" className="btn-one">
-            Create your Resume!
-          </Link>
-        </div>
-        <div className="footer-content">
-          <div className="footer-content-section">
-            <h2 className="footer-title">ResGenie</h2>
-          </div>
-          <div className="footer-content-section">
-            <h3>Check out this project on GitHub</h3>
-            <a
-              className="footer-link"
-              href="https://github.com/starter-code/res-gen"
-            >
-              GitHub
-            </a>
-          </div>
-          <div className="footer-content-section">
-            <h3>Information</h3>
-            <Link className="footer-link" to="faq-page">
-              FAQ
-            </Link>
-          </div>
-          <div className="footer-content-section">
-            <h3>Made by:</h3>
-            <a className="footer-link" href="https://github.com/davidholyko">
-              David Ko
-            </a>
-            <a
-              className="footer-link"
-              href="https://www.linkedin.com/in/patrick-dohn/"
-            >
-              Patrick Dohn
-            </a>
-          </div>
-        </div>
-        <div className="footer-foot">
-          <h6>Copyright stuff can go here if we need it??</h6>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 };

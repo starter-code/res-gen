@@ -1,3 +1,4 @@
+@import './colors.scss';
 @import './App.scss';
 @import './Editor/index.scss';
 @import './Pdf.scss';
@@ -5,6 +6,8 @@
 @import './CodeMirror.scss';
 @import './EditorPage.scss';
 @import './Modal.scss';
+@import './NavBar.scss';
+@import './Footer.scss';
 
 body {
   margin: 0;
