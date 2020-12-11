@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { HiExternalLink } from 'react-icons/hi';
 
 export const Footer = () => {
   return (
@@ -10,10 +11,11 @@ export const Footer = () => {
         </Link>
       </div>
       <div className="footer-content">
-        <section className="footer-content-section text-lg">
+        <section className="footer-content-section">
           <h3>
-            <Link to="/" className="footer-title">
+            <Link to="/" className="footer-link text-bold">
               ResGenie
+              <HiExternalLink className="external-link-icon" />
             </Link>
           </h3>
         </section>
@@ -24,6 +26,7 @@ export const Footer = () => {
             href="https://github.com/starter-code/res-gen"
           >
             GitHub
+            <HiExternalLink className="external-link-icon" />
           </a>
         </section>
         <section className="footer-content-section">
@@ -41,6 +44,7 @@ export const Footer = () => {
             rel="noreferrer"
           >
             David Ko
+            <HiExternalLink className="external-link-icon" />
           </a>
           <a
             className="footer-link"
@@ -49,6 +53,7 @@ export const Footer = () => {
             rel="noreferrer"
           >
             Patrick Dohn
+            <HiExternalLink className="external-link-icon" />
           </a>
         </section>
       </div>
@@ -63,6 +68,7 @@ export const Footer = () => {
           >
             {' '}
             Starter Code
+            <HiExternalLink className="external-link-icon" />
           </a>
         </h6>
       </div>

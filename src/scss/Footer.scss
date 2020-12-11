@@ -48,15 +48,14 @@
     font-weight: 400;
   }
 
+  &.text-bold {
+    color: $base2;
+    font-weight: 800;
+    text-decoration: underline $blue;
+  }
+
   &:hover {
     color: $base1;
     transition: all 0.2s ease-out;
   }
-}
-
-.footer-title {
-  font-weight: 800;
-  color: $base2;
-  margin-left: 30px;
-  text-decoration: underline $blue;
 }
