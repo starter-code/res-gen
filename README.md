@@ -1,4 +1,6 @@
-[!(https://github.com/starter-code/res-gen/documentation/example-pdfs/1.0-home-screenshot.png)](res-gen.netlify.app/)
+### Screenshot
+
+<a href="res-gen.netlify.app/" rel="some text">![Foo](https://github.com/starter-code/res-gen/documentation/example-pdfs/1.0-home-screenshot.png)</a>
 
 ### Installation
 

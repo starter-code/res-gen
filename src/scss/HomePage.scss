@@ -1,3 +1,40 @@
+.btn-one {
+  background-color: $blue;
+  border-radius: 30px;
+  border: none;
+  color: $base2;
+  font-size: 20px;
+  font-weight: 900;
+  outline: none;
+  padding: 14px 40px;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+.btn-one:hover {
+  color: $black;
+  background-color: $base2;
+}
+.choose-template-section {
+  color: $base02;
+  background-color: $base2;
+  height: 100vh;
+  text-align: center;
+  width: 100vw;
+  z-index: 2;
+}
+.design {
+  background-color: $base2;
+  border-radius: 50px;
+  display: block;
+  height: 50px;
+  left: -20px;
+  position: absolute;
+  top: -20px;
+  transition: 0.3s;
+  width: 50px;
+}
+
 .home-page {
   display: flex;
   flex-direction: column;
@@ -41,24 +78,6 @@
 
 .hero-items {
   margin: 12px 12px 12px 12px;
-}
-
-.btn-one {
-  background-color: $blue;
-  border-radius: 30px;
-  border: none;
-  color: $base2;
-  font-size: 20px;
-  font-weight: 900;
-  outline: none;
-  padding: 14px 40px;
-  text-decoration: none;
-  transition: 0.4s;
-}
-
-.btn-one:hover {
-  color: $black;
-  background-color: $base2;
 }
 
 .hero-two {
@@ -120,27 +139,6 @@
   }
 }
 
-.design {
-  background-color: $base2;
-  border-radius: 50px;
-  display: block;
-  height: 50px;
-  left: -20px;
-  position: absolute;
-  top: -20px;
-  transition: 0.3s;
-  width: 50px;
-}
-
-.choose-template-section {
-  color: $base02;
-  background-color: $base2;
-  height: 100vh;
-  text-align: center;
-  width: 100vw;
-  z-index: 2;
-}
-
 .template-picker {
   display: flex;
   justify-content: space-around;
@@ -163,17 +161,6 @@
 .template-pick-image:hover {
   transform: scale(1.1);
 }
-
-.youtube-how-to-section {
-  align-items: center;
-  background-color: $base3;
-  color: $red;
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  width: 100vw;
-}
-
 .video-demo {
   align-items: center;
   background-color: $red;
@@ -182,4 +169,13 @@
   height: 50vh;
   justify-content: center;
   width: 50vw;
+}
+.youtube-how-to-section {
+  align-items: center;
+  background-color: $base3;
+  color: $red;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
 }
