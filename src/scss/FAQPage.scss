@@ -4,52 +4,41 @@
 }
 
 .faq {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   overflow: scroll;
 }
 
 .faq-title {
-  font-size: 50px;
   color: $base02;
+  font-size: 50px;
 }
 
 .faq-questions {
   color: $base02;
-  width: 70%;
   margin-bottom: 15px;
+  width: 70%;
 }
 
 .faq-section {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-around;
   min-height: 100vh;
-  width: 70%;
   overflow: scroll;
+  width: 70%;
 }
 
-/*
+.faq-link {
+  color: $base03;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 800;
 
-Question 1 Who is the project for
-Answer: Software engineers coming out of a bootcamp who know some CSS and JSON
-
-Question 2: What is this project made out of
-Answer: Its made with React with a custom webpack config. The editor page is made from codemirror to make the editor and React PDF to render the PDF.
-
-Question 3: Who made this project and how to contact them?
-Answer:
-
-
-Question 4: How do i find the code for this project?
-Answer: Link to github
-
-Question 5: Can I contribute to this project
-Answer: NO go away!!!
-
-
-
-*/
+  &:hover {
+    border-bottom: 4px solid $blue;
+  }
+}
