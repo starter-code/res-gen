@@ -23,6 +23,7 @@ export const HomePage = () => {
           <img className="hero-image" src={FolesCoverImg} />
         </div>
       </section>
+      {/* TODO: restore this section with meaningful content */}
       <section className="hidden triple-column-section">
         <div className="triple-header">
           <h1>Create resumes that get results! In 3 easy steps!</h1>
@@ -60,6 +61,7 @@ export const HomePage = () => {
           </div>
         </div>
       </section>
+      {/* TODO: restore this section with meaningful content */}
       <section className="hidden youtube-how-to-section">
         <div className="video-demo">This is video demo</div>
       </section>
