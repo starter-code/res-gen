@@ -10,11 +10,12 @@ export const HomePage = () => {
       <NavBar />
       <section className="hero-section">
         <div className="hero-one">
-          <h3>Resumes made simple!</h3>
+          <h3>Generate your resume with ResGenie</h3>
           <ul className="hero-list">
-            <li className="hero-items">point one</li>
-            <li className="hero-items">point two</li>
-            <li className="hero-items">point three</li>
+            <li className="hero-items">Made by developers for devlopers.</li>
+            <li className="hero-items">
+              See your resume preview as a real PDF.
+            </li>
           </ul>
           <Link to="editor-page" className="btn-one">
             Create your Resume!
@@ -24,7 +25,7 @@ export const HomePage = () => {
           <img className="hero-image" src={FolesCoverImg} />
         </div>
       </section>
-      <section className="triple-column-section">
+      {/* <section className="triple-column-section">
         <div className="triple-header">
           <h1>Create resumes that get results! In 3 easy steps!</h1>
         </div>
@@ -45,7 +46,7 @@ export const HomePage = () => {
             <p>content can go here put whatever you want</p>
           </article>
         </div>
-      </section>
+      </section> */}
       <section className="choose-template-section">
         <h2>Choose your resume template</h2>
         <div className="template-picker">
@@ -61,9 +62,9 @@ export const HomePage = () => {
           </div>
         </div>
       </section>
-      <section className="youtube-how-to-section">
+      {/* <section className="youtube-how-to-section">
         <div className="video-demo">This is video demo</div>
-      </section>
+      </section> */}
       <Footer />
     </main>
   );

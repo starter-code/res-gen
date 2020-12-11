@@ -133,11 +133,12 @@
 }
 
 .choose-template-section {
-  background-color: $base03;
+  background-color: $base2;
+  color: $base02;
   text-align: center;
-  color: $base2;
   width: 100vw;
   height: 100vh;
+  z-index: 2;
 }
 
 .template-picker {
