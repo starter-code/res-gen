@@ -1,6 +1,6 @@
 ### Screenshot
 
-<a href="res-gen.netlify.app/" rel="some text"><img src="documentation/images/1.0-home-screenshot.png"></a>
+<a href="https://res-gen.netlify.app/" rel="some text"><img src="documentation/images/1.0-home-screenshot.png"></a>
 
 ### Installation
 

@@ -15,6 +15,7 @@ export const HomePage = () => {
             <li className="hero-items">Made by developers for developers.</li>
             <li className="hero-items">Preview your resume as a real PDF.</li>
           </ul>
+          {/* TODO: Rename btn-one to a better name */}
           <Link to="editor-page" className="btn-one">
             Create your Resume!
           </Link>

@@ -9,12 +9,13 @@
   padding: 14px 40px;
   text-decoration: none;
   transition: 0.4s;
+
+  &:hover {
+    color: $black;
+    background-color: $base2;
+  }
 }
 
-.btn-one:hover {
-  color: $black;
-  background-color: $base2;
-}
 .choose-template-section {
   color: $base02;
   background-color: $base2;
