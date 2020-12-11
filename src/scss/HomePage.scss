@@ -1,41 +1,41 @@
 .home-page {
   display: flex;
-  width: 100%;
   flex-direction: column;
   overflow-y: overlay;
+  width: 100%;
 }
 
 .hero-section {
-  background-color: $base2;
-  color: $cyan;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: space-around;
   align-items: center;
+  color: $cyan;
+  background-color: $base2;
+  display: flex;
+  height: 100vh;
+  justify-content: space-around;
+  width: 100vw;
 
   &::before {
-    content: '';
-    position: absolute;
-    height: 180%;
-    width: 70%;
-    transform: rotate(-10deg);
     background-color: $base02;
     bottom: -30%;
+    content: '';
+    height: 180%;
     left: -5%;
+    position: absolute;
+    transform: rotate(-10deg);
+    width: 70%;
     z-index: 1;
   }
 }
 
 .hero-one {
-  color: $base2;
-  font-size: 2rem;
-  display: flex;
   align-items: flex-start;
-  justify-content: center;
+  color: $base2;
+  display: flex;
+  font-size: 2rem;
   flex-direction: column;
-  width: 30vw;
   height: 80vh;
+  justify-content: center;
+  width: 30vw;
   z-index: 2;
 }
 
@@ -44,30 +44,30 @@
 }
 
 .btn-one {
-  padding: 14px 40px;
+  background-color: $blue;
   border-radius: 30px;
+  border: none;
+  color: $base2;
   font-size: 20px;
   font-weight: 900;
-  background-color: $blue;
-  color: $base2;
-  text-decoration: none;
   outline: none;
-  border: none;
+  padding: 14px 40px;
+  text-decoration: none;
   transition: 0.4s;
 }
 
 .btn-one:hover {
-  background-color: $base2;
   color: $black;
+  background-color: $base2;
 }
 
 .hero-two {
+  align-items: center;
   color: $black;
   display: flex;
-  align-items: center;
+  height: 80vh;
   justify-content: center;
   width: 30vw;
-  height: 80vh;
   z-index: 2;
 }
 
@@ -76,44 +76,44 @@
 }
 
 .triple-column-section {
+  align-items: center;
   background-color: $base2;
   color: $base02;
-  width: 100vw;
-  height: 100vh;
   display: flex;
   flex-direction: column;
+  height: 100vh;
   justify-content: space-around;
-  align-items: center;
+  width: 100vw;
   z-index: 2;
 }
 
 .triple-header {
-  width: 100vw;
-  height: 30vh;
-  display: flex;
-  margin-left: 50px;
   align-items: center;
+  display: flex;
+  height: 30vh;
+  margin-left: 50px;
+  width: 100vw;
 }
 
 .triple-content {
-  width: 100%;
-  height: 70vh;
+  align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: center;
+  height: 70vh;
+  width: 100%;
 }
 
 .triplet {
+  align-items: center;
   background-color: $base02;
   color: $base2;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 20vw;
   height: 40vh;
+  justify-content: center;
   position: relative;
+  width: 20vw;
 
   &:hover > .design {
     background-color: $blue;
@@ -121,23 +121,23 @@
 }
 
 .design {
-  display: block;
-  position: absolute;
-  top: -20px;
-  left: -20px;
-  height: 50px;
-  width: 50px;
   background-color: $base2;
   border-radius: 50px;
+  display: block;
+  height: 50px;
+  left: -20px;
+  position: absolute;
+  top: -20px;
   transition: 0.3s;
+  width: 50px;
 }
 
 .choose-template-section {
-  background-color: $base2;
   color: $base02;
+  background-color: $base2;
+  height: 100vh;
   text-align: center;
   width: 100vw;
-  height: 100vh;
   z-index: 2;
 }
 
@@ -147,12 +147,12 @@
 }
 
 .template-pick {
-  display: flex;
   align-items: center;
-  justify-content: space-around;
   color: black;
-  width: 30vw;
+  display: flex;
   height: 80vh;
+  justify-content: space-around;
+  width: 30vw;
 }
 
 .template-pick-image {
@@ -165,21 +165,21 @@
 }
 
 .youtube-how-to-section {
+  align-items: center;
   background-color: $base3;
   color: $red;
-  width: 100vw;
-  height: 100vh;
   display: flex;
+  height: 100vh;
   justify-content: center;
-  align-items: center;
+  width: 100vw;
 }
 
 .video-demo {
-  background-color: $red;
-  display: flex;
   align-items: center;
-  justify-content: center;
+  background-color: $red;
   color: $black;
-  width: 50vw;
+  display: flex;
   height: 50vh;
+  justify-content: center;
+  width: 50vw;
 }

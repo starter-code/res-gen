@@ -1,4 +1,4 @@
-![Home Page](https://github.com/starter-code/res-gen/documentation/example-pdfs/HomePage.png)
+[![Home Page screenshot](https://github.com/starter-code/res-gen/documentation/example-pdfs/1.0-home-screenshot.png)](res-gen.netlify.app/)
 
 ### Installation
 
