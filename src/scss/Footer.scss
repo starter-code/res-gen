@@ -1,63 +1,58 @@
-.footer-section {
+.footer {
+  align-items: center;
   background-color: $base02;
   color: $base2;
-  width: 100vw;
-  height: 40%;
   display: flex;
   flex-direction: column;
+  height: 40%;
   justify-content: space-between;
-  align-items: center;
-}
-
-.footer-header {
   margin-top: 50px;
-  width: 30vw;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  padding: 20px 0 0 0;
+  width: 100vw;
 }
 
 .footer-content {
   display: flex;
+  justify-content: space-around;
   width: 100%;
-  height: 60%;
-}
-
-.footer-title {
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: $base2;
-  justify-self: start;
-  flex: 1;
-  margin-left: 30px;
-  text-decoration: underline $blue;
-}
-
-.footer-foot {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0.5;
-  width: 100vw;
-  height: 10vh;
 }
 
 .footer-content-section {
   display: flex;
   flex-direction: column;
+  text-align: center;
+}
+
+.footer-header {
+  display: flex;
+}
+
+.footer-bottom {
   align-items: center;
-  width: 25vw;
-  height: 100%;
+  display: flex;
+  height: 20px;
+  padding: 10px;
+  justify-content: center;
+  width: 100%;
 }
 
 .footer-link {
-  color: $base00;
   align-self: center;
+  color: $base00;
   cursor: pointer;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 400;
   margin-bottom: 10px;
+  text-decoration: none;
+
+  &.text-lg {
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  &.text-bold {
+    color: $base2;
+    font-weight: 800;
+    text-decoration: underline $blue;
+  }
 
   &:hover {
     color: $base1;

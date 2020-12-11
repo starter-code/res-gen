@@ -1,51 +1,76 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { HiExternalLink } from 'react-icons/hi';
 
 export const Footer = () => {
   return (
-    <footer className="footer-section">
+    <footer className="footer">
       <div className="footer-header">
-        <h3>Get going!</h3>
         <Link to="editor-page" className="btn-one">
-          Create your Resume!
+          Create your Resume
         </Link>
       </div>
       <div className="footer-content">
-        <div className="footer-content-section">
-          <Link to="/" className="footer-title">
-            ResGenie
-          </Link>
-        </div>
-        <div className="footer-content-section">
-          <h3>Check out this project on GitHub</h3>
+        <section className="footer-content-section">
+          <h3>
+            <Link to="/" className="footer-link text-bold">
+              ResGenie
+              <HiExternalLink className="external-link-icon" />
+            </Link>
+          </h3>
+        </section>
+        <section className="footer-content-section">
+          <h3>Source Code</h3>
           <a
             className="footer-link"
             href="https://github.com/starter-code/res-gen"
           >
             GitHub
+            <HiExternalLink className="external-link-icon" />
           </a>
-        </div>
-        <div className="footer-content-section">
+        </section>
+        <section className="footer-content-section">
           <h3>Information</h3>
           <Link className="footer-link" to="faq-page">
             FAQ
           </Link>
-        </div>
-        <div className="footer-content-section">
-          <h3>Made by:</h3>
-          <a className="footer-link" href="https://github.com/davidholyko">
+        </section>
+        <section className="footer-content-section">
+          <h3>Developers</h3>
+          <a
+            className="footer-link"
+            href="https://github.com/davidholyko"
+            target="_blank"
+            rel="noreferrer"
+          >
             David Ko
+            <HiExternalLink className="external-link-icon" />
           </a>
           <a
             className="footer-link"
             href="https://www.linkedin.com/in/patrick-dohn/"
+            target="_blank"
+            rel="noreferrer"
           >
             Patrick Dohn
+            <HiExternalLink className="external-link-icon" />
           </a>
-        </div>
+        </section>
       </div>
-      <div className="footer-foot">
-        <h6>Copyright stuff can go here if we need it??</h6>
+      <div className="footer-bottom">
+        <h6>
+          Copyright ©2020 Created by
+          <a
+            className="footer-link"
+            href="https://github.com/starter-code/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {' '}
+            Starter Code
+            <HiExternalLink className="external-link-icon" />
+          </a>
+        </h6>
       </div>
     </footer>
   );
