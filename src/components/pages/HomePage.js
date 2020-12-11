@@ -10,12 +10,12 @@ export const HomePage = () => {
       <NavBar />
       <section className="hero-section">
         <div className="hero-one">
-          <h3>Resumes made simple!</h3>
+          <h3>Generate your resume with ResGenie</h3>
           <ul className="hero-list">
-            <li className="hero-items">point one</li>
-            <li className="hero-items">point two</li>
-            <li className="hero-items">point three</li>
+            <li className="hero-items">Made by developers for developers.</li>
+            <li className="hero-items">Preview your resume as a real PDF.</li>
           </ul>
+          {/* TODO: Rename btn-one to a better name */}
           <Link to="editor-page" className="btn-one">
             Create your Resume!
           </Link>
@@ -24,7 +24,8 @@ export const HomePage = () => {
           <img className="hero-image" src={FolesCoverImg} />
         </div>
       </section>
-      <section className="triple-column-section">
+      {/* TODO: restore this section with meaningful content */}
+      <section className="hidden triple-column-section">
         <div className="triple-header">
           <h1>Create resumes that get results! In 3 easy steps!</h1>
         </div>
@@ -61,7 +62,8 @@ export const HomePage = () => {
           </div>
         </div>
       </section>
-      <section className="youtube-how-to-section">
+      {/* TODO: restore this section with meaningful content */}
+      <section className="hidden youtube-how-to-section">
         <div className="video-demo">This is video demo</div>
       </section>
       <Footer />
