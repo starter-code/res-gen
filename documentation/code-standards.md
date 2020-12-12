@@ -19,18 +19,23 @@ import ... '../../folder/file';
 import ... './file-in-same-folder';
 ```
 
-### CSS Properties
+### CSS Selectors and Properties
 
-CSS Properties should be sorted alphabetically and selectors should be sorted alphabetically in same file
+CSS Selectors and Properties should be sorted alphabetically,
 
 ```css
-.example {
+
+.a {
+  color: red;
+}
+
+.b {
   color: blue;
   margin: 0px;
   padding: 0px;
 }
 
-.doc {
+.c {
   visibility: hidden;
 }
 ```
