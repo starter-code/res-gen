@@ -2,37 +2,46 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.js',
+  entry: {
+    index: './src/index.js',
+    editor: './src/components/pages/EditorPage.js',
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    // filename: 'bundle.js',
+    filename: '[name].bundle.js',
     publicPath: '/',
   },
   devtool: 'eval-source-map',
   module: {
     rules: [
       {
+        exclude: /node_modules/,
         test: /\.js$/,
         loader: 'babel-loader',
-        exclude: /node_modules/,
       },
       {
+        exclude: /node_modules/,
         test: /\.s[ac]ss$/i,
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
+        exclude: /node_modules/,
         test: /\.js$/,
         enforce: 'pre',
         use: ['source-map-loader'],
       },
       {
+        exclude: /node_modules/,
         test: /\.(webm|webp|mp4|png)$/,
         loader: 'file-loader',
       },
       {
+        exclude: /node_modules/,
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
         use: [
           {
@@ -107,4 +116,8 @@ module.exports = {
       process: 'process/browser',
     }),
   ],
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin()],
+  },
 };
