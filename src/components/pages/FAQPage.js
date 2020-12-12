@@ -12,9 +12,21 @@ export const FAQPage = () => {
           <div className="faq-questions">
             <h1>What technologies are used to build this project</h1>
             <h3>
-              ResGenie is built with React, with a custom webpack config. The
-              editor page is made from codemirror to make the editor, and React
-              PDF to render the PDF.
+              ResGenie is built with React. It&#39;s JSON editor is made from{' '}
+              <a className="faq-link" href="https://codemirror.net/">
+                codemirror
+              </a>{' '}
+              and the PDF iframe is built with{' '}
+              <a className="faq-link" href="https://react-pdf.org/">
+                react-pdf
+              </a>
+              . Please check out a more comprehensive list{' '}
+              <a
+                className="faq-link"
+                href="https://github.com/starter-code/res-gen#technology"
+              >
+                here
+              </a>
             </h3>
           </div>
           <div className="faq-questions">
@@ -25,7 +37,7 @@ export const FAQPage = () => {
             </h3>
           </div>
           <div className="faq-questions">
-            <h1>How do i find the code for this project?</h1>
+            <h1>How do I find the code for this project?</h1>
             <h3>
               Great question click{' '}
               <a
