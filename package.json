@@ -29,7 +29,7 @@
     "stream-browserify": "^3.0.0"
   },
   "scripts": {
-    "start": "npx webpack-dev-server",
+    "start": "npx webpack-dev-server --config ./webpack.dev.config.js",
     "build:dev": "webpack --config ./webpack.dev.config.js",
     "build:prod": "webpack --config ./webpack.prod.config.js",
     "test": "react-scripts test",
