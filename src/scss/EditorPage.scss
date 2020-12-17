@@ -41,6 +41,7 @@
 
   & section {
     width: 50%;
+    margin: 0px 10px;
   }
 }
 
@@ -82,5 +83,37 @@
 
   &:active {
     background-color: $base01;
+  }
+}
+
+.switch-template-button {
+  padding: 14px 40px;
+  font-size: 20px;
+  font-weight: 900;
+  background-color: $blue;
+  color: $white;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  transition: 0.4s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $base2;
+    color: $black;
+  }
+
+  &:hover path {
+    stroke: $black;
+  }
+
+  & svg {
+    vertical-align: text-bottom;
+    margin-left: 5px;
+  }
+
+  & path {
+    stroke: $white;
+    transition: 0.4s;
   }
 }

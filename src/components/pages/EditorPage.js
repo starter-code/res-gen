@@ -123,7 +123,7 @@ export const EditorPage = (props) => {
         </section>
         <section className="template-section">
           <div className="switch-template-button-container">
-            <button className="btn-one" onClick={openModal}>
+            <button className="switch-template-button" onClick={openModal}>
               <span>Switch Template</span>
               <GrDocumentText />
             </button>
