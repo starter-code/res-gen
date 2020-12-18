@@ -51,12 +51,12 @@ export const HomePage = () => {
         <h2>Choose your resume template</h2>
         <div className="template-picker">
           <div className="template-pick">
-            <Link to="editor-page">
+            <Link to={{ pathname: 'editor-page', hash: '#mahomes' }}>
               <img className="template-pick-image" src={MahomesCoverImg} />
             </Link>
           </div>
           <div className="template-pick">
-            <Link to="editor-page">
+            <Link to={{ pathname: 'editor-page', hash: '#foles' }}>
               <img className="template-pick-image" src={FolesCoverImg} />
             </Link>
           </div>

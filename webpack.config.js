@@ -81,7 +81,7 @@ const alias = {
   'json-lint': path.resolve(__dirname, 'src/custom-packages/json-lint.js'),
   'react-pdf': path.resolve(__dirname, 'node_modules/@react-pdf/renderer'),
   'src/components': path.resolve(__dirname, 'src/components'),
-  'src/customizers': path.resolve(__dirname, 'src/components/customizers'),
+  'src/editor': path.resolve(__dirname, 'src/components/editor'),
   'src/fonts': path.resolve(__dirname, 'src/fonts/fonts.js'),
   'src/pages': path.resolve(__dirname, 'src/components/pages'),
   'src/templates': path.resolve(__dirname, 'src/components/templates'),

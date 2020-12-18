@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import Split from 'react-split';
-import { EditorCustomizer } from 'src/customizers/EditorCustomizer';
+import { Editor } from 'src/editor';
 import { FolesTemplate } from 'src/templates/FolesTemplate';
 import { MahomesTemplate } from 'src/templates/MahomesTemplate';
 import { style as defaultFolesCss } from '../templates/FolesTemplate/Styles';
@@ -10,14 +9,23 @@ import FolesCoverImg from '../../images/FolesCoverImg.png';
 import MahomesCoverImg from '../../images/MahomesCoverImg.png';
 import Modal from 'react-modal';
 import _ from 'lodash';
+import PropTypes from 'prop-types';
+import { GrDocumentText, GrClose } from 'react-icons/gr';
+import { NavBar, Footer } from 'src/components/main';
 
 Modal.setAppElement('#modal');
 
-export const EditorPage = () => {
+export const EditorPage = (props) => {
+  let defaultResumeIndex = 0;
+
+  if (props && props.location.hash === '#mahomes') {
+    defaultResumeIndex = 1;
+  }
+
   const templateStyles = [defaultFolesCss, defaultMahomesCss];
   const [resumeData, setResumeData] = useState(defaultResumeData);
   const [editorIndex, setEditorIndex] = useState(0);
-  const [resumeIndex, setResumeIndex] = useState(0);
+  const [resumeIndex, setResumeIndex] = useState(defaultResumeIndex);
   const [cssData, setCssData] = useState(templateStyles[resumeIndex]);
   const [modalIsOpen, setIsOpen] = useState(false);
 
@@ -41,25 +49,23 @@ export const EditorPage = () => {
   const editors = [
     {
       component: (
-        <EditorCustomizer
+        <Editor
           setData={setResumeData}
           defaultData={resumeData}
           type="Content"
           key={Math.random()}
         />
       ),
-      title: 'Resume Content',
     },
     {
       component: (
-        <EditorCustomizer
+        <Editor
           setData={setCssData}
           defaultData={cssData}
           type="Resume Styles"
           key={Math.random()}
         />
       ),
-      title: 'Resume Styles',
     },
   ];
 
@@ -75,8 +81,12 @@ export const EditorPage = () => {
     return type[index].component;
   };
 
-  const onHandleSwitchEditor = (index) => {
-    setEditorIndex(index);
+  const onHandleSwitchEditor = () => {
+    if (editorIndex === 0) {
+      setEditorIndex(1);
+    } else {
+      setEditorIndex(0);
+    }
   };
 
   const onHandleSwitchTemplate = (index) => {
@@ -84,37 +94,44 @@ export const EditorPage = () => {
     setCssData(templateStyles[index]);
   };
 
+  const renderEditorButtons = () => {
+    return (
+      <div className="editor-buttons-container">
+        <button
+          className={editorIndex === 0 ? 'active-editor' : ''}
+          onClick={onHandleSwitchEditor}
+        >
+          Content
+        </button>
+        <button
+          className={editorIndex === 1 ? 'active-editor' : ''}
+          onClick={onHandleSwitchEditor}
+        >
+          Styles
+        </button>
+      </div>
+    );
+  };
+
   return (
     <div className="editor-page">
-      <Split
-        className="split-screen"
-        sizes={[50, 50]}
-        minSize={100}
-        gutterSize={2}
-        gutterAlign="center"
-        snapOffset={30}
-        dragInterval={1}
-        direction="horizontal"
-        cursor="col-resize"
-      >
-        <div className="container">
-          <div className="customizer">
-            {_.map(editors, (editor, editorIndex) => (
-              <button
-                key={editorIndex}
-                onClick={() => onHandleSwitchEditor(editorIndex)}
-              >
-                {editor.title}
-              </button>
-            ))}
-          </div>
+      <NavBar />
+      <main>
+        <section className="editor-section">
+          {renderEditorButtons()}
           {renderComponent(editors, editorIndex)}
-        </div>
-        <div className="template">
-          <button onClick={openModal}>Open Modal</button>
+        </section>
+        <section className="template-section">
+          <div className="switch-template-button-container">
+            <button className="switch-template-button" onClick={openModal}>
+              <span>Switch Template</span>
+              <GrDocumentText />
+            </button>
+          </div>
           {renderComponent(templates, resumeIndex)}
-        </div>
-      </Split>
+        </section>
+      </main>
+      <Footer />
 
       <Modal
         isOpen={modalIsOpen}
@@ -124,19 +141,27 @@ export const EditorPage = () => {
         contentLabel="Template Switcher"
       >
         <h2>Select a template</h2>
-        <button onClick={closeModal}>Exit</button>
+        <button className="blank modal-close-button" onClick={closeModal}>
+          <GrClose />
+        </button>
         <div>
           {_.map(templates, (template, templateIndex) => (
             <button
-              className="img-button"
+              className="blank template-img-button"
               key={templateIndex}
               onClick={() => onHandleSwitchTemplate(templateIndex)}
             >
-              <img className="cover-img" src={template.image} />
+              <img className="template-img" src={template.image} />
             </button>
           ))}
         </div>
       </Modal>
     </div>
   );
+};
+
+EditorPage.propTypes = {
+  location: PropTypes.object,
+  match: PropTypes.object,
+  history: PropTypes.object,
 };
