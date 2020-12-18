@@ -25,25 +25,33 @@ export const HomePage = () => {
         </div>
       </section>
       {/* TODO: restore this section with meaningful content */}
-      <section className="hidden triple-column-section">
+      <section className="triple-column-section">
         <div className="triple-header">
           <h1>Create resumes that get results! In 3 easy steps!</h1>
+          <p>
+            Res-Genie is designed for developers to give them a platform to
+            create and customize their resume using their skills in JSON and
+            CSS. Put your skills to the test creating your resume from scratch.
+          </p>
         </div>
         <div className="triple-content">
           <article className="triplet">
             <div className="design"> </div>
-            <h3>title</h3>
-            <p>content can go here put whatever you want</p>
+            <h3>Choose Template</h3>
+            <p>
+              Pick from our library of templates to find the one that best fits
+              you.
+            </p>
           </article>
           <article className="triplet">
             <div className="design"> </div>
-            <h3>title</h3>
-            <p>content can go here put whatever you want</p>
+            <h3>Modify content and styles</h3>
+            <p>Use your knowledge of JSON and CSS to build your resume.</p>
           </article>
           <article className="triplet">
             <div className="design"> </div>
-            <h3>title</h3>
-            <p>content can go here put whatever you want</p>
+            <h3>Land your dream job</h3>
+            <p>Download Pdf and send too recruiters!</p>
           </article>
         </div>
       </section>
