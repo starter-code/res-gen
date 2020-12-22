@@ -39,21 +39,6 @@
   width: 100vw;
   z-index: 2;
 }
-.triplet-design-one {
-  font-size: 90px;
-  color: $blue;
-  top: 2px;
-}
-.triplet-design-two {
-  font-size: 70px;
-  color: $blue;
-  top: 12px;
-}
-.triplet-design-three {
-  font-size: 70px;
-  color: $blue;
-  top: 12px;
-}
 
 .home-page {
   display: flex;
@@ -137,6 +122,15 @@
   width: 100vw;
 }
 
+.triple-header > h1 {
+  font-size: 50px;
+}
+.triple-header > p {
+  font-size: 25px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
 .triple-content {
   align-items: center;
   display: flex;
@@ -159,9 +153,26 @@
   width: 20vw;
 }
 
-.triple-text {
+.triplet-design-one {
+  font-size: 90px;
+  color: $blue;
+  top: 2px;
+}
+.triplet-design-two {
+  font-size: 70px;
+  color: $blue;
+  top: 12px;
+}
+.triplet-design-three {
+  font-size: 90px;
+  color: $blue;
+  top: 12px;
+}
+
+.triplet-text {
   margin-left: 25px;
   margin-right: 25px;
+  padding-bottom: 50px;
 }
 
 .template-picker {

@@ -5,8 +5,7 @@ import MahomesCoverImg from '../../images/MahomesCoverImg.png';
 import { NavBar, Footer } from 'src/components/main';
 import { GiCardPick } from 'react-icons/gi';
 import { FaPencilAlt } from 'react-icons/fa';
-import { BsFillBriefcaseFill } from 'react-icons/bs';
-import { GrDocumentText } from 'react-icons/gr';
+import { AiOutlineFilePdf } from 'react-icons/ai';
 
 export const HomePage = () => {
   return (
@@ -19,7 +18,6 @@ export const HomePage = () => {
             <li className="hero-items">Made by developers for developers.</li>
             <li className="hero-items">Preview your resume as a real PDF.</li>
           </ul>
-          {/* TODO: Rename btn-one to a better name */}
           <Link to="editor-page" className="btn-one">
             Create your Resume!
           </Link>
@@ -28,10 +26,9 @@ export const HomePage = () => {
           <img className="hero-image" src={FolesCoverImg} />
         </div>
       </section>
-      {/* TODO: restore this section with meaningful content */}
       <section className="triple-column-section">
         <div className="triple-header">
-          <h1>Create resumes that get results! In 3 easy steps!</h1>
+          <h1>Create resumes that get results!</h1>
           <p>
             Res-Genie is designed for developers to give them a platform to
             create and customize their resume using their skills in JSON and
@@ -42,7 +39,7 @@ export const HomePage = () => {
           <article className="triplet">
             <GiCardPick className="triplet-design-one" />
             <h3>Choose your template</h3>
-            <p className="triple-text">
+            <p className="triplet-text">
               Pick from our library of templates to find the one that best fits
               you.
             </p>
@@ -50,14 +47,14 @@ export const HomePage = () => {
           <article className="triplet">
             <FaPencilAlt className="triplet-design-two" />
             <h3>Modify content and styles</h3>
-            <p className="triple-text">
+            <p className="triplet-text">
               Use your knowledge of JSON and CSS to build your resume.
             </p>
           </article>
           <article className="triplet">
-            <GrDocumentText className="triplet-design-three" />
+            <AiOutlineFilePdf className="triplet-design-three" />
             <h3>Download or print your resume</h3>
-            <p className="triple-text">
+            <p className="triplet-text">
               Complete your resume and get on the job search!
             </p>
           </article>
@@ -78,7 +75,6 @@ export const HomePage = () => {
           </div>
         </div>
       </section>
-      {/* TODO: restore this section with meaningful content */}
       <section className="youtube-how-to-section">
         <div className="video-demo">This is video demo</div>
       </section>
