@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 import FolesCoverImg from '../../images/FolesCoverImg.png';
 import MahomesCoverImg from '../../images/MahomesCoverImg.png';
 import { NavBar, Footer } from 'src/components/main';
+import { GiCardPick } from 'react-icons/gi';
+import { FaPencilAlt } from 'react-icons/fa';
+import { BsFillBriefcaseFill } from 'react-icons/bs';
+import { GrDocumentText } from 'react-icons/gr';
 
 export const HomePage = () => {
   return (
@@ -36,22 +40,26 @@ export const HomePage = () => {
         </div>
         <div className="triple-content">
           <article className="triplet">
-            <div className="design"> </div>
-            <h3>Choose Template</h3>
-            <p>
+            <GiCardPick className="triplet-design-one" />
+            <h3>Choose your template</h3>
+            <p className="triple-text">
               Pick from our library of templates to find the one that best fits
               you.
             </p>
           </article>
           <article className="triplet">
-            <div className="design"> </div>
+            <FaPencilAlt className="triplet-design-two" />
             <h3>Modify content and styles</h3>
-            <p>Use your knowledge of JSON and CSS to build your resume.</p>
+            <p className="triple-text">
+              Use your knowledge of JSON and CSS to build your resume.
+            </p>
           </article>
           <article className="triplet">
-            <div className="design"> </div>
-            <h3>Land your dream job</h3>
-            <p>Download Pdf and send too recruiters!</p>
+            <GrDocumentText className="triplet-design-three" />
+            <h3>Download or print your resume</h3>
+            <p className="triple-text">
+              Complete your resume and get on the job search!
+            </p>
           </article>
         </div>
       </section>
@@ -71,7 +79,7 @@ export const HomePage = () => {
         </div>
       </section>
       {/* TODO: restore this section with meaningful content */}
-      <section className="hidden youtube-how-to-section">
+      <section className="youtube-how-to-section">
         <div className="video-demo">This is video demo</div>
       </section>
       <Footer />
