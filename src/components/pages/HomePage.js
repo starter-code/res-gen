@@ -3,9 +3,7 @@ import { Link } from 'react-router-dom';
 import FolesCoverImg from '../../images/FolesCoverImg.png';
 import MahomesCoverImg from '../../images/MahomesCoverImg.png';
 import { NavBar, Footer } from 'src/components/main';
-import { GiCardPick } from 'react-icons/gi';
-import { FaPencilAlt } from 'react-icons/fa';
-import { AiOutlineFilePdf } from 'react-icons/ai';
+import { GrMultiple, GrDocumentText, GrEdit } from 'react-icons/gr';
 
 export const HomePage = () => {
   return (
@@ -28,16 +26,16 @@ export const HomePage = () => {
       </section>
       <section className="triple-column-section">
         <div className="triple-header">
-          <h1>Create resumes that get results!</h1>
+          <h2 className="section-title">Create resumes that get results!</h2>
           <p>
             Res-Genie is designed for developers to give them a platform to
             create and customize their resume using their skills in JSON and
-            CSS. Put your skills to the test creating your resume from scratch.
+            CSS.
           </p>
         </div>
         <div className="triple-content">
           <article className="triplet">
-            <GiCardPick className="triplet-design-one" />
+            <GrMultiple className="triplet-icon" />
             <h3>Choose your template</h3>
             <p className="triplet-text">
               Pick from our library of templates to find the one that best fits
@@ -45,15 +43,15 @@ export const HomePage = () => {
             </p>
           </article>
           <article className="triplet">
-            <FaPencilAlt className="triplet-design-two" />
+            <GrEdit className="triplet-icon" />
             <h3>Modify content and styles</h3>
             <p className="triplet-text">
               Use your knowledge of JSON and CSS to build your resume.
             </p>
           </article>
           <article className="triplet">
-            <AiOutlineFilePdf className="triplet-design-three" />
-            <h3>Download or print your resume</h3>
+            <GrDocumentText className="triplet-icon" />
+            <h3>Download your resume</h3>
             <p className="triplet-text">
               Complete your resume and get on the job search!
             </p>
@@ -61,7 +59,7 @@ export const HomePage = () => {
         </div>
       </section>
       <section className="choose-template-section">
-        <h2>Choose your resume template</h2>
+        <h2 className="section-title">Choose your resume template</h2>
         <div className="template-picker">
           <div className="template-pick">
             <Link to={{ pathname: 'editor-page', hash: '#mahomes' }}>
@@ -76,7 +74,8 @@ export const HomePage = () => {
         </div>
       </section>
       <section className="youtube-how-to-section">
-        <div className="video-demo">This is video demo</div>
+        <h2 className="section-title">Video Demo Section</h2>
+        <div className="video-demo">Video demo coming soon.</div>
       </section>
       <Footer />
     </main>
