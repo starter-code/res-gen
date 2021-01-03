@@ -11,7 +11,7 @@ export const HomePage = () => {
       <NavBar />
       <section className="hero-section">
         <div className="hero-one">
-          <h3>Generate your resume with ResGenie</h3>
+          <h3 className="m-0">Generate your resume with ResGenie</h3>
           <ul className="hero-list">
             <li className="hero-items">Made by developers for developers.</li>
             <li className="hero-items">Preview your resume as a real PDF.</li>
