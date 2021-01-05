@@ -38,8 +38,7 @@ export const HomePage = () => {
             <GrMultiple className="triplet-icon" />
             <h3>Choose your template</h3>
             <p className="triplet-text">
-              Pick from our library of templates to find the one that best fits
-              you.
+              Pick from our templates to find the one that best fits you.
             </p>
           </article>
           <article className="triplet">

@@ -110,7 +110,6 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  justify-content: space-around;
   z-index: 2;
 }
 
@@ -120,7 +119,6 @@
   flex-direction: column;
   display: flex;
   height: 30vh;
-  margin-left: 50px;
 
   & > p {
     font-size: 25px;
@@ -134,7 +132,6 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  height: 70vh;
 }
 
 .triplet {
@@ -142,14 +139,17 @@
   background-color: $base2;
   border-radius: 20px;
   color: $base02;
-  display: flex;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
   flex-direction: column;
   font-size: 25px;
   justify-content: flex-start;
-  height: 40vh;
   position: relative;
-  width: 20vw;
   padding: 5px;
+
+  & > svg {
+    margin: auto;
+  }
 }
 
 .triplet-icon {
