@@ -117,10 +117,8 @@ export const style = StyleSheet.create({
     margin: '3px 0 8px 0',
   },
   'skill-item': {
-    backgroundColor: '#276a97',
     display: 'inline',
-    borderRadius: 8,
-    color: 'white',
+    color: 'black',
     margin: '0 100px 5px 0',
     padding: '0 6px',
   },
