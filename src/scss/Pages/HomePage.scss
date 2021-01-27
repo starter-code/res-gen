@@ -140,12 +140,13 @@
   border-radius: 20px;
   color: $base02;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr auto auto;
   flex-direction: column;
   font-size: 25px;
   justify-content: flex-start;
   position: relative;
   padding: 5px;
+  margin: 5px;
 
   & > svg {
     margin: auto;
