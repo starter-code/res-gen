@@ -12,6 +12,9 @@ I did...
 -
 -
 
+#### Screenshots
+*Provide before/after screenshots if applicable
+
 #### Checklist
 
 - [ ] Branch should be in format `TYPE/scope/description`
