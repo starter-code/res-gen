@@ -1,19 +1,14 @@
 Resolves: N/A <!-- Add Link to Issue or Card-->
 
 #### Summary
-*Provide a general summary of what this PR does*
-
-I did...
-
-#### What I did
-*Enumerate changes*
+*Enumerate changes of what this PR does*
 
 -
 -
 -
 
 #### Screenshots
-*Provide before/after screenshots if applicable
+*Provide before/after screenshots if applicable*
 
 #### Checklist
 
