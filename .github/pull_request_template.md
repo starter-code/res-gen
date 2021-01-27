@@ -1,17 +1,18 @@
+Resolves: N/A <!-- Add Link to Issue or Card-->
+
 #### Summary
-
-- Work Type: <!-- Feature | Fix | Chore | Refactor -->
-
-#### What I did
+*Enumerate changes of what this PR does*
 
 -
 -
 -
+
+#### Screenshots
+*Provide before/after screenshots if applicable*
 
 #### Checklist
 
-- [ ] Branch is in format `TYPE/scope/description`
+- [ ] Branch should be in format `TYPE/scope/description`
 - [ ] PR title is in format `TYPE(scope): description`
+  - Expected TYPES, scopes are listed [here](https://github.com/starter-code/res-gen/blob/master/.github/semantic.yml)
 - [ ] Commits are in semantic format
-- [ ] Has Summary
-- [ ] Has Labels
