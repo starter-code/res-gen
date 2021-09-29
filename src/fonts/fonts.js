@@ -14,11 +14,7 @@ import MerriweatherLightItalic from './Merriweather-LightItalic.ttf';
 
 Font.register({
   family: 'Roboto',
-  fonts: [
-    { src: Roboto },
-    { src: RobotoLight },
-    { src: RobotoBold, fontWeight: 700 },
-  ],
+  fonts: [{ src: Roboto }, { src: RobotoLight }, { src: RobotoBold, fontWeight: 700 }],
 });
 
 Font.register({

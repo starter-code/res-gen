@@ -2,46 +2,38 @@ import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Text, View } from 'react-pdf';
-
-import { DetailHeading } from './DetailHeading';
+import { DetailsHeading } from './DetailsHeading';
 import { DescriptionsList } from './DescriptionsList';
 
-const OtherWorkExperience = ({ company, dates, descriptions, location, title, style }) => {
+const Education = ({ dates, descriptions, location, school, style }) => {
   return (
     <View>
-      <DetailHeading
-        company={company}
-        dates={dates}
-        title={title}
-        location={location}
-        style={style}
-      />
+      <DetailsHeading dates={dates} location={location} school={school} style={style} />
       <DescriptionsList descriptions={descriptions} style={style} />
     </View>
   );
 };
 
-OtherWorkExperience.propTypes = {
-  company: PropTypes.string,
+Education.propTypes = {
   dates: PropTypes.string,
   descriptions: PropTypes.arrayOf(PropTypes.string),
   location: PropTypes.string,
-  title: PropTypes.string,
+  school: PropTypes.string,
   style: PropTypes.object,
 };
 
-export const OtherWorkExperiences = ({ details, heading, style }) => {
+export const Educations = ({ details, heading, style }) => {
   return (
     <View>
       <Text style={style['section-heading']}>{heading}</Text>
       {_.map(details, (details, index) => {
-        return <OtherWorkExperience {...details} key={index} style={style} />;
+        return <Education {...details} key={index} style={style} />;
       })}
     </View>
   );
 };
 
-OtherWorkExperiences.propTypes = {
+Educations.propTypes = {
   details: PropTypes.array,
   heading: PropTypes.string,
   style: PropTypes.object,

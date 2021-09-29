@@ -8,12 +8,7 @@ import { DescriptionsList } from './DescriptionsList';
 const Education = ({ dates, descriptions, location, school, style }) => {
   return (
     <View>
-      <DetailHeading
-        dates={dates}
-        location={location}
-        school={school}
-        style={style}
-      />
+      <DetailHeading dates={dates} location={location} school={school} style={style} />
       <DescriptionsList descriptions={descriptions} style={style} />
     </View>
   );

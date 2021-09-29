@@ -1,12 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import {
-  HomePage,
-  ContributorsPage,
-  NotFoundPage,
-  EditorPage,
-  FAQPage,
-} from 'src/pages';
+import { HomePage, ContributorsPage, NotFoundPage, EditorPage, FAQPage } from 'src/pages';
 
 export const Routes = () => {
   return (

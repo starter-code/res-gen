@@ -21,10 +21,7 @@ export const Footer = () => {
         </section>
         <section className="footer-content-section">
           <h3>Source Code</h3>
-          <a
-            className="footer-link"
-            href="https://github.com/starter-code/res-gen"
-          >
+          <a className="footer-link" href="https://github.com/starter-code/res-gen">
             GitHub
             <HiExternalLink className="external-link-icon" />
           </a>

@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Text, View } from 'react-pdf';
 
-import { DetailHeading } from './DetailHeading';
+import { DetailsHeading } from './DetailsHeading';
 import { DetailsTags } from './DetailsTags';
 import { DescriptionsList } from './DescriptionsList';
 
 const Project = ({ dates, descriptions, descriptor, location, project, tags, title, style }) => {
   return (
     <View>
-      <DetailHeading
+      <DetailsHeading
         project={project}
         descriptor={descriptor}
         location={location}

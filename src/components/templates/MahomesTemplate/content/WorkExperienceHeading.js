@@ -2,13 +2,7 @@ import React from 'react';
 import { Text, View } from 'react-pdf';
 import PropTypes from 'prop-types';
 
-export const WorkExperienceHeading = ({
-  company,
-  dates,
-  location,
-  title,
-  style,
-}) => {
+export const WorkExperienceHeading = ({ company, dates, location, title, style }) => {
   return (
     <View>
       <View style={style['work-experience-heading']}>

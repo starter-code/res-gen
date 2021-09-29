@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Editor } from 'src/editor';
-import { FolesTemplate } from 'src/templates/FolesTemplate';
+import { CunninghamTemplate } from 'src/templates/CunninghamTemplate';
 import { MahomesTemplate } from 'src/templates/MahomesTemplate';
-import { style as defaultFolesCss } from '../templates/FolesTemplate/Styles';
+import { style as defaultCunninghamCss } from '../templates/CunninghamTemplate/Styles';
 import { style as defaultMahomesCss } from '../templates/MahomesTemplate/Styles';
 import defaultResumeData from '../../example-json/john_smith.json';
 import FolesCoverImg from '../../images/FolesCoverImg.png';
@@ -22,7 +22,7 @@ export const EditorPage = (props) => {
     defaultResumeIndex = 1;
   }
 
-  const templateStyles = [defaultFolesCss, defaultMahomesCss];
+  const templateStyles = [defaultCunninghamCss, defaultMahomesCss];
   const [resumeData, setResumeData] = useState(defaultResumeData);
   const [editorIndex, setEditorIndex] = useState(0);
   const [resumeIndex, setResumeIndex] = useState(defaultResumeIndex);
@@ -31,16 +31,12 @@ export const EditorPage = (props) => {
 
   const templates = [
     {
-      component: (
-        <FolesTemplate key="foles" data={resumeData} style={cssData} />
-      ),
-      title: 'Foles',
+      component: <CunninghamTemplate key="Cunningham" data={resumeData} style={cssData} />,
+      title: 'Cunningham',
       image: FolesCoverImg,
     },
     {
-      component: (
-        <MahomesTemplate key="mahomes" data={resumeData} style={cssData} />
-      ),
+      component: <MahomesTemplate key="mahomes" data={resumeData} style={cssData} />,
       title: 'Mahomes',
       image: MahomesCoverImg,
     },
@@ -97,16 +93,10 @@ export const EditorPage = (props) => {
   const renderEditorButtons = () => {
     return (
       <div className="editor-buttons-container">
-        <button
-          className={editorIndex === 0 ? 'active-editor' : ''}
-          onClick={onHandleSwitchEditor}
-        >
+        <button className={editorIndex === 0 ? 'active-editor' : ''} onClick={onHandleSwitchEditor}>
           Content
         </button>
-        <button
-          className={editorIndex === 1 ? 'active-editor' : ''}
-          onClick={onHandleSwitchEditor}
-        >
+        <button className={editorIndex === 1 ? 'active-editor' : ''} onClick={onHandleSwitchEditor}>
           Styles
         </button>
       </div>

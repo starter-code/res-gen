@@ -28,9 +28,8 @@ export const HomePage = () => {
         <div className="triple-header">
           <h2 className="section-title">Create resumes that get results!</h2>
           <p>
-            Res-Genie is designed for developers to give them a platform to
-            create and customize their resume using their skills in JSON and
-            CSS.
+            Res-Genie is designed for developers to give them a platform to create and customize
+            their resume using their skills in JSON and CSS.
           </p>
         </div>
         <div className="triple-content">
@@ -44,16 +43,12 @@ export const HomePage = () => {
           <article className="triplet">
             <GrEdit className="triplet-icon" />
             <h3>Modify content and styles</h3>
-            <p className="triplet-text">
-              Use your knowledge of JSON and CSS to build your resume.
-            </p>
+            <p className="triplet-text">Use your knowledge of JSON and CSS to build your resume.</p>
           </article>
           <article className="triplet">
             <GrDocumentText className="triplet-icon" />
             <h3>Download your resume</h3>
-            <p className="triplet-text">
-              Complete your resume and get on the job search!
-            </p>
+            <p className="triplet-text">Complete your resume and get on the job search!</p>
           </article>
         </div>
       </section>

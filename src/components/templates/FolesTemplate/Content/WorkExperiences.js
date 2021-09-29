@@ -7,15 +7,7 @@ import { DetailHeading } from './DetailHeading';
 import { DetailsTags } from './DetailsTags';
 import { DescriptionsList } from './DescriptionsList';
 
-const WorkExperience = ({
-  company,
-  dates,
-  descriptions,
-  location,
-  tags,
-  title,
-  style,
-}) => {
+const WorkExperience = ({ company, dates, descriptions, location, tags, title, style }) => {
   return (
     <View>
       <DetailHeading
