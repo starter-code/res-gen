@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import FolesCoverImg from '../../images/FolesCoverImg.png';
-import MahomesCoverImg from '../../images/MahomesCoverImg.png';
+import FolesPreview from '../../images/FolesPreview.png';
+import MahomesPreview from '../../images/MahomesPreview.png';
 import { NavBar, Footer } from 'src/components/main';
 import { GrMultiple, GrDocumentText, GrEdit } from 'react-icons/gr';
 
@@ -21,7 +21,7 @@ export const HomePage = () => {
           </Link>
         </div>
         <div className="hero-two">
-          <img className="hero-image" src={FolesCoverImg} />
+          <img className="hero-image" src={FolesPreview} />
         </div>
       </section>
       <section className="triple-column-section">
@@ -57,12 +57,12 @@ export const HomePage = () => {
         <div className="template-picker">
           <div className="template-pick">
             <Link to={{ pathname: 'editor-page', hash: '#mahomes' }}>
-              <img className="template-pick-image" src={MahomesCoverImg} />
+              <img className="template-pick-image" src={MahomesPreview} />
             </Link>
           </div>
           <div className="template-pick">
             <Link to={{ pathname: 'editor-page', hash: '#foles' }}>
-              <img className="template-pick-image" src={FolesCoverImg} />
+              <img className="template-pick-image" src={FolesPreview} />
             </Link>
           </div>
         </div>

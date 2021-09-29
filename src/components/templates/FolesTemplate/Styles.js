@@ -10,6 +10,7 @@ export const style = StyleSheet.create({
     backgroundColor: 'white',
     padding: '24px 24px 0 24px',
     width: '65%',
+    height: '100%',
   },
   'description-item': {
     padding: '0 0 0 0',

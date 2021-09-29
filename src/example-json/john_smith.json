@@ -1,90 +1,114 @@
 {
   "heading": {
-    "name": "David Ko",
+    "name": "John Smith",
     "title": "Software Engineer",
     "location": "Boston, MA"
   },
   "contact-info": {
-    "email": "david.holy.ko@gmail.com",
-    "github": "davidholyko",
-    "linkedin": "davidhko1",
-    "website": "david-ko.com"
+    "email": "john.smith@gmail.com",
+    "github": "johnsmith0101",
+    "linkedin": "johnsmith0101",
+    "website": "google.com"
   },
   "summary": {
     "heading": "Summary",
-    "description": "Software engineer focused in web development with 2+ years of expertise in JavaScript and React. Passionate about solving problems with pragmatic and maintainable solutions. Highly team-oriented and driven to be a high impact team member."
+    "description": "Developer focused on finding innovative ways to efficiently develop, design, and optimize web applications. I'm a hard-working, quick learning individual who strives in pushing myself and learning new things."
   },
   "skills": [
-    "JavaScript / HTML / CSS",
-    "Selenium + Nightwatch",
-    "React + Webpack",
-    "Git + Github",
-    "Confluence + Jira",
-    "Agile + Kanban"
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "Git",
+    "React",
+    "Express",
+    "Agile",
+    "Kanban"
   ],
   "languages": ["JavaScript", "HTML", "CSS"],
-  "libraries/frameworks": ["React + Webpack", "Selenium + Nightwatch", "HTML + CSS"],
-  "software-development": ["Git + Github", "Jira + Confluence", "Agile + Kanban"],
-  "interests": ["Philadelphia Eagles", "Total War: Warhammer", "Smite (MOBA)", "Smoked meats"],
+  "libraries/frameworks": [
+    "React.js",
+    "Webpack",
+    "Express.js",
+    "Nest.js",
+    "jQuery"
+  ],
+  "software-development": [
+    "Git + Github",
+    "Jira",
+    "Confluence",
+    "Agile",
+    "Kanban"
+  ],
+  "interests": [
+    "Philadelphia Eagles",
+    "Game of Thrones",
+    "Marathon Running",
+    "American Culture"
+  ],
   "work-experience": {
     "heading": "Software Engineering Experience",
     "details": [
       {
-        "company": "Curriculum Associates (thru F1V)",
-        "location": "Billerica, MA",
-        "title": "Software Engineer II",
-        "dates": "Jan 2020 - Present",
-        "tags": ["JavaScript", "React", "Agile + Kanban", "Unit-Testing + Automation"],
+        "company": "Google",
+        "location": "Cambridge, MA",
+        "title": "Software Engineer",
+        "dates": "June 2010 - Present",
+        "tags": [
+          "JavaScript",
+          "React",
+          "Agile",
+          "Unit-Testing",
+          "End-to-End-Testing"
+        ],
         "descriptions": [
-          "Spearheaded a cross project refactor to standardize visual elements and maintain visual integrity accross multiple browsers and devices",
-          "Added new expermental feature for integrated automation feature testing with Nightwatch and Selenium",
-          "Fulfilled support developer duties including being scrum master for stand up and actively responding to cross-team engineering support channels",
-          "Fixed bugs, created new features according to product specifications and completed spikes to pioneer new solutions around automation for Microsoft Edge and viewport scaling with a new Closed Captions feature"
-        ]
+          "Innovative software engineer offering four years of experience in the full software development lifecycle – from concept through delivery of next-generation applications and customizable solutions.",
+          "Expert in advanced development methodologies, tools and processes contributing to the design and rollout of cutting-edge software applications.",
+          "Known for excellent troubleshooting skills – able to analyze code and engineer well-researched, cost-effective and responsive solutions"
+        ],
+        "hidden": true
       },
       {
-        "company": "F1V",
-        "location": "Waltham, MA",
-        "title": "Software Engineer",
-        "dates": "May 2019 - Present",
-        "tags": ["JavaScript + Node", "Nest.js", "Slack/Bolt", "Project Management"],
+        "company": "Facebook",
+        "location": "San Francisco, CA",
+        "title": "Staff Software Engineer",
+        "dates": "Jan 2000 - Sept 2009",
+        "tags": [".NET", "SQL", "Git", "Jenkins", "CI/CD"],
         "descriptions": [
-          "Lead and managed small team on a project for a custom slackbot to perform HR duties",
-          "Designed how the slackbot interacts with Slack, Google, and Paymo APIs to automate requests",
-          "Reverse engineered a financial application (Java + PHP) and converted to modern JavaScript",
-          "Created interview questions and participated in the hiring process for junior developers"
+          "Developed .NET code for publishing and consuming messages",
+          "Developed deployment scripts from Git repository to GCP App",
+          "Implemented the ETL process the migrate legacy data to SQL database"
         ]
       }
     ]
   },
   "projects": {
-    "heading": "Personal Projects",
+    "heading": "Web Development Projects",
     "details": [
       {
-        "project": "ResGenie",
-        "location": "Boston",
-        "descriptor": "",
-        "title": "Software Engineer",
-        "dates": "Sept 2020 - Dec 2020",
+        "project": "GoFundThem",
+        "location": "",
+        "descriptor": "Your one stop shop to get funded",
+        "title": "Senior Software Engineer",
+        "dates": "June 2020 - Aug 2020",
         "tags": ["JavaScript", "React"],
         "descriptions": [
-          "Made a resume generating application that takes JSON and converts into a preformatted PDF",
-          "Reviewed code and built out features for how the application reads JSON"
+          "Refactored entire CSS infrastructure",
+          "Implemented a feature to wire tips directly to my bank account"
         ],
-        "url": ""
+        "url": "google.com"
       },
       {
-        "project": "CommunityConnect",
-        "location": "Boston",
+        "project": "DraftQueens",
+        "location": "New York City",
         "title": "Software Engineer Consultant",
-        "dates": "June 2019 - Oct 2019",
-        "tags": ["JavaScript", "React"],
+        "dates": "Jan 2020 - May 2020",
+        "tags": ["JavaScript", "React", "PHP", "Laravel", "MySQL"],
         "descriptions": [
-          "Established a system to organize CSS files for streamlined development",
-          "Executed refactoring recommendations to improve site performance",
-          "Guided onboarding developers through environment setup"
+          "Developing and creating PHP MySQL applications as per the specifications.",
+          "Testing and analyzing programming projects and reporting the same to the programming manager.",
+          "Designed, developed, coded, tested and debugged system requirements for the purpose of conversions and development projects."
         ],
-        "url": ""
+        "url": "yahoo.com"
       }
     ]
   },
@@ -94,10 +118,19 @@
       {
         "school": "General Assembly",
         "location": "Boston, MA",
-        "dates": "Jan 2019 - Apr 2019",
+        "dates": "2019 - 2020",
         "descriptions": [
           "Full time 500+ hour web development immersive program",
           "Developed four full stack web applications using JavaScript, HTML, CSS, and Ruby"
+        ]
+      },
+      {
+        "school": "UMass Amherst",
+        "location": "Amherst",
+        "dates": "2019 - 2020",
+        "descriptions": [
+          "Computer Science: Intro to Java, Data Structures, Game Design, Data Science",
+          "Information Technology: Computer Literacy, Problem Solving with Internet"
         ]
       }
     ]
@@ -106,25 +139,18 @@
     "heading": "Other Work History",
     "details": [
       {
-        "title": "Food Service Worker",
+        "title": "Cashier",
         "location": "Boston",
-        "company": "Roche Brothers",
-        "dates": "Oct 2018 - Jan 2019",
+        "company": "McDonalds",
+        "dates": "2018 - 2020",
         "descriptions": []
       },
       {
-        "title": "Compliance Specialist",
+        "title": "Customer Service Representative",
         "location": "Boston",
-        "company": "Manning Personel Group",
-        "dates": "July 2018 - June 2018",
-        "descriptions": []
-      },
-      {
-        "title": "Food Service Worker",
-        "location": "Dedham",
-        "company": "Whole Foods",
-        "dates": "Sept 2017 - Feb 2018",
-        "descriptions": [""]
+        "company": "Target",
+        "dates": "2018 - 2019",
+        "descriptions": ["Increased customer happiness by 200%"]
       }
     ]
   }
