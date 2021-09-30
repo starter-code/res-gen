@@ -10,7 +10,7 @@ export const generatePDFTemplate = ({ Template, displayName }) => {
     return (
       <React.Fragment>
         <PDFViewer className="pdf-frame">
-          <Document>
+          <Document title="your_resume.pdf">
             <Page size="LETTER" style={style.page}>
               <Template data={data} style={style} />
             </Page>

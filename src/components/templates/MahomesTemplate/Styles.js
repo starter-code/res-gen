@@ -8,11 +8,12 @@ export const style = StyleSheet.create({
   },
   columns: {
     flexDirection: 'row',
-    height: '100%',
+    height: '85%',
   },
   'heading-info': {
     backgroundColor: '#276a97',
     color: 'white',
+    height: '15%',
     padding: '24px 0 24px 24px',
     width: '100%',
   },

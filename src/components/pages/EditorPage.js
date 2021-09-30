@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import Modal from 'react-modal';
 import _ from 'lodash';
@@ -21,89 +22,109 @@ const { CUNNINGHAM, FOLES, MAHOMES, CONTENT, STYLES } = CONSTANTS;
 
 Modal.setAppElement('#modal');
 
-export const EditorPage = (props) => {
-  let defaultResumeIndex = 0;
+const templateNames = {
+  [FOLES]: FOLES,
+  [MAHOMES]: MAHOMES,
+  [CUNNINGHAM]: CUNNINGHAM,
+};
 
-  if (props && props.location.hash === '#mahomes') {
-    defaultResumeIndex = 1;
+const templateStyles = {
+  [FOLES]: FolesCSS,
+  [MAHOMES]: MahomesCSS,
+  [CUNNINGHAM]: CunninghamCSS,
+};
+
+export const EditorPage = (props) => {
+  let defaultCSS = templateStyles[FOLES];
+  let defaultTemplate = templateNames[FOLES];
+
+  if (props && props.location.hash) {
+    const name = _.capitalize(props.location.hash.replace('#', ''));
+    defaultCSS = templateStyles[name] || defaultCSS;
+    defaultTemplate = templateNames[name] || defaultTemplate;
   }
 
-  const templateStyles = [FolesCSS, MahomesCSS, CunninghamCSS];
+  const [activeEditor, setActiveEditor] = useState(CONTENT);
+  const [resumeTemplate, setResumeTemplate] = useState(defaultTemplate);
+  const [cssData, setCssData] = useState(defaultCSS);
   const [resumeData, setResumeData] = useState(defaultContentJson);
-  const [editorIndex, setEditorIndex] = useState(0);
-  const [resumeIndex, setResumeIndex] = useState(defaultResumeIndex);
-  const [cssData, setCssData] = useState(templateStyles[resumeIndex]);
-  const [modalIsOpen, setIsOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const templates = [
-    {
+  const templates = {
+    [FOLES]: {
       component: <FolesTemplate key={FOLES} data={resumeData} style={cssData} />,
       title: FOLES,
       image: FolesPreview,
+      styles: FolesCSS,
     },
-    {
+    [MAHOMES]: {
       component: <MahomesTemplate key={MAHOMES} data={resumeData} style={cssData} />,
       title: MAHOMES,
       image: MahomesPreview,
+      styles: MahomesCSS,
     },
-    {
+    [CUNNINGHAM]: {
       component: <CunninghamTemplate key={CUNNINGHAM} data={resumeData} style={cssData} />,
       title: CUNNINGHAM,
       image: CunninghamPreview,
+      styles: CunninghamCSS,
     },
-  ];
+  };
 
-  const editors = [
-    {
-      component: (
-        <Editor
-          setData={setResumeData}
-          defaultData={resumeData}
-          type={CONTENT}
-          key={Math.random()}
-        />
-      ),
-    },
-    {
-      component: (
-        <Editor setData={setCssData} defaultData={cssData} type={STYLES} key={Math.random()} />
-      ),
-    },
-  ];
+  const editors = {
+    [CONTENT]: (
+      <Editor setData={setResumeData} defaultData={resumeData} type={CONTENT} key={Math.random()} />
+    ),
+    [STYLES]: (
+      <Editor setData={setCssData} defaultData={cssData} type={STYLES} key={Math.random()} />
+    ),
+  };
 
   const openModal = () => {
-    setIsOpen(true);
+    setIsModalOpen(true);
   };
 
   const closeModal = () => {
-    setIsOpen(false);
+    setIsModalOpen(false);
   };
 
-  const renderComponent = (type, index) => {
-    return type[index].component;
+  const renderEditor = (type) => {
+    return editors[type];
   };
 
-  const onHandleSwitchEditor = () => {
-    if (editorIndex === 0) {
-      setEditorIndex(1);
-    } else {
-      setEditorIndex(0);
-    }
+  const renderTemplate = (type) => {
+    return templates[type].component;
   };
 
-  const onHandleSwitchTemplate = (index) => {
-    setResumeIndex(index);
-    setCssData(templateStyles[index]);
-    setIsOpen(false);
+  const onSwitchTemplate = (type) => {
+    setResumeTemplate(type);
+    setCssData(templates[type].styles);
+    setIsModalOpen(false);
   };
 
   const renderEditorButtons = () => {
+    const onToggleEditor = (editor) => {
+      if (activeEditor === editor) {
+        // if content is already the active type
+        // and content button is clicked, dont switch
+        return;
+      }
+
+      setActiveEditor(activeEditor === CONTENT ? STYLES : CONTENT);
+    };
+
     return (
       <div className="editor-buttons-container">
-        <button className={editorIndex === 0 ? 'active-editor' : ''} onClick={onHandleSwitchEditor}>
+        <button
+          className={classNames({ active: activeEditor === CONTENT })}
+          onClick={() => onToggleEditor(CONTENT)}
+        >
           Content
         </button>
-        <button className={editorIndex === 1 ? 'active-editor' : ''} onClick={onHandleSwitchEditor}>
+        <button
+          className={classNames({ active: activeEditor === STYLES })}
+          onClick={() => onToggleEditor(STYLES)}
+        >
           Styles
         </button>
       </div>
@@ -116,20 +137,20 @@ export const EditorPage = (props) => {
       <main>
         <section className="editor-section">
           {renderEditorButtons()}
-          {renderComponent(editors, editorIndex)}
+          {renderEditor(activeEditor)}
         </section>
         <section className="template-section">
           <button className="switch-template-button" onClick={openModal}>
             <span>Switch Template</span>
             <GrDocumentText />
           </button>
-          {renderComponent(templates, resumeIndex)}
+          {renderTemplate(resumeTemplate)}
         </section>
       </main>
       <Footer />
 
       <Modal
-        isOpen={modalIsOpen}
+        isOpen={isModalOpen}
         onRequestClose={closeModal}
         className="template-switcher-modal"
         overlayClassName="template-switcher-overlay"
@@ -137,11 +158,11 @@ export const EditorPage = (props) => {
       >
         <h2 className="ml-2 mb-0">Select a template</h2>
         <div className="switch-template-button-container">
-          {_.map(templates, (template, templateIndex) => (
+          {_.map(templates, (template) => (
             <button
               className="blank template-img-button"
-              key={templateIndex}
-              onClick={() => onHandleSwitchTemplate(templateIndex)}
+              key={template.title}
+              onClick={() => onSwitchTemplate(template.title)}
             >
               <img className="template-img" src={template.image} />
             </button>
