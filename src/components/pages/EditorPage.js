@@ -22,37 +22,54 @@ const { CUNNINGHAM, FOLES, MAHOMES, CONTENT, STYLES } = CONSTANTS;
 
 Modal.setAppElement('#modal');
 
-export const EditorPage = (props) => {
-  let defaultResumeIndex = 0;
+const templateNames = {
+  [FOLES]: FOLES,
+  [MAHOMES]: MAHOMES,
+  [CUNNINGHAM]: CUNNINGHAM,
+};
 
-  if (props && props.location.hash === '#mahomes') {
-    defaultResumeIndex = 1;
+const templateStyles = {
+  [FOLES]: FolesCSS,
+  [MAHOMES]: MahomesCSS,
+  [CUNNINGHAM]: CunninghamCSS,
+};
+
+export const EditorPage = (props) => {
+  let defaultCSS = templateStyles[FOLES];
+  let defaultTemplate = templateNames[FOLES];
+
+  if (props && props.location.hash) {
+    const name = _.capitalize(props.location.hash.replace('#', ''));
+    defaultCSS = templateStyles[name] || defaultCSS;
+    defaultTemplate = templateNames[name] || defaultTemplate;
   }
 
-  const templateStyles = [FolesCSS, MahomesCSS, CunninghamCSS];
-  const [resumeData, setResumeData] = useState(defaultContentJson);
   const [activeEditor, setActiveEditor] = useState(CONTENT);
-  const [resumeIndex, setResumeIndex] = useState(defaultResumeIndex);
-  const [cssData, setCssData] = useState(templateStyles[resumeIndex]);
+  const [resumeTemplate, setResumeTemplate] = useState(defaultTemplate);
+  const [cssData, setCssData] = useState(defaultCSS);
+  const [resumeData, setResumeData] = useState(defaultContentJson);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const templates = [
-    {
+  const templates = {
+    [FOLES]: {
       component: <FolesTemplate key={FOLES} data={resumeData} style={cssData} />,
       title: FOLES,
       image: FolesPreview,
+      styles: FolesCSS,
     },
-    {
+    [MAHOMES]: {
       component: <MahomesTemplate key={MAHOMES} data={resumeData} style={cssData} />,
       title: MAHOMES,
       image: MahomesPreview,
+      styles: MahomesCSS,
     },
-    {
+    [CUNNINGHAM]: {
       component: <CunninghamTemplate key={CUNNINGHAM} data={resumeData} style={cssData} />,
       title: CUNNINGHAM,
       image: CunninghamPreview,
+      styles: CunninghamCSS,
     },
-  ];
+  };
 
   const editors = {
     [CONTENT]: (
@@ -71,31 +88,31 @@ export const EditorPage = (props) => {
     setIsModalOpen(false);
   };
 
-  const renderEditors = (type) => {
+  const renderEditor = (type) => {
     return editors[type];
   };
 
-  const renderTemplates = (index) => {
-    return templates[index].component;
+  const renderTemplate = (type) => {
+    return templates[type].component;
   };
 
-  const onToggleEditor = (editor) => {
-    if (activeEditor === editor) {
-      // if content is already the active type
-      // and content button is clicked, dont switch
-      return;
-    }
-
-    setActiveEditor(activeEditor === CONTENT ? STYLES : CONTENT);
-  };
-
-  const onSwitchTemplate = (index) => {
-    setResumeIndex(index);
-    setCssData(templateStyles[index]);
+  const onSwitchTemplate = (type) => {
+    setResumeTemplate(type);
+    setCssData(templates[type].styles);
     setIsModalOpen(false);
   };
 
   const renderEditorButtons = () => {
+    const onToggleEditor = (editor) => {
+      if (activeEditor === editor) {
+        // if content is already the active type
+        // and content button is clicked, dont switch
+        return;
+      }
+
+      setActiveEditor(activeEditor === CONTENT ? STYLES : CONTENT);
+    };
+
     return (
       <div className="editor-buttons-container">
         <button
@@ -120,14 +137,14 @@ export const EditorPage = (props) => {
       <main>
         <section className="editor-section">
           {renderEditorButtons()}
-          {renderEditors(activeEditor)}
+          {renderEditor(activeEditor)}
         </section>
         <section className="template-section">
           <button className="switch-template-button" onClick={openModal}>
             <span>Switch Template</span>
             <GrDocumentText />
           </button>
-          {renderTemplates(resumeIndex)}
+          {renderTemplate(resumeTemplate)}
         </section>
       </main>
       <Footer />
@@ -141,11 +158,11 @@ export const EditorPage = (props) => {
       >
         <h2 className="ml-2 mb-0">Select a template</h2>
         <div className="switch-template-button-container">
-          {_.map(templates, (template, templateIndex) => (
+          {_.map(templates, (template) => (
             <button
               className="blank template-img-button"
-              key={templateIndex}
-              onClick={() => onSwitchTemplate(templateIndex)}
+              key={template.title}
+              onClick={() => onSwitchTemplate(template.title)}
             >
               <img className="template-img" src={template.image} />
             </button>
