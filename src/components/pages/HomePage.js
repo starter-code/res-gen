@@ -68,8 +68,17 @@ export const HomePage = () => {
         </div>
       </section>
       <section className="youtube-how-to-section">
-        <h2 className="section-title">Video Demo Section</h2>
-        <div className="video-demo">Video demo coming soon.</div>
+        <h2 className="section-title">Video Demo</h2>
+        <div className="video-demo">
+          <iframe
+            width="885"
+            height="500"
+            src="https://www.youtube.com/embed/_tvsOnnn2g8"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
       </section>
       <Footer />
     </main>
