@@ -10,10 +10,7 @@ export const ContentColumn = ({ data, style }) => {
   const {
     projects: { details: projectDetails, heading: projectsHeading },
     education: { details: educationDetails, heading: educationHeading },
-    'work-experience': {
-      details: workExperienceDetails,
-      heading: workExperienceHeading,
-    },
+    'work-experience': { details: workExperienceDetails, heading: workExperienceHeading },
     'other-work-experience': {
       details: OtherWorkExperienceDetails,
       heading: OtherWorkExperienceHeading,
@@ -26,16 +23,8 @@ export const ContentColumn = ({ data, style }) => {
         heading={workExperienceHeading}
         style={style}
       />
-      <Projects
-        details={projectDetails}
-        heading={projectsHeading}
-        style={style}
-      />
-      <Educations
-        details={educationDetails}
-        heading={educationHeading}
-        style={style}
-      />
+      <Projects details={projectDetails} heading={projectsHeading} style={style} />
+      <Educations details={educationDetails} heading={educationHeading} style={style} />
       <OtherWorkExperiences
         details={OtherWorkExperienceDetails}
         heading={OtherWorkExperienceHeading}

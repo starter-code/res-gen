@@ -1,6 +1,5 @@
 .editor-buttons-container {
   display: flex;
-  height: 50px;
   justify-content: center;
 
   & > button {
@@ -54,12 +53,6 @@
   height: calc(100vh - 50px);
 }
 
-.switch-template-button-container {
-  display: flex;
-  height: 50px;
-  justify-content: center;
-}
-
 .template-section {
   display: flex;
   flex-direction: column;
@@ -87,16 +80,18 @@
 }
 
 .switch-template-button {
-  padding: 14px 40px;
+  background-color: $blue;
+  border: none;
+  color: $white;
+  cursor: pointer;
   font-size: 20px;
   font-weight: 900;
-  background-color: $blue;
-  color: $white;
+  line-height: 42px;
   text-decoration: none;
+  margin: 0 auto;
   outline: none;
-  border: none;
+  padding: 0 40px;
   transition: 0.4s;
-  cursor: pointer;
 
   &:hover {
     background-color: $base2;

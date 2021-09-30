@@ -9,24 +9,13 @@ export const ContentColumn = ({ data, style }) => {
   const {
     summary: { description: summaryDescription, heading: summaryHeading },
     projects: { details: projectDetails, heading: projectHeading },
-    'work-experience': {
-      details: workExperienceDetails,
-      heading: WorkExperienceHeading,
-    },
+    'work-experience': { details: workExperienceDetails, heading: WorkExperienceHeading },
   } = data;
 
   return (
     <View style={style['column-content']}>
-      <Summary
-        description={summaryDescription}
-        heading={summaryHeading}
-        style={style}
-      />
-      <Projects
-        details={projectDetails}
-        heading={projectHeading}
-        style={style}
-      />
+      <Summary description={summaryDescription} heading={summaryHeading} style={style} />
+      <Projects details={projectDetails} heading={projectHeading} style={style} />
       <WorkExperiences
         details={workExperienceDetails}
         heading={WorkExperienceHeading}

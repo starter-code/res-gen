@@ -10,11 +10,7 @@ export const editorOptions = {
   },
   foldGutter: true,
   lint: true,
-  gutters: [
-    'CodeMirror-linenumbers',
-    'CodeMirror-foldgutter',
-    'CodeMirror-lint-markers',
-  ],
+  gutters: ['CodeMirror-linenumbers', 'CodeMirror-foldgutter', 'CodeMirror-lint-markers'],
   foldOptions: {
     widget: (from, to) => {
       var count = undefined;

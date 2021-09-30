@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Text, View } from 'react-pdf';
 
-export const DetailHeading = ({ company, dates, location, project, title, school, style }) => {
+export const DetailsHeading = ({ company, dates, location, project, title, school, style }) => {
   return (
     <View>
       <View style={style['detail-heading']}>
@@ -16,7 +16,7 @@ export const DetailHeading = ({ company, dates, location, project, title, school
   );
 };
 
-DetailHeading.propTypes = {
+DetailsHeading.propTypes = {
   company: PropTypes.string,
   dates: PropTypes.string,
   location: PropTypes.string,

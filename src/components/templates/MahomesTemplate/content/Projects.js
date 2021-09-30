@@ -31,15 +31,7 @@ ProjectHeading.propTypes = {
   style: PropTypes.object,
 };
 
-const Project = ({
-  project,
-  dates,
-  descriptor,
-  descriptions,
-  tags,
-  title,
-  style,
-}) => {
+const Project = ({ project, dates, descriptor, descriptions, tags, title, style }) => {
   return (
     <View>
       <ProjectHeading

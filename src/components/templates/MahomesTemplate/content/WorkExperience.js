@@ -24,15 +24,7 @@ WorkExperienceDescriptions.propTypes = {
   style: PropTypes.object,
 };
 
-const WorkExperience = ({
-  company,
-  dates,
-  descriptions,
-  location,
-  tags,
-  title,
-  style,
-}) => {
+const WorkExperience = ({ company, dates, descriptions, location, tags, title, style }) => {
   return (
     <View>
       <WorkExperienceHeading

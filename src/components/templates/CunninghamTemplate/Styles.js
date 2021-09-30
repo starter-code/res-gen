@@ -4,13 +4,21 @@ export const style = StyleSheet.create({
   page: {
     flexDirection: 'row',
     fontFamily: 'Roboto',
-    fontSize: 8,
+    fontSize: 10,
+    padding: '24px',
   },
   'column-content': {
     backgroundColor: 'white',
-    padding: '24px 24px 0 24px',
-    width: '65%',
-    height: '100%',
+    width: '100%',
+  },
+  'contact-info': {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    width: '100%',
+  },
+  'contact-item': {
+    margin: '0 12px 4px 0',
   },
   'description-item': {
     padding: '0 0 0 0',
@@ -23,6 +31,20 @@ export const style = StyleSheet.create({
   },
   'detail-title': {
     fontWeight: 'bold',
+  },
+  'heading-info': {
+    display: 'flex',
+    flexDirection: 'column',
+    width: '100%',
+  },
+  'heading-name': {
+    fontSize: 32,
+    textAlign: 'center',
+  },
+  interests: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
   },
   'tags-list': {
     display: 'flex',
@@ -43,42 +65,8 @@ export const style = StyleSheet.create({
     textAlign: 'center',
     borderBottom: 1,
   },
-  'column-info': {
-    backgroundColor: 'darkslategrey',
-    color: 'white',
-    padding: '24px 0 0 0',
-    width: '35%',
-  },
-  'contact-item': {
+  'skills-info': {
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-between',
-    margin: '0 12px 4px 0',
-  },
-  'info-header': {
-    padding: '0 0 0 24px',
-  },
-  'info-header-name': {
-    fontSize: 24,
-    fontWeight: 'bold',
-  },
-  'info-header-title': {
-    fontSize: 14,
-  },
-  'info-header-location': {
-    fontSize: 14,
-  },
-  'info-header-content': {
-    backgroundColor: '#446F6F',
-    fontSize: 16,
-    fontWeight: 'bold',
-    margin: '16px 0 8px 0',
-    padding: '0 0 0 24px',
-  },
-  'info-section': {
-    padding: '0 0 0 24px',
-  },
-  'info-item': {
-    margin: '0 0 4px 0',
   },
 });

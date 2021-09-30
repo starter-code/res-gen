@@ -1,17 +1,23 @@
-import React, { useState } from 'react';
-import { Editor } from 'src/editor';
-import { FolesTemplate } from 'src/templates/FolesTemplate';
-import { MahomesTemplate } from 'src/templates/MahomesTemplate';
-import { style as defaultFolesCss } from '../templates/FolesTemplate/Styles';
-import { style as defaultMahomesCss } from '../templates/MahomesTemplate/Styles';
-import defaultResumeData from '../../example-json/john_smith.json';
-import FolesCoverImg from '../../images/FolesCoverImg.png';
-import MahomesCoverImg from '../../images/MahomesCoverImg.png';
+import PropTypes from 'prop-types';
 import Modal from 'react-modal';
 import _ from 'lodash';
-import PropTypes from 'prop-types';
-import { GrDocumentText, GrClose } from 'react-icons/gr';
+import React, { useState } from 'react';
+import { GrDocumentText } from 'react-icons/gr';
+
+import { CONSTANTS } from '../../constants';
+import { Editor } from 'src/editor';
+import { CunninghamTemplate, style as CunninghamCSS } from 'src/templates/CunninghamTemplate';
+import { FolesTemplate, style as FolesCSS } from 'src/templates/FolesTemplate';
+import { MahomesTemplate, style as MahomesCSS } from 'src/templates/MahomesTemplate';
+import defaultContentJson from '../../example-json/john_smith.json';
+
+import CunninghamPreview from '../../images/CunninghamPreview.png';
+import FolesPreview from '../../images/FolesPreview.png';
+import MahomesPreview from '../../images/MahomesPreview.png';
+
 import { NavBar, Footer } from 'src/components/main';
+
+const { CUNNINGHAM, FOLES, MAHOMES, CONTENT, STYLES } = CONSTANTS;
 
 Modal.setAppElement('#modal');
 
@@ -22,8 +28,8 @@ export const EditorPage = (props) => {
     defaultResumeIndex = 1;
   }
 
-  const templateStyles = [defaultFolesCss, defaultMahomesCss];
-  const [resumeData, setResumeData] = useState(defaultResumeData);
+  const templateStyles = [FolesCSS, MahomesCSS, CunninghamCSS];
+  const [resumeData, setResumeData] = useState(defaultContentJson);
   const [editorIndex, setEditorIndex] = useState(0);
   const [resumeIndex, setResumeIndex] = useState(defaultResumeIndex);
   const [cssData, setCssData] = useState(templateStyles[resumeIndex]);
@@ -31,18 +37,19 @@ export const EditorPage = (props) => {
 
   const templates = [
     {
-      component: (
-        <FolesTemplate key="foles" data={resumeData} style={cssData} />
-      ),
-      title: 'Foles',
-      image: FolesCoverImg,
+      component: <FolesTemplate key={FOLES} data={resumeData} style={cssData} />,
+      title: FOLES,
+      image: FolesPreview,
     },
     {
-      component: (
-        <MahomesTemplate key="mahomes" data={resumeData} style={cssData} />
-      ),
-      title: 'Mahomes',
-      image: MahomesCoverImg,
+      component: <MahomesTemplate key={MAHOMES} data={resumeData} style={cssData} />,
+      title: MAHOMES,
+      image: MahomesPreview,
+    },
+    {
+      component: <CunninghamTemplate key={CUNNINGHAM} data={resumeData} style={cssData} />,
+      title: CUNNINGHAM,
+      image: CunninghamPreview,
     },
   ];
 
@@ -52,19 +59,14 @@ export const EditorPage = (props) => {
         <Editor
           setData={setResumeData}
           defaultData={resumeData}
-          type="Content"
+          type={CONTENT}
           key={Math.random()}
         />
       ),
     },
     {
       component: (
-        <Editor
-          setData={setCssData}
-          defaultData={cssData}
-          type="Resume Styles"
-          key={Math.random()}
-        />
+        <Editor setData={setCssData} defaultData={cssData} type={STYLES} key={Math.random()} />
       ),
     },
   ];
@@ -92,21 +94,16 @@ export const EditorPage = (props) => {
   const onHandleSwitchTemplate = (index) => {
     setResumeIndex(index);
     setCssData(templateStyles[index]);
+    setIsOpen(false);
   };
 
   const renderEditorButtons = () => {
     return (
       <div className="editor-buttons-container">
-        <button
-          className={editorIndex === 0 ? 'active-editor' : ''}
-          onClick={onHandleSwitchEditor}
-        >
+        <button className={editorIndex === 0 ? 'active-editor' : ''} onClick={onHandleSwitchEditor}>
           Content
         </button>
-        <button
-          className={editorIndex === 1 ? 'active-editor' : ''}
-          onClick={onHandleSwitchEditor}
-        >
+        <button className={editorIndex === 1 ? 'active-editor' : ''} onClick={onHandleSwitchEditor}>
           Styles
         </button>
       </div>
@@ -122,12 +119,10 @@ export const EditorPage = (props) => {
           {renderComponent(editors, editorIndex)}
         </section>
         <section className="template-section">
-          <div className="switch-template-button-container">
-            <button className="switch-template-button" onClick={openModal}>
-              <span>Switch Template</span>
-              <GrDocumentText />
-            </button>
-          </div>
+          <button className="switch-template-button" onClick={openModal}>
+            <span>Switch Template</span>
+            <GrDocumentText />
+          </button>
           {renderComponent(templates, resumeIndex)}
         </section>
       </main>
@@ -140,11 +135,8 @@ export const EditorPage = (props) => {
         overlayClassName="template-switcher-overlay"
         contentLabel="Template Switcher"
       >
-        <h2>Select a template</h2>
-        <button className="blank modal-close-button" onClick={closeModal}>
-          <GrClose />
-        </button>
-        <div>
+        <h2 className="ml-2 mb-0">Select a template</h2>
+        <div className="switch-template-button-container">
           {_.map(templates, (template, templateIndex) => (
             <button
               className="blank template-img-button"

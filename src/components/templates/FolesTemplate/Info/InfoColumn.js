@@ -20,21 +20,9 @@ export const InfoColumn = ({ data, style }) => {
       <InfoHeader name={name} title={title} location={location} style={style} />
       <Contacts contactInfo={contactInfo} style={style} />
       <InfoSubSection data={languagesData} style={style} heading="Languages" />
-      <InfoSubSection
-        data={librariesData}
-        style={style}
-        heading="Libraries/Frameworks"
-      />
-      <InfoSubSection
-        data={developmentData}
-        style={style}
-        heading="Software Development"
-      />
-      <InfoSubSection
-        data={interestsData}
-        style={style}
-        heading="Personal Interests"
-      />
+      <InfoSubSection data={librariesData} style={style} heading="Libraries/Frameworks" />
+      <InfoSubSection data={developmentData} style={style} heading="Software Development" />
+      <InfoSubSection data={interestsData} style={style} heading="Personal Interests" />
     </View>
   );
 };

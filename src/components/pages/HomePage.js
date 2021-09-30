@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import FolesCoverImg from '../../images/FolesCoverImg.png';
-import MahomesCoverImg from '../../images/MahomesCoverImg.png';
+import FolesPreview from '../../images/FolesPreview.png';
+import MahomesPreview from '../../images/MahomesPreview.png';
 import { NavBar, Footer } from 'src/components/main';
 import { GrMultiple, GrDocumentText, GrEdit } from 'react-icons/gr';
 
@@ -21,16 +21,15 @@ export const HomePage = () => {
           </Link>
         </div>
         <div className="hero-two">
-          <img className="hero-image" src={FolesCoverImg} />
+          <img className="hero-image" src={FolesPreview} />
         </div>
       </section>
       <section className="triple-column-section">
         <div className="triple-header">
           <h2 className="section-title">Create resumes that get results!</h2>
           <p>
-            Res-Genie is designed for developers to give them a platform to
-            create and customize their resume using their skills in JSON and
-            CSS.
+            Res-Genie is designed for developers to give them a platform to create and customize
+            their resume using their skills in JSON and CSS.
           </p>
         </div>
         <div className="triple-content">
@@ -44,16 +43,12 @@ export const HomePage = () => {
           <article className="triplet">
             <GrEdit className="triplet-icon" />
             <h3>Modify content and styles</h3>
-            <p className="triplet-text">
-              Use your knowledge of JSON and CSS to build your resume.
-            </p>
+            <p className="triplet-text">Use your knowledge of JSON and CSS to build your resume.</p>
           </article>
           <article className="triplet">
             <GrDocumentText className="triplet-icon" />
             <h3>Download your resume</h3>
-            <p className="triplet-text">
-              Complete your resume and get on the job search!
-            </p>
+            <p className="triplet-text">Complete your resume and get on the job search!</p>
           </article>
         </div>
       </section>
@@ -62,12 +57,12 @@ export const HomePage = () => {
         <div className="template-picker">
           <div className="template-pick">
             <Link to={{ pathname: 'editor-page', hash: '#mahomes' }}>
-              <img className="template-pick-image" src={MahomesCoverImg} />
+              <img className="template-pick-image" src={MahomesPreview} />
             </Link>
           </div>
           <div className="template-pick">
             <Link to={{ pathname: 'editor-page', hash: '#foles' }}>
-              <img className="template-pick-image" src={FolesCoverImg} />
+              <img className="template-pick-image" src={FolesPreview} />
             </Link>
           </div>
         </div>

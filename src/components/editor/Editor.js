@@ -15,10 +15,7 @@ export const Editor = ({ setData, defaultData, type }) => {
   };
 
   useEffect(() => {
-    const codeMirrorEditor = CodeMirror.fromTextArea(
-      editorRef.current,
-      editorOptions,
-    );
+    const codeMirrorEditor = CodeMirror.fromTextArea(editorRef.current, editorOptions);
     setEditor(codeMirrorEditor);
     setData(defaultData);
   }, [type, editorRef, defaultData]);

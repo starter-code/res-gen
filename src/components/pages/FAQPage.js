@@ -21,29 +21,20 @@ export const FAQPage = () => {
                 react-pdf
               </a>
               . Please check out a more comprehensive list{' '}
-              <a
-                className="faq-link"
-                href="https://github.com/starter-code/res-gen#technology"
-              >
+              <a className="faq-link" href="https://github.com/starter-code/res-gen#technology">
                 here
               </a>
             </h3>
           </div>
           <div className="faq-questions">
             <h1>Who is the project for?</h1>
-            <h3>
-              Software engineers coming out of a bootcamp who know some CSS and
-              JSON.
-            </h3>
+            <h3>Software engineers coming out of a bootcamp who know some CSS and JSON.</h3>
           </div>
           <div className="faq-questions">
             <h1>How do I find the code for this project?</h1>
             <h3>
               Great question click{' '}
-              <a
-                href="https://github.com/starter-code/res-gen"
-                className="faq-link"
-              >
+              <a href="https://github.com/starter-code/res-gen" className="faq-link">
                 here!
               </a>
             </h3>
