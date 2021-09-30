@@ -13,10 +13,9 @@
 
 .template-switcher-modal {
   background-color: white;
-  padding: 20px;
   outline: none;
-  text-align: center;
   position: relative;
+  overflow-x: scroll;
 }
 
 .template-img-button {
@@ -25,8 +24,8 @@
 }
 
 .template-img {
-  height: 500px;
-  width: 400px;
+  border: 1px solid black;
+  width: 300px;
   margin: 10px;
 
   &:hover {
@@ -34,9 +33,12 @@
   }
 }
 
-button.modal-close-button {
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 5px;
+.templates-modal-content {
+  display: flex;
+  overflow: scroll;
+  width: 100vw;
+}
+
+.switch-template-button-container {
+  display: flex;
 }

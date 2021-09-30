@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import Modal from 'react-modal';
 import _ from 'lodash';
 import React, { useState } from 'react';
-import { GrDocumentText, GrClose } from 'react-icons/gr';
+import { GrDocumentText } from 'react-icons/gr';
 
 import { CONSTANTS } from '../../constants';
 import { Editor } from 'src/editor';
@@ -21,79 +21,89 @@ const { CUNNINGHAM, FOLES, MAHOMES, CONTENT, STYLES } = CONSTANTS;
 
 Modal.setAppElement('#modal');
 
-export const EditorPage = () => {
-  // TODO re implement template hash links
-  const [resumeData, setResumeData] = useState(defaultContentJson);
-  const [editorType, setEditorType] = useState(CONTENT);
-  const [resumeKey, setResumeKey] = useState(FOLES);
-  const [cssData, setCssData] = useState(FolesCSS);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+export const EditorPage = (props) => {
+  let defaultResumeIndex = 0;
 
-  const templates = {
-    [FOLES]: {
-      component: <FolesTemplate key={FOLES} data={resumeData} style={FolesCSS} />,
+  if (props && props.location.hash === '#mahomes') {
+    defaultResumeIndex = 1;
+  }
+
+  const templateStyles = [FolesCSS, MahomesCSS, CunninghamCSS];
+  const [resumeData, setResumeData] = useState(defaultContentJson);
+  const [editorIndex, setEditorIndex] = useState(0);
+  const [resumeIndex, setResumeIndex] = useState(defaultResumeIndex);
+  const [cssData, setCssData] = useState(templateStyles[resumeIndex]);
+  const [modalIsOpen, setIsOpen] = useState(false);
+
+  const templates = [
+    {
+      component: <FolesTemplate key={FOLES} data={resumeData} style={cssData} />,
       title: FOLES,
       image: FolesPreview,
-      style: FolesCSS,
     },
-    [MAHOMES]: {
-      component: <MahomesTemplate key={MAHOMES} data={resumeData} style={MahomesCSS} />,
+    {
+      component: <MahomesTemplate key={MAHOMES} data={resumeData} style={cssData} />,
       title: MAHOMES,
       image: MahomesPreview,
-      style: MahomesCSS,
     },
-    [CUNNINGHAM]: {
-      component: <CunninghamTemplate key={CUNNINGHAM} data={resumeData} style={CunninghamCSS} />,
+    {
+      component: <CunninghamTemplate key={CUNNINGHAM} data={resumeData} style={cssData} />,
       title: CUNNINGHAM,
       image: CunninghamPreview,
-      style: CunninghamCSS,
     },
-  };
+  ];
 
-  const editors = {
-    [CONTENT]: <Editor setData={setResumeData} defaultData={resumeData} type={CONTENT} key={1} />,
-    [STYLES]: <Editor setData={setCssData} defaultData={cssData} type={STYLES} key={2} />,
-  };
+  const editors = [
+    {
+      component: (
+        <Editor
+          setData={setResumeData}
+          defaultData={resumeData}
+          type={CONTENT}
+          key={Math.random()}
+        />
+      ),
+    },
+    {
+      component: (
+        <Editor setData={setCssData} defaultData={cssData} type={STYLES} key={Math.random()} />
+      ),
+    },
+  ];
 
   const openModal = () => {
-    setIsModalOpen(true);
+    setIsOpen(true);
   };
 
   const closeModal = () => {
-    setIsModalOpen(false);
+    setIsOpen(false);
   };
 
-  const renderEditor = (type) => {
-    return editors[type];
-  };
-
-  const renderTemplate = (title) => {
-    return templates[title].component;
+  const renderComponent = (type, index) => {
+    return type[index].component;
   };
 
   const onHandleSwitchEditor = () => {
-    setEditorType(editorType === CONTENT ? STYLES : CONTENT);
+    if (editorIndex === 0) {
+      setEditorIndex(1);
+    } else {
+      setEditorIndex(0);
+    }
   };
 
-  const onHandleSwitchTemplate = (title) => {
-    setResumeKey(title);
-    setCssData(templates[title].style);
-    setIsModalOpen(false);
+  const onHandleSwitchTemplate = (index) => {
+    setResumeIndex(index);
+    setCssData(templateStyles[index]);
+    setIsOpen(false);
   };
 
   const renderEditorButtons = () => {
     return (
       <div className="editor-buttons-container">
-        <button
-          className={editorType === CONTENT ? 'active-editor' : ''}
-          onClick={onHandleSwitchEditor}
-        >
+        <button className={editorIndex === 0 ? 'active-editor' : ''} onClick={onHandleSwitchEditor}>
           Content
         </button>
-        <button
-          className={editorType === STYLES ? 'active-editor' : ''}
-          onClick={onHandleSwitchEditor}
-        >
+        <button className={editorIndex === 1 ? 'active-editor' : ''} onClick={onHandleSwitchEditor}>
           Styles
         </button>
       </div>
@@ -106,37 +116,32 @@ export const EditorPage = () => {
       <main>
         <section className="editor-section">
           {renderEditorButtons()}
-          {renderEditor(editorType)}
+          {renderComponent(editors, editorIndex)}
         </section>
         <section className="template-section">
-          <div className="switch-template-button-container">
-            <button className="switch-template-button" onClick={openModal}>
-              <span>Switch Template</span>
-              <GrDocumentText />
-            </button>
-          </div>
-          {renderTemplate(resumeKey)}
+          <button className="switch-template-button" onClick={openModal}>
+            <span>Switch Template</span>
+            <GrDocumentText />
+          </button>
+          {renderComponent(templates, resumeIndex)}
         </section>
       </main>
       <Footer />
 
       <Modal
-        isModalOpen={isModalOpen}
+        isOpen={modalIsOpen}
         onRequestClose={closeModal}
         className="template-switcher-modal"
         overlayClassName="template-switcher-overlay"
         contentLabel="Template Switcher"
       >
-        <h2>Select a template</h2>
-        <button className="blank modal-close-button" onClick={closeModal}>
-          <GrClose />
-        </button>
-        <div className="templates-modal-content">
-          {_.map(templates, (template) => (
+        <h2 className="ml-2 mb-0">Select a template</h2>
+        <div className="switch-template-button-container">
+          {_.map(templates, (template, templateIndex) => (
             <button
               className="blank template-img-button"
-              key={template.title}
-              onClick={() => onHandleSwitchTemplate(template.title)}
+              key={templateIndex}
+              onClick={() => onHandleSwitchTemplate(templateIndex)}
             >
               <img className="template-img" src={template.image} />
             </button>
