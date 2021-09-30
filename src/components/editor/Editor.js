@@ -3,7 +3,6 @@ import 'code-mirror-lint';
 import PropTypes from 'prop-types';
 import React, { useRef, useEffect, useState } from 'react';
 import { editorOptions } from './options';
-import { GrDocumentUpdate } from 'react-icons/gr';
 
 export const Editor = ({ setData, defaultData, type }) => {
   const [editor, setEditor] = useState(null);
@@ -23,7 +22,7 @@ export const Editor = ({ setData, defaultData, type }) => {
   return (
     <div>
       <button className="update-pdf-button" onClick={onHandleClick}>
-        <GrDocumentUpdate size="2em" />
+        Apply Changes
       </button>
       <form>
         <textarea

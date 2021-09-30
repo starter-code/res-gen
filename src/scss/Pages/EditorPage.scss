@@ -53,32 +53,6 @@
   height: calc(100vh - 50px);
 }
 
-.template-section {
-  display: flex;
-  flex-direction: column;
-}
-
-.update-pdf-button {
-  bottom: 50px;
-  border-radius: 50%;
-  border-style: none;
-  cursor: pointer;
-  padding: 20px;
-  position: absolute;
-  outline: none;
-  right: 50px;
-  transition: background-color 0.25s;
-  z-index: 100;
-
-  &:hover {
-    transform: scale(1.1);
-  }
-
-  &:active {
-    background-color: $base01;
-  }
-}
-
 .switch-template-button {
   background-color: $blue;
   border: none;
@@ -110,5 +84,32 @@
   & path {
     stroke: $white;
     transition: 0.4s;
+  }
+}
+
+.template-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.update-pdf-button {
+  bottom: 50px;
+  border-radius: 40px;
+  border-style: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-weight: 700;
+  position: absolute;
+  outline: none;
+  right: 10px;
+  transition: background-color 0.25s;
+  z-index: 100;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:active {
+    background-color: $base01;
   }
 }
