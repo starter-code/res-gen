@@ -20,7 +20,7 @@
     }
   }
 
-  & > button.active-editor {
+  & > .active {
     background-color: $base03;
     border-color: $base03;
     color: $white;
