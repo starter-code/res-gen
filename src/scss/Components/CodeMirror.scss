@@ -5,24 +5,24 @@
 
 .CodeMirror-lint-tooltip {
   background-color: #ffd;
-  border: 1px solid black;
   border-radius: 4px 4px 4px 4px;
+  border: 1px solid black;
   color: black;
   font-family: monospace;
   font-size: 10pt;
+  max-width: 600px;
+  opacity: 0;
   overflow: hidden;
   padding: 2px 5px;
   position: fixed;
-  white-space: pre;
-  white-space: pre-wrap;
-  z-index: 100;
-  max-width: 600px;
-  opacity: 0;
   transition: opacity 0.4s;
+  white-space: pre-wrap;
+  white-space: pre;
+  z-index: 100;
   -moz-transition: opacity 0.4s;
-  -webkit-transition: opacity 0.4s;
-  -o-transition: opacity 0.4s;
   -ms-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+  -webkit-transition: opacity 0.4s;
 }
 
 .CodeMirror-lint-mark {
@@ -44,15 +44,15 @@
   cursor: pointer;
   display: inline-block;
   height: 16px;
-  width: 16px;
-  vertical-align: middle;
   position: relative;
+  vertical-align: middle;
+  width: 16px;
 }
 
 .CodeMirror-lint-message {
-  padding-left: 18px;
   background-position: top left;
   background-repeat: no-repeat;
+  padding-left: 18px;
 }
 
 .CodeMirror-lint-marker-warning,
@@ -67,8 +67,8 @@
 
 .CodeMirror-lint-marker-multiple {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAMAAADzjKfhAAAACVBMVEUAAAAAAAC/v7914kyHAAAAAXRSTlMAQObYZgAAACNJREFUeNo1ioEJAAAIwmz/H90iFFSGJgFMe3gaLZ0od+9/AQZ0ADosbYraAAAAAElFTkSuQmCC');
-  background-repeat: no-repeat;
   background-position: right bottom;
-  width: 100%;
+  background-repeat: no-repeat;
   height: 100%;
+  width: 100%;
 }

@@ -1,32 +1,32 @@
 .template-switcher-overlay {
+  align-items: center;
   background-color: rgba(0%, 0%, 0%, 50%);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
   bottom: 0;
-  z-index: 100;
   display: flex;
   justify-content: center;
-  align-items: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100;
 }
 
 .template-switcher-modal {
   background-color: white;
   outline: none;
-  position: relative;
   overflow-x: scroll;
+  position: relative;
 }
 
 .template-img-button {
-  margin: 10px;
   cursor: pointer;
+  margin: 10px;
 }
 
 .template-img {
   border: 1px solid black;
-  width: 300px;
   margin: 10px;
+  width: 300px;
 
   &:hover {
     transform: scale(1.05);

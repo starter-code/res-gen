@@ -4,8 +4,8 @@
 
   & > button {
     background-color: #efefef;
-    border: 2px solid $black;
     border-bottom: 0;
+    border: 2px solid $black;
     color: $black;
     cursor: pointer;
     font-size: 1.5rem;
@@ -39,8 +39,8 @@
   }
 
   & section {
-    width: 50%;
     margin: 0px 10px;
+    width: 50%;
   }
 }
 
@@ -61,10 +61,10 @@
   font-size: 20px;
   font-weight: 900;
   line-height: 42px;
-  text-decoration: none;
   margin: 0 auto;
   outline: none;
   padding: 0 40px;
+  text-decoration: none;
   transition: 0.4s;
 
   &:hover {
@@ -77,8 +77,8 @@
   }
 
   & svg {
-    vertical-align: text-bottom;
     margin-left: 5px;
+    vertical-align: text-bottom;
   }
 
   & path {
@@ -93,14 +93,14 @@
 }
 
 .update-pdf-button {
-  bottom: 50px;
   border-radius: 40px;
   border-style: none;
+  bottom: 50px;
   cursor: pointer;
-  padding: 10px 20px;
   font-weight: 700;
-  position: absolute;
   outline: none;
+  padding: 10px 20px;
+  position: absolute;
   right: 10px;
   transition: background-color 0.25s;
   z-index: 100;
