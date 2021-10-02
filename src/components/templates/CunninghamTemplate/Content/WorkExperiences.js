@@ -9,7 +9,7 @@ import { DescriptionsList } from './DescriptionsList';
 
 const WorkExperience = ({ company, dates, descriptions, location, tags, title, style }) => {
   return (
-    <View>
+    <View style={style['work-experience-item']}>
       <DetailsHeading
         company={company}
         dates={dates}

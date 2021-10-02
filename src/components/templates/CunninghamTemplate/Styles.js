@@ -69,4 +69,7 @@ export const style = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
   },
+  'work-experience-item': {
+    marginBottom: '4px',
+  },
 });

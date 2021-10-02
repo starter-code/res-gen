@@ -8,43 +8,18 @@
     "email": "john.smith@gmail.com",
     "github": "johnsmith0101",
     "linkedin": "johnsmith0101",
-    "website": "google.com"
+    "website": "google.com",
+    "phone": "555-555-5555"
   },
   "summary": {
     "heading": "Summary",
     "description": "Developer focused on finding innovative ways to efficiently develop, design, and optimize web applications. I'm a hard-working, quick learning individual who strives in pushing myself and learning new things."
   },
-  "skills": [
-    "JavaScript",
-    "HTML",
-    "CSS",
-    "Git",
-    "React",
-    "Express",
-    "Agile",
-    "Kanban"
-  ],
+  "skills": ["JavaScript", "HTML", "CSS", "Git", "React", "Express", "Agile", "Kanban"],
   "languages": ["JavaScript", "HTML", "CSS"],
-  "libraries/frameworks": [
-    "React.js",
-    "Webpack",
-    "Express.js",
-    "Nest.js",
-    "jQuery"
-  ],
-  "software-development": [
-    "Git + Github",
-    "Jira",
-    "Confluence",
-    "Agile",
-    "Kanban"
-  ],
-  "interests": [
-    "Philadelphia Eagles",
-    "Game of Thrones",
-    "Marathon Running",
-    "American Culture"
-  ],
+  "libraries/frameworks": ["React.js", "Webpack", "Express.js", "Nest.js", "jQuery"],
+  "software-development": ["Git + Github", "Jira", "Confluence", "Agile", "Kanban"],
+  "interests": ["Philadelphia Eagles", "Game of Thrones", "Marathon Running", "American Culture"],
   "work-experience": {
     "heading": "Software Engineering Experience",
     "details": [
@@ -53,13 +28,7 @@
         "location": "Cambridge, MA",
         "title": "Software Engineer",
         "dates": "June 2010 - Present",
-        "tags": [
-          "JavaScript",
-          "React",
-          "Agile",
-          "Unit-Testing",
-          "End-to-End-Testing"
-        ],
+        "tags": ["JavaScript", "React", "Agile", "Unit-Testing", "End-to-End-Testing"],
         "descriptions": [
           "Innovative software engineer offering four years of experience in the full software development lifecycle – from concept through delivery of next-generation applications and customizable solutions.",
           "Expert in advanced development methodologies, tools and processes contributing to the design and rollout of cutting-edge software applications.",
