@@ -11,7 +11,7 @@ export const Skills = ({ technologySkills, workflowSkills, style }) => {
         <Text>{technologySkills.join(', ')}</Text>
       </View>
       <View style={style['skills-info']}>
-        <Text style={style['detail-title']}>Workflow Tools: </Text>
+        <Text style={style['detail-title']}>Workflow: </Text>
         <Text>{workflowSkills.join(', ')}</Text>
       </View>
     </View>
