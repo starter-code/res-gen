@@ -85,18 +85,9 @@
     "heading": "Education",
     "details": [
       {
-        "school": "General Assembly",
-        "location": "Boston, MA",
-        "dates": "2019 - 2020",
-        "descriptions": [
-          "Full time 500+ hour web development immersive program",
-          "Developed four full stack web applications using JavaScript, HTML, CSS, and Ruby"
-        ]
-      },
-      {
         "school": "UMass Amherst",
         "location": "Amherst",
-        "dates": "2019 - 2020",
+        "dates": "2016 - 2020",
         "descriptions": [
           "Computer Science: Intro to Java, Data Structures, Game Design, Data Science",
           "Information Technology: Computer Literacy, Problem Solving with Internet"
