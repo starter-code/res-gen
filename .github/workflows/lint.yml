@@ -1,0 +1,30 @@
+name: Validate code changes
+
+on: [pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/pacakge-lock.json') }}
+
+      - name: Install packages
+        run: npm install
+
+      - name: Check commit format
+        run: |
+          npm run semantic-commitlint
+
+      - name: Check eslint
+        run: |
+          npm run lint
+
+      - name: Run prettier
+        run: |
+          npm run prettier-format
+
