@@ -11,7 +11,7 @@ jobs:
       - uses: actions/cache@v2
         with:
           path: '**/node_modules'
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/pacakge-lock.json') }}
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
 
       - name: Install packages
         run: npm install
