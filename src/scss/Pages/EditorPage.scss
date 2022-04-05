@@ -92,6 +92,28 @@
   flex-direction: column;
 }
 
+.export-json-button {
+  border-radius: 40px;
+  border-style: none;
+  bottom: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  outline: none;
+  padding: 10px 20px;
+  position: absolute;
+  right: 10px;
+  transition: background-color 0.25s;
+  z-index: 100;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:active {
+    background-color: $base01;
+  }
+}
+
 .update-pdf-button {
   border-radius: 40px;
   border-style: none;

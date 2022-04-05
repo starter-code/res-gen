@@ -19,11 +19,33 @@ export const Editor = ({ setData, defaultData, type }) => {
     setData(defaultData);
   }, [type, editorRef, defaultData]);
 
+  const stringData = JSON.stringify(defaultData, null, 4);
+
+  const handleExportJson = () => {
+    const filename = 'res-gen.json';
+
+    let element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(stringData));
+    element.setAttribute('download', filename);
+
+    element.style.display = 'none';
+    document.body.appendChild(element);
+
+    element.click();
+
+    document.body.removeChild(element);
+  };
+
   return (
     <div>
-      <button className="update-pdf-button" onClick={onHandleClick}>
-        Apply Changes
-      </button>
+      <div>
+        <button className="update-pdf-button" onClick={onHandleClick}>
+          Apply Changes
+        </button>
+        <button className="export-json-button" onClick={handleExportJson}>
+          Export File
+        </button>
+      </div>
       <form>
         <textarea
           onChange={onHandleChange}
